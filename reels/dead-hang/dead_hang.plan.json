@@ -24,10 +24,10 @@
  "header": {
   "text": "IT’S:",
   "big_size": 240,
-  "big_y": 930,
+  "big_y": 880,
   "big_color": "cream",
   "size": 84,
-  "y": 845,
+  "y": 760,
   "color": "orange",
   "delay": 0.12
  },
@@ -42,28 +42,28 @@
     1.08
    ],
    "text_span": 2,
-   "band_y": 860,
+   "band_y": 790,
    "note": "Wide: coach watching a timed hang. Words slam in on beats 0/1/2 with the house font flicker, then hold.",
    "title_words": [
     {
      "text": "IT’S MORE THAN",
      "beat": 0,
      "size": 112,
-     "y": 715,
+     "y": 640,
      "color": "cream"
     },
     {
      "text": "JUST",
      "beat": 1,
      "size": 112,
-     "y": 845,
+     "y": 770,
      "color": "cream"
     },
     {
      "text": "HOLDING ON.",
      "beat": 2,
-     "size": 178,
-     "y": 1005,
+     "size": 168,
+     "y": 925,
      "color": "orange"
     }
    ],
@@ -99,7 +99,7 @@
    "tin": "wipe",
    "header_intro": true,
    "band": [
-    930,
+    880,
     420,
     0.5
    ],
@@ -116,8 +116,8 @@
    ],
    "tin": "slide",
    "header": true,
-   "ttop": 945,
-   "band_y": 1060,
+   "ttop": 860,
+   "band_y": 975,
    "text": "How long can you maintain your hold?",
    "highlight": [
     "how",
@@ -137,8 +137,8 @@
    ],
    "tin": "wipe",
    "header": true,
-   "ttop": 945,
-   "band_y": 1060,
+   "ttop": 860,
+   "band_y": 975,
    "text": "Can you maintain a comfortable, controlled position?",
    "highlight": [
     "controlled"
@@ -161,8 +161,8 @@
    ],
    "tin": "slide",
    "header": true,
-   "ttop": 945,
-   "band_y": 1060,
+   "ttop": 860,
+   "band_y": 975,
    "text": "Does one hand fatigue noticeably faster?",
    "highlight": [
     "one",
@@ -185,8 +185,8 @@
    ],
    "tin": "wipe",
    "header": true,
-   "ttop": 945,
-   "band_y": 1060,
+   "ttop": 860,
+   "band_y": 975,
    "text": "Is your endurance improving with consistent training?",
    "highlight": [
     "endurance"
@@ -208,7 +208,7 @@
    ],
    "tin": "dip",
    "tdur": 18,
-   "ty": 1120,
+   "ty": 900,
    "size": 84,
    "reveal": 0.6,
    "stagger": 0.12,
@@ -232,7 +232,7 @@
    ],
    "tin": "dissolve",
    "tdur": 12,
-   "ty": 1120,
+   "ty": 900,
    "size": 88,
    "reveal": 0.5,
    "stagger": 0.12,
@@ -254,14 +254,14 @@
     1.08
    ],
    "tin": "slide",
-   "ty": 1390,
-   "size": 140,
-   "maxw": 1010,
+   "ty": 820,
+   "size": 130,
+   "maxw": 950,
    "reveal": 0.45,
    "stagger": 0.14,
    "box_beats": 2,
-   "band_y": 1380,
-   "band_h": 560,
+   "band_y": 820,
+   "band_h": 520,
    "band_s": 0.6,
    "lh_k": 1.08,
    "text": "Measure what matters.",
