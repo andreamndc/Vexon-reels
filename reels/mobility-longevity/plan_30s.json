@@ -1,0 +1,277 @@
+{
+ "_comment": "VEXON 'Mobility and Longevity' reel. Beat grid = 'Loser' (Tame Impala) as used in the reference TikTok: 82.97 BPM; reel t=0 = the opening drum hit (0.65 s into the TikTok audio).",
+ "title": "VEXON · Mobility and Longevity (30 s) · Storyboard",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 82.97,
+ "music_note": "Cut to 'Loser' (Tame Impala), ~83 BPM. Exported silent; add the sound in-app with its opening drum hit on frame 1.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "card_border": false
+ },
+ "sources": {
+  "ROW": "footage/IMG_1915.mov",
+  "BOX": "footage/IMG_1011.mov",
+  "BIKE": "footage/IMG_1607.MOV"
+ },
+ "shots": [
+  {
+   "name": "HOOK",
+   "kind": "title",
+   "src": "BOX",
+   "ss": 0.5,
+   "beats": 4,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "bright": -0.08,
+   "tin": "cut",
+   "text_span": 2,
+   "band_y": 850,
+   "note": "Slam title on the song's hits (beats 0 / 1.5 / 3); PAIN. lands on the bar line.",
+   "title_words": [
+    {
+     "text": "MOBILITY IS",
+     "beat": 0,
+     "size": 150,
+     "y": 600,
+     "color": "cream"
+    },
+    {
+     "text": "MORE THAN",
+     "beat": 1.5,
+     "size": 150,
+     "y": 760,
+     "color": "cream"
+    },
+    {
+     "text": "MOVING WITHOUT",
+     "beat": 3,
+     "size": 122,
+     "y": 905,
+     "color": "cream"
+    },
+    {
+     "text": "PAIN.",
+     "beat": 4,
+     "size": 240,
+     "y": 1090,
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "name": "HOOK b",
+   "kind": "plain",
+   "src": "BOX",
+   "ss": 9.0,
+   "beats": 2,
+   "z": [
+    1.1,
+    1.02
+   ],
+   "bright": -0.08,
+   "tin": "cut",
+   "cont": true
+  },
+  {
+   "name": "Supporting",
+   "src": "ROW",
+   "ss": 0.3,
+   "beats": 3.5,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "flash",
+   "text_span": 2,
+   "text": "It’s how well your body moves, adapts, and performs.",
+   "highlight": [
+    "performs"
+   ],
+   "note": "Flash in on the bar line. Subtle wipe-up; one orange box on 'performs'."
+  },
+  {
+   "name": "Supporting b",
+   "kind": "plain",
+   "src": "BIKE",
+   "ss": 4.3,
+   "beats": 1.5,
+   "z": [
+    1.04,
+    1.12
+   ],
+   "tin": "whip",
+   "cont": true
+  },
+  {
+   "name": "Q1 Control",
+   "src": "BOX",
+   "ss": 3.5,
+   "beats": 3,
+   "z": [
+    1.0,
+    1.1
+   ],
+   "num": "01",
+   "tin": "flash",
+   "text": "Can you move with control?",
+   "highlight": [
+    "control"
+   ],
+   "note": "Flash in. Boxing."
+  },
+  {
+   "name": "Q2 Range",
+   "src": "ROW",
+   "ss": 3.8,
+   "beats": 4,
+   "z": [
+    1.08,
+    1.0
+   ],
+   "num": "02",
+   "tin": "flash",
+   "text": "Maintain your range of motion?",
+   "highlight": [
+    "range",
+    "of",
+    "motion"
+   ],
+   "note": "THE DROP: flash on the groove's first hit. Full rowing stroke."
+  },
+  {
+   "name": "Q3 Strong",
+   "src": "BIKE",
+   "ss": 0.0,
+   "beats": 4,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "speed": 0.85,
+   "num": "03",
+   "tin": "cutout",
+   "text": "Stay strong through every stage of life?",
+   "highlight": [
+    "strong"
+   ],
+   "note": "Paper-cutout reveal on the bar line. Older athlete, VO2 test."
+  },
+  {
+   "name": "Transition",
+   "src": "BOX",
+   "ss": 14.2,
+   "beats": 2.5,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "speed": 0.5,
+   "tin": "cut",
+   "text_span": 2,
+   "text": "Because mobility isn’t just about how you move today.",
+   "highlight": [
+    "today"
+   ],
+   "note": "Slows down: half-speed footage, plain cut on the beat."
+  },
+  {
+   "name": "Transition b",
+   "kind": "plain",
+   "src": "ROW",
+   "ss": 5.9,
+   "beats": 2.5,
+   "z": [
+    1.06,
+    1.0
+   ],
+   "speed": 0.55,
+   "tin": "cut",
+   "cont": true
+  },
+  {
+   "name": "FINAL",
+   "kind": "title",
+   "src": "BOX",
+   "ss": 17.6,
+   "beats": 6,
+   "z": [
+    1.0,
+    1.12
+   ],
+   "speed": 0.5,
+   "bright": -0.14,
+   "tin": "flash",
+   "band_y": 880,
+   "note": "Visual highlight: lines slam on consecutive beats, TOMORROW. gets the orange box.",
+   "title_words": [
+    {
+     "text": "IT’S ABOUT WHAT",
+     "beat": 0,
+     "size": 125,
+     "y": 640,
+     "color": "cream"
+    },
+    {
+     "text": "YOU’LL BE ABLE",
+     "beat": 1,
+     "size": 125,
+     "y": 785,
+     "color": "cream"
+    },
+    {
+     "text": "TO DO",
+     "beat": 2,
+     "size": 125,
+     "y": 930,
+     "color": "cream"
+    },
+    {
+     "text": "TOMORROW.",
+     "beat": 3,
+     "size": 185,
+     "y": 1125,
+     "color": "cream",
+     "box": true
+    }
+   ]
+  },
+  {
+   "name": "CTA",
+   "kind": "cta",
+   "src": "BIKE",
+   "ss": 4.0,
+   "beats": 5,
+   "z": [
+    1.12,
+    1.02
+   ],
+   "speed": 0.6,
+   "bright": -0.14,
+   "tin": "punch",
+   "text": "Click the link in our bio to book your assessment.",
+   "highlight": [
+    "link",
+    "bio"
+   ],
+   "note": "Zoom punch onto the assessment screen. Last beat fades to navy."
+  },
+  {
+   "name": "END SLOT",
+   "kind": "end",
+   "src": null,
+   "beats": 3,
+   "tin": "fade",
+   "fade_beats": 1,
+   "fill": "navy",
+   "note": "Clean navy background; logo added manually by the client."
+  }
+ ]
+}
