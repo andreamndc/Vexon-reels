@@ -1,0 +1,293 @@
+{
+ "_comment": "Dead hangs / strength & ageing reel. Source paths point at the raw uploads; repoint them at the clips (IMG_0123.MP4, IMG_2313.MOV, IMG_2303.MOV, IMG_2597.MOV) to re-render.",
+ "title": "VEXON · It's more than just holding on · Storyboard",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 131,
+ "music_note": "Cut to the inspiration reel's track (~131 BPM). Exported silent; start the song on its first downbeat at 0:00.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "pulse": 0.01,
+  "card_border": false
+ },
+ "sources": {
+  "HANG_SR": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/e7933d02-IMG_0123.MP4",
+  "TUCK": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/ddac9cdf-IMG_2313.MOV",
+  "WHITE": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/325db3ab-IMG_2303.MOV",
+  "DRESS": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/d397bcb7-IMG_2597.MOV"
+ },
+ "header": {
+  "text": "IT’S:",
+  "big_size": 240,
+  "big_y": 930,
+  "big_color": "cream",
+  "size": 84,
+  "y": 845,
+  "color": "orange",
+  "delay": 0.12
+ },
+ "shots": [
+  {
+   "name": "HOOK",
+   "kind": "title",
+   "src": "HANG_SR",
+   "ss": 0.4,
+   "bars": 1.5,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "text_span": 2,
+   "band_y": 860,
+   "note": "Wide: coach watching a timed hang. Words slam in on beats 0/2/4 with the house font flicker, then hold.",
+   "title_words": [
+    {
+     "text": "IT’S MORE THAN",
+     "beat": 0,
+     "size": 112,
+     "y": 715,
+     "color": "cream"
+    },
+    {
+     "text": "JUST",
+     "beat": 2,
+     "size": 112,
+     "y": 845,
+     "color": "cream"
+    },
+    {
+     "text": "HOLDING ON.",
+     "beat": 4,
+     "size": 178,
+     "y": 1005,
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "name": "HOOK b",
+   "kind": "plain",
+   "src": "HANG_SR",
+   "ss": 18.7,
+   "bars": 1.5,
+   "z": [
+    1.18,
+    1.26
+   ],
+   "zc": [
+    660,
+    860
+   ],
+   "tin": "cut",
+   "cont": true,
+   "note": "Hard cut on the bar line to a tighter angle; title holds so it can be absorbed."
+  },
+  {
+   "name": "IT'S:",
+   "kind": "plain",
+   "src": "WHITE",
+   "ss": 0.0,
+   "bars": 1,
+   "z": [
+    1.0,
+    1.07
+   ],
+   "tin": "wipe",
+   "header_intro": true,
+   "band": [
+    930,
+    420,
+    0.5
+   ],
+   "note": "Soft diagonal wipe with orange edge. 'IT'S:' rises in alone, centre frame."
+  },
+  {
+   "name": "Q1 How long",
+   "src": "HANG_SR",
+   "ss": 9.9,
+   "bars": 2,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "num": "01",
+   "num_y": 70,
+   "tin": "slide",
+   "header": true,
+   "ttop": 945,
+   "band_y": 1060,
+   "text": "How long can you maintain your hold?",
+   "highlight": [
+    "how",
+    "long"
+   ],
+   "note": "Vertical push. 'IT'S:' glides up into a header and stays. Stopwatch phone visible bottom-left."
+  },
+  {
+   "name": "Q2 Controlled",
+   "src": "DRESS",
+   "ss": 0.1,
+   "bars": 2,
+   "speed": 0.95,
+   "z": [
+    1.06,
+    1.0
+   ],
+   "num": "02",
+   "num_y": 70,
+   "tin": "wipe",
+   "header": true,
+   "ttop": 945,
+   "band_y": 1060,
+   "text": "Can you maintain a comfortable, controlled position?",
+   "highlight": [
+    "controlled"
+   ],
+   "note": "Soft wipe. Relaxed, steady hang; slow pull-out."
+  },
+  {
+   "name": "Q3 One hand",
+   "src": "WHITE",
+   "ss": 1.7,
+   "bars": 2,
+   "speed": 0.8,
+   "z": [
+    1.12,
+    1.22
+   ],
+   "zc": [
+    620,
+    700
+   ],
+   "num": "03",
+   "num_y": 70,
+   "tin": "slide",
+   "header": true,
+   "ttop": 945,
+   "band_y": 1060,
+   "text": "Does one hand fatigue noticeably faster?",
+   "highlight": [
+    "one",
+    "hand"
+   ],
+   "note": "Push. Slow push-in toward the grip."
+  },
+  {
+   "name": "Q4 Endurance",
+   "src": "HANG_SR",
+   "ss": 13.7,
+   "bars": 2,
+   "z": [
+    1.12,
+    1.2
+   ],
+   "zc": [
+    560,
+    760
+   ],
+   "num": "04",
+   "num_y": 70,
+   "tin": "wipe",
+   "header": true,
+   "ttop": 945,
+   "band_y": 1060,
+   "text": "Is your endurance improving with consistent training?",
+   "highlight": [
+    "endurance"
+   ],
+   "note": "Soft wipe back to the long timed hang, tighter angle."
+  },
+  {
+   "name": "KEY MESSAGE",
+   "src": "HANG_SR",
+   "ss": 22.0,
+   "bars": 3,
+   "z": [
+    1.0,
+    1.1
+   ],
+   "zc": [
+    560,
+    820
+   ],
+   "tin": "dip",
+   "tdur": 22,
+   "ty": 1120,
+   "size": 84,
+   "reveal": 0.7,
+   "stagger": 0.16,
+   "box_beats": 6,
+   "text_delay": 0.25,
+   "text": "Maintaining strength and physical function helps support independence as you age.",
+   "highlight": [
+    "independence"
+   ],
+   "note": "Slow dip through navy. Lines rise in slowly; orange box on 'independence' lands on the next bar."
+  },
+  {
+   "name": "FINAL a",
+   "src": "HANG_SR",
+   "ss": 27.15,
+   "bars": 2,
+   "speed": 0.85,
+   "z": [
+    1.04,
+    1.0
+   ],
+   "tin": "dissolve",
+   "tdur": 14,
+   "ty": 1120,
+   "size": 88,
+   "reveal": 0.5,
+   "stagger": 0.12,
+   "text": "A dead hang is one small piece of the picture.",
+   "highlight": [
+    "small",
+    "piece"
+   ],
+   "note": "Dissolve. He finishes the hang and steps away."
+  },
+  {
+   "name": "FINAL b",
+   "src": "TUCK",
+   "ss": 0.0,
+   "bars": 2,
+   "speed": 0.9,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "slide",
+   "ty": 1390,
+   "size": 140,
+   "maxw": 1010,
+   "reveal": 0.45,
+   "stagger": 0.14,
+   "box_beats": 2,
+   "band_y": 1380,
+   "band_h": 560,
+   "band_s": 0.6,
+   "lh_k": 1.08,
+   "text": "Measure what matters.",
+   "highlight": [
+    "matters"
+   ],
+   "note": "Push to the 'MEASURE WHAT MATTERS' banner shot. Large type under the banner; orange box on 'MATTERS'."
+  },
+  {
+   "name": "END SLOT",
+   "kind": "end",
+   "src": null,
+   "bars": 2,
+   "tin": "dissolve",
+   "tdur": 20,
+   "fill": "navy",
+   "note": "Slow dissolve to clean navy. Logo space; client adds the logo manually."
+  }
+ ]
+}
