@@ -33,6 +33,14 @@ python3 scripts/render_reel.py plan.json out/render.mp4
 bash scripts/finalize.sh out/render.mp4 out/VexonMed_Mobility_Cognitive_Reel.mp4
 ```
 
+## Safe zone
+All text sits inside **x 90–960, y 270–1350**. That keeps it clear of the Instagram top bar, the caption/username
+area at the bottom and the Like/Comment/Share buttons on the right. Check any change with:
+
+```bash
+python3 scripts/render_reel.py plan.json x --audit
+```
+
 ## Renderer additions (on top of the skill's render_reel.py)
 - `"tin": "scan"`: an orange scan line wipes down to reveal the next shot (calm, no shake). Used for the four indicators.
 - `"tin": "fade"`: a soft dissolve, used into the end slot.

@@ -402,7 +402,7 @@ def render_frame(fi):
                 arr = arr * (1 - band(cy, 520, 0.55) * bf)
                 if ts.get('num'): numeral(layer, ts['num'], tl, a1 - a0, ts.get('num_y', 150))
                 n = len(ts['_words']); size = ts.get('size', 92 if n <= 9 else (80 if n <= 14 else 70))
-                text_block(layer, ts['_words'], tl, a1 - a0, cy, size, ts.get('maxw', 940), ts['box_beats'] * BEAT if 'box_beats' in ts else min(2 * BEAT, 0.3 * (a1 - a0)))
+                text_block(layer, ts['_words'], tl, a1 - a0, cy, size, ts.get('maxw', P.get('text_maxw', 940)), ts['box_beats'] * BEAT if 'box_beats' in ts else min(2 * BEAT, 0.3 * (a1 - a0)))
         if s.get('fx'): callout(layer, s['fx'], lt, s['dur'], z)
         sh = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         sh.putalpha(layer.getchannel('A').filter(ImageFilter.GaussianBlur(12)).point(lambda v: min(255, int(v * 1.2))))
@@ -422,6 +422,27 @@ def render_frame(fi):
     return np.clip(arr, 0, 255).astype(np.uint8)
 
 # ---------------------------------------------------------------- main
+if '--audit' in sys.argv:
+    # Print each text block's bounding box in output pixels, so it can be checked against the IG safe zone.
+    def lines_of(words, size, maxw):
+        fnt = font('title', size); txt = [(w.upper(), h) for w, h in words]
+        n0 = len(layout(txt, fnt, maxw)); mw = maxw
+        while mw > 300 and len(layout(txt, fnt, mw - 10)) == n0: mw -= 10
+        return fnt, layout(txt, fnt, mw)
+    for s in SHOTS:
+        if s['kind'] == 'title':
+            for wd in s['title_words']:
+                f = font('title', wd['size']); tw = f.getlength(wd['text']); bb = f.getbbox(wd['text'])
+                print(f"{s['name'][:22]:<22} x {(W-tw)/2:5.0f}-{(W+tw)/2:5.0f}  y {wd['y']-wd['size']*0.75+bb[1]:5.0f}-{wd['y']-wd['size']*0.75+bb[3]:5.0f}  {wd['text']}")
+        elif s['kind'] in ('line', 'cta'):
+            cta = s['kind'] == 'cta'; n = len(s['_words'])
+            size = s.get('size', 96 if cta else (92 if n <= 9 else (80 if n <= 14 else 70)))
+            maxw = 900 if cta else s.get('maxw', P.get('text_maxw', 940)); cy = s.get('ty', 900 if cta else 1130)
+            fnt, ls = lines_of(s['_words'], size, maxw); sp = fnt.getlength(' ')
+            lh = int(size * 1.12); y0 = cy - lh * len(ls) / 2
+            wmax = max(sum(fnt.getlength(w) for w, _ in l) + sp * (len(l) - 1) for l in ls)
+            print(f"{s['name'][:22]:<22} x {(W-wmax)/2-12:5.0f}-{(W+wmax)/2+12:5.0f}  y {y0:5.0f}-{y0+lh*len(ls):5.0f}  " + ' / '.join(' '.join(w for w, _ in l) for l in ls))
+    sys.exit()
 if STILLS:
     for ts_ in STILLS:
         Image.fromarray(render_frame(int(round(ts_ * FPS)))).save(f'{OUT}_{ts_:05.2f}.png')
