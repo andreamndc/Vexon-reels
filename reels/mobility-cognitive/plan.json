@@ -1,0 +1,376 @@
+{
+ "_comment": "VEXON Med · Mobility isn't just muscle. Built on the vexon-reel-editor skill (house style v6). Raw clips go in footage/ (not committed).",
+ "title": "VEXON · Mobility isn't just muscle · Storyboard",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 95,
+ "music_note": "Cut to 'Salgo Pa' la Calle' (Daddy Yankee) ~95 BPM. Exported silent; add the sound in-app on a downbeat.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "card_border": false
+ },
+ "sources": {
+  "TAB": "footage/1101.mp4",
+  "COACH": "footage/IMG_0047.MP4",
+  "VR": "footage/IMG_0043.MP4",
+  "COG": "footage/IMG_0038.MP4"
+ },
+ "shots": [
+  {
+   "name": "HOOK · muscle",
+   "kind": "title",
+   "src": "COACH",
+   "ss": 2.3,
+   "beats": 3,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "bright": -0.08,
+   "tin": "cut",
+   "text_span": 2,
+   "band_y": 860,
+   "note": "Physical first: coach-guided rotation. Slam/flicker title. MUSCLE in cream, COGNITIVE in orange.",
+   "title_words": [
+    {
+     "text": "MOBILITY ISN’T",
+     "beat": 0,
+     "size": 112,
+     "y": 560,
+     "color": "cream"
+    },
+    {
+     "text": "JUST MUSCLE.",
+     "beat": 1,
+     "size": 150,
+     "y": 705,
+     "color": "cream"
+    },
+    {
+     "text": "IT’S",
+     "beat": 3,
+     "size": 96,
+     "y": 870,
+     "color": "cream"
+    },
+    {
+     "text": "COGNITIVE,",
+     "beat": 3.5,
+     "size": 200,
+     "y": 1020,
+     "color": "orange"
+    },
+    {
+     "text": "TOO.",
+     "beat": 4.25,
+     "size": 120,
+     "y": 1190,
+     "color": "cream"
+    }
+   ]
+  },
+  {
+   "name": "HOOK · cognitive",
+   "kind": "plain",
+   "src": "TAB",
+   "ss": 2.2,
+   "beats": 3,
+   "z": [
+    1.06,
+    1.14
+   ],
+   "bright": -0.08,
+   "tin": "whip",
+   "cont": true,
+   "note": "Whip pan into the reaction-test tablet as IT'S COGNITIVE, TOO lands."
+  },
+  {
+   "name": "Problem",
+   "src": "COACH",
+   "ss": 4.6,
+   "beats": 4,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "flash",
+   "ty": 1180,
+   "text": "Most longevity-focused organizations strictly focus on the body.",
+   "highlight": [
+    "body"
+   ],
+   "note": "Flash in. Physical assessment, coach-guided overhead reach. Clean editorial line."
+  },
+  {
+   "name": "Science 1",
+   "src": "COG",
+   "ss": 1.0,
+   "beats": 3,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "cutout",
+   "ty": 520,
+   "text": "But how well you move also involves",
+   "highlight": [
+    "move"
+   ],
+   "note": "Cutout reveal into the cognitive test station. Text up top, screen stays clear."
+  },
+  {
+   "name": "Science 2",
+   "src": "COG",
+   "ss": 9.0,
+   "beats": 3,
+   "z": [
+    1.12,
+    1.2
+   ],
+   "cx": 0.75,
+   "cy": 0.45,
+   "tin": "whip",
+   "ty": 1300,
+   "text": "how your brain processes information,",
+   "highlight": [
+    "brain"
+   ],
+   "fx": {
+    "kind": "neural",
+    "box": [
+     150,
+     400,
+     950,
+     820
+    ],
+    "n": 11,
+    "seed": 4
+   },
+   "note": "Whip to a tighter angle. Subtle node network draws in with pulses travelling along the links."
+  },
+  {
+   "name": "Science 3",
+   "src": "VR",
+   "ss": 0.3,
+   "beats": 3.5,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "cutout",
+   "ty": 1300,
+   "text": "coordinates movement, and responds to your environment.",
+   "highlight": [
+    "coordinates",
+    "environment"
+   ],
+   "note": "VR coordination drill with the coach. Cutout reveal."
+  },
+  {
+   "name": "01 Reaction",
+   "src": "TAB",
+   "ss": 0.1,
+   "beats": 1.5,
+   "z": [
+    1.05,
+    1.12
+   ],
+   "tin": "scan",
+   "ty": 1200,
+   "size": 130,
+   "num": "01",
+   "num_y": 330,
+   "box_beats": 0.35,
+   "text": "Reaction time.",
+   "highlight": [
+    "reaction"
+   ],
+   "note": "Orange scan-line wipe. Lights-out reaction test. One indicator per cut."
+  },
+  {
+   "name": "02 Processing",
+   "src": "COG",
+   "ss": 24.8,
+   "beats": 1.5,
+   "z": [
+    1.15,
+    1.2
+   ],
+   "cx": 0.8,
+   "cy": 0.45,
+   "tin": "scan",
+   "ty": 1300,
+   "size": 130,
+   "num": "02",
+   "num_y": 330,
+   "box_beats": 0.35,
+   "text": "Processing speed.",
+   "highlight": [
+    "processing"
+   ],
+   "note": "Scan wipe. Tapping the colour targets."
+  },
+  {
+   "name": "03 Attention",
+   "src": "TAB",
+   "ss": 5.0,
+   "beats": 1.5,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "cx": 0.5,
+   "tin": "scan",
+   "ty": 1300,
+   "size": 130,
+   "num": "03",
+   "num_y": 330,
+   "box_beats": 0.35,
+   "text": "Attention.",
+   "highlight": [
+    "attention"
+   ],
+   "note": "Scan wipe. Focused VR task, profile."
+  },
+  {
+   "name": "04 Cognitive",
+   "src": "VR",
+   "ss": 2.9,
+   "beats": 1.5,
+   "z": [
+    1.04,
+    1.1
+   ],
+   "tin": "scan",
+   "ty": 1300,
+   "size": 120,
+   "num": "04",
+   "num_y": 330,
+   "box_beats": 0.35,
+   "text": "Cognitive performance.",
+   "highlight": [
+    "cognitive"
+   ],
+   "note": "Scan wipe. VR cognitive drill."
+  },
+  {
+   "name": "Signals",
+   "src": "COG",
+   "ss": 30.0,
+   "beats": 3,
+   "z": [
+    1.0,
+    1.1
+   ],
+   "tin": "flash",
+   "ty": 1250,
+   "size": 128,
+   "box_beats": 0.75,
+   "text": "These signals matter, too.",
+   "highlight": [
+    "matter"
+   ],
+   "note": "Emphasis: white flash, bigger type, push-in on the test station."
+  },
+  {
+   "name": "Physical & beyond",
+   "src": "COACH",
+   "ss": 0.0,
+   "beats": 3,
+   "z": [
+    1.1,
+    1.0
+   ],
+   "tin": "cutout",
+   "ty": 1200,
+   "size": 104,
+   "text": "We look at the physical and beyond.",
+   "highlight": [
+    "beyond"
+   ],
+   "note": "Cutout reveal. Wider coach-guided assessment, slow pull-out."
+  },
+  {
+   "name": "Neurocognitive",
+   "src": "COG",
+   "ss": 14.0,
+   "beats": 2.5,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "whip",
+   "ty": 520,
+   "box_beats": 0.6,
+   "text": "We incorporate neurocognitive testing",
+   "highlight": [
+    "neurocognitive"
+   ],
+   "fx": {
+    "kind": "brackets",
+    "box": [
+     430,
+     880,
+     1060,
+     1380
+    ],
+    "tag": "NEUROCOGNITIVE TEST"
+   },
+   "note": "Whip. Brackets lock onto the test screen; tag names the test."
+  },
+  {
+   "name": "Comprehensive view",
+   "src": "TAB",
+   "ss": 6.3,
+   "beats": 4.5,
+   "z": [
+    1.12,
+    1.0
+   ],
+   "tin": "cut",
+   "ty": 1250,
+   "text": "into a more comprehensive view of performance and longevity.",
+   "highlight": [
+    "performance",
+    "longevity"
+   ],
+   "note": "Straight cut, pull-out: the coach in frame with the VR test. The bigger picture.",
+   "speed": 0.8
+  },
+  {
+   "name": "CTA",
+   "kind": "cta",
+   "src": "COG",
+   "ss": 35.5,
+   "beats": 5.5,
+   "z": [
+    1.1,
+    1.0
+   ],
+   "bright": -0.12,
+   "speed": 0.8,
+   "tin": "punch",
+   "size": 100,
+   "text": "Book a performance and longevity assessment with Vexon Med. Link in bio.",
+   "highlight": [
+    "assessment",
+    "bio"
+   ],
+   "note": "Zoom punch, 0.8x slow-mo. No arrow."
+  },
+  {
+   "name": "END SLOT",
+   "kind": "end",
+   "src": null,
+   "beats": 2.5,
+   "tin": "fade",
+   "fill": "navy",
+   "note": "Fades to a clean navy slot; client adds the official logo."
+  }
+ ]
+}
