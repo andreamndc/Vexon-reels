@@ -114,8 +114,6 @@
     1.0,
     1.05
    ],
-   "num": "01",
-   "num_y": 70,
    "tin": "slide",
    "header": true,
    "ttop": 945,
@@ -137,8 +135,6 @@
     1.06,
     1.0
    ],
-   "num": "02",
-   "num_y": 70,
    "tin": "wipe",
    "header": true,
    "ttop": 945,
@@ -163,8 +159,6 @@
     620,
     700
    ],
-   "num": "03",
-   "num_y": 70,
    "tin": "slide",
    "header": true,
    "ttop": 945,
@@ -189,8 +183,6 @@
     560,
     760
    ],
-   "num": "04",
-   "num_y": 70,
    "tin": "wipe",
    "header": true,
    "ttop": 945,
