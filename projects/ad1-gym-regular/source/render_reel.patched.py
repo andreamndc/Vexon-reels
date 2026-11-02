@@ -10,7 +10,7 @@ See SKILL.md and examples/*.plan.json for the plan format.
 """
 import json, math, os, random, subprocess, sys
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SKILL = os.path.dirname(HERE)
@@ -43,6 +43,13 @@ SERIF = P.get('serif_font', '/usr/share/fonts/truetype/liberation/LiberationSeri
 
 LOOK = {'grade': True, 'grain': True, 'beat_pulse': True, 'card_border': False}
 LOOK.update(P.get('look', {}))
+
+# Instagram/Meta Reels-ad safe zone for text (x0, y0, x1, y1): 6% sides, 14% top, 35% bottom kept clear
+# of the app UI (profile, caption, CTA button, like/comment/share column). Text is auto-fitted inside it.
+SAFE = P.get('safe_zone', [65, 270, 1015, 1250])
+SX0, SY0, SX1, SY1 = SAFE; SAFE_W = SX1 - SX0; SAFE_H = SY1 - SY0
+VIOLATIONS = []
+SAFE_MASK = Image.new('L', (W, H), 0); ImageDraw.Draw(SAFE_MASK).rectangle((SX0, SY0, SX1 - 1, SY1 - 1), fill=255)
 
 def src_path(key):
     if key is None: return None
@@ -196,12 +203,18 @@ def layout(words, fnt, maxw):
 def text_block(layer, words, lt, span, cy, size, maxw, box_at):
     """Uppercase kinetic text: lines mask-wipe up; key words get an orange box wiping in behind them
     (trailing punctuation stays outside the box); lines are balanced so no word is left alone."""
-    fnt = font('title', size)
     txt = [(w.upper(), h) for w, h in words]
-    n0 = len(layout(txt, fnt, maxw)); mw = maxw
-    while mw > 300 and len(layout(txt, fnt, mw - 10)) == n0: mw -= 10
-    lines = layout(txt, fnt, mw)
-    lh = int(size * 1.12); total = lh * len(lines); y0 = cy - total / 2
+    maxw = min(maxw, SAFE_W - 2 * 20)  # keep text + orange box padding inside the safe zone
+    while True:  # shrink until every word fits the safe width and the block fits the safe height
+        fnt = font('title', size)
+        if size > 40 and max(fnt.getlength(w) for w, _ in txt) > maxw: size -= 4; continue
+        n0 = len(layout(txt, fnt, maxw)); mw = maxw
+        while mw > 300 and len(layout(txt, fnt, mw - 10)) == n0: mw -= 10
+        lines = layout(txt, fnt, mw)
+        lh = int(size * 1.12); total = lh * len(lines)
+        if size > 40 and total + 40 > SAFE_H: size -= 4; continue
+        break
+    y0 = min(max(cy - total / 2, SY0 + 20), SY1 - 20 - total)
     sp = fnt.getlength(' ')
     out_r = ease((lt - (span - 5 / FPS)) / (5 / FPS))
     for li, line in enumerate(lines):
@@ -289,9 +302,13 @@ def hook_title(layer, words, lt, span):
         if uo >= 1: continue
         fi = int(bt * FPS)
         kind = FLICK[(fi // 2) % len(FLICK)] if fi < 8 else 'title'
-        sz = int(wd['size'] * (1.0 if kind == 'title' else 0.82))
+        base = wd['size']
+        while base > 40 and font('title', base).getlength(wd['text']) > SAFE_W - 40: base -= 2
+        sz = int(base * (1.0 if kind == 'title' else 0.82))
         f = font(kind, sz); tw = f.getlength(wd['text'])
+        while sz > 30 and tw > SAFE_W - 60: sz -= 2; f = font(kind, sz); tw = f.getlength(wd['text'])  # flicker fonts too
         sc = 1 + 0.6 * (1 - ease(bt / 0.16))
+        sc = min(sc, max(1.0, (SAFE_W - 40) / max(1, tw)))  # slam-in never pushes past the safe zone
         c = Image.new('RGBA', (int(tw + 40), int(sz * 1.5)), (0, 0, 0, 0))
         ImageDraw.Draw(c).text((20, 0), wd['text'], font=f, fill=color(wd.get('color', 'cream')) + (int(255 * clamp(bt / 0.08) * (1 - out) * (1 - uo)),))
         if sc > 1.01: c = c.resize((int(c.width * sc), int(c.height * sc)), Image.BICUBIC)
@@ -402,6 +419,9 @@ def render_frame(fi):
                 if ts.get('num'): numeral(layer, ts['num'], tl, a1 - a0, ts.get('num_y', 150))
                 n = len(ts['_words']); size = ts.get('size', 92 if n <= 9 else (80 if n <= 14 else 70))
                 text_block(layer, ts['_words'], tl, a1 - a0, cy, size, 940, ts.get('box_at', 2 * BEAT))
+        layer.putalpha(ImageChops.multiply(layer.getchannel('A'), SAFE_MASK))  # line wipes stop at the safe-zone edge
+        bb = layer.getchannel('A').point(lambda v: 255 if v > 24 else 0).getbbox()
+        if bb and (bb[0] < SX0 or bb[1] < SY0 or bb[2] > SX1 or bb[3] > SY1): VIOLATIONS.append((round(t, 2), bb))
         if s.get('fx'): callout(layer, s['fx'], lt, s['dur'], z)
         sh = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         sh.putalpha(layer.getchannel('A').filter(ImageFilter.GaussianBlur(12)).point(lambda v: min(255, int(v * 1.2))))
@@ -423,9 +443,12 @@ def render_frame(fi):
 # ---------------------------------------------------------------- main
 if STILLS:
     for ts_ in STILLS:
-        Image.fromarray(render_frame(int(round(ts_ * FPS)))).save(f'{OUT}_{ts_:05.2f}.png')
+        im_ = Image.fromarray(render_frame(int(round(ts_ * FPS))))
+        if '--guides' in sys.argv: ImageDraw.Draw(im_).rectangle(SAFE, outline=(0, 255, 120), width=4)
+        im_.save(f'{OUT}_{ts_:05.2f}.png')
         for r in readers:
             if r: r.p = None
+    print(f'safe-zone text violations: {len(VIOLATIONS)}', VIOLATIONS[:10])
     sys.exit()
 
 print(f'timeline {TOTAL:.2f}s @ {BPM} BPM')
@@ -437,4 +460,5 @@ enc = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_f
 for fi in range(NF):
     enc.stdin.write(render_frame(fi).tobytes())
     if fi % 90 == 0: print(f'{fi / FPS:.1f}s', flush=True)
-enc.stdin.close(); enc.wait(); print('done', OUT)
+enc.stdin.close(); enc.wait()
+print(f'safe-zone text violations: {len(VIOLATIONS)}', VIOLATIONS[:10]); print('done', OUT)
