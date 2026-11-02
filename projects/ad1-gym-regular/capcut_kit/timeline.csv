@@ -1,33 +1,33 @@
 track,start,end,file,transition_in,animation_in,animation_out,notes
-VIDEO,00:00.00 (frame 0),00:03.03 (frame 91),clips/01_hook_boxing.mp4,-,-,-,One continuous take; speed ramp and the punch-in at 1.92 s are already in the clip
-VIDEO,00:03.03 (frame 91),00:04.83 (frame 145),clips/02_problem_rowing.mp4,White flash (0.2s) — on the drop,-,-,
-VIDEO,00:04.83 (frame 145),00:07.03 (frame 211),clips/03_problem_outdoor_push.mp4,Zoom in / pull in with blur (0.2s),-,-,
-VIDEO,00:07.03 (frame 211),00:07.73 (frame 232),clips/04_strength_grip.mp4,Hard cut + Shake effect 0.2s,-,-,
-VIDEO,00:07.73 (frame 232),00:08.83 (frame 265),clips/05_cardio_vo2_bike.mp4,Whip pan left (0.25s),-,-,
-VIDEO,00:08.83 (frame 265),00:09.93 (frame 298),clips/06_mobility_squat.mp4,Torn paper / rip (0.3s),-,-,
-VIDEO,00:09.93 (frame 298),00:10.67 (frame 320),clips/07_balance_force_plate.mp4,Whip pan down (0.25s),-,-,
-VIDEO,00:10.67 (frame 320),00:11.73 (frame 352),clips/08_reaction_tablet.mp4,Zoom in / pull in with blur (0.2s),-,-,
-VIDEO,00:11.73 (frame 352),00:13.57 (frame 407),clips/09_question_body_scan.mp4,Zoom in punch (0.2s),-,-,
-VIDEO,00:13.57 (frame 407),00:15.73 (frame 472),clips/10_solution_body_comp.mp4,White flash (0.2s),-,-,
-VIDEO,00:15.73 (frame 472),00:17.57 (frame 527),clips/11_solution_results_screen.mp4,Slide down / blinds (0.3s),-,-,
-VIDEO,00:17.57 (frame 527),00:19.40 (frame 582),clips/12_logo_slot_navy_0b1525.png,Dissolve / mix (0.5s),-,-,Blank: add the official logo here
+VIDEO,00:00.00 (frame 0),00:03.03 (frame 91),clips/01_hook.mp4,-,-,-,"One boxing take, one sentence. Lines slam in on the song's intro hits (0.10 / 0.46 / 0.83 / 1.19 s); punch-in on the bar at 1.92 s; cut on the drop at 3.01 s."
+VIDEO,00:03.03 (frame 91),00:04.83 (frame 145),clips/02_problem_a.mp4,White flash (0.2s),-,-,White flash on the drop (3.01 s). Rowing stroke.
+VIDEO,00:04.83 (frame 145),00:05.93 (frame 178),clips/03_problem_b.mp4,Zoom in / pull in with blur (0.2s),-,-,Zoom-blur push on the bar downbeat (4.83 s). Line holds to 5.92 s.
+VIDEO,00:05.93 (frame 178),00:06.47 (frame 194),clips/04_strength.mp4,Hard cut + Shake effect 0.2s,-,-,Hard hit on the accent (5.92 s). Brackets snap onto the grip device.
+VIDEO,00:06.47 (frame 194),00:07.20 (frame 216),clips/05_cardio.mp4,Whip pan left (0.25s),-,-,Whip on 6.46 s. Rings from the VO2 mask.
+VIDEO,00:07.20 (frame 216),00:07.73 (frame 232),clips/06_mobility.mp4,Hard cut + Shake effect 0.2s,-,-,Hard hit on 7.19 s. Speed ramp into the squat.
+VIDEO,00:07.73 (frame 232),00:08.30 (frame 249),clips/07_balance.mp4,Whip pan down (0.25s),-,-,Vertical whip on the bar downbeat (7.73 s) to the feet on the force plate.
+VIDEO,00:08.30 (frame 249),00:08.83 (frame 265),clips/08_reaction.mp4,Zoom in / pull in with blur (0.2s),-,-,Zoom-blur on 8.28 s.
+VIDEO,00:08.83 (frame 265),00:10.30 (frame 309),clips/09_question.mp4,Zoom in punch (0.2s),-,-,Zoom punch on the accent (8.82 s) into the 3D body scan.
+VIDEO,00:10.30 (frame 309),00:11.73 (frame 352),clips/10_solution_a.mp4,White flash (0.2s),-,-,Flash on 10.28 s. Body-composition assessment.
+VIDEO,00:11.73 (frame 352),00:12.83 (frame 385),clips/11_solution_b.mp4,Slide down / blinds (0.3s),-,-,Panel drop on the accent (11.73 s) to the results screen.
+VIDEO,00:12.83 (frame 385),00:14.23 (frame 427),clips/12_logo_slot_navy_0b1525.png,Dissolve / mix (0.4s),-,-,Fade to navy on the accent (12.82 s); ends at 14.23 s with the music. Client adds the logo.
 OVERLAY,00:00.00 (frame 0),00:03.03 (frame 91),layers/hook_0_band.png,-,Fade in 0.25s,Fade out 0.13s,Soft dark band behind the hook
-OVERLAY,00:00.10 (frame 3),00:03.03 (frame 91),layers/hook_1_I_CANT_BELIEVE.png,-,Zoom out (shrink) 0.2s,Fade out 0.13s,Lands on a song hit
+OVERLAY,00:00.10 (frame 3),00:03.03 (frame 91),layers/hook_1_I_CAN_T_BELIEVE.png,-,Zoom out (shrink) 0.2s,Fade out 0.13s,Lands on a song hit
 OVERLAY,00:00.47 (frame 14),00:03.03 (frame 91),layers/hook_2_I_SCORED_AS_LOW.png,-,Zoom out (shrink) 0.2s,Fade out 0.13s,Lands on a song hit
 OVERLAY,00:00.83 (frame 25),00:03.03 (frame 91),layers/hook_3_AS_I_DID_AS_A.png,-,Zoom out (shrink) 0.2s,Fade out 0.13s,Lands on a song hit
 OVERLAY,00:01.20 (frame 36),00:03.03 (frame 91),layers/hook_4_GYM_REGULAR.png,-,Zoom out (shrink) 0.2s,Fade out 0.13s,Lands on a song hit
-OVERLAY,00:03.03 (frame 91),00:03.77 (frame 113),layers/text_01_problem_plain.png,-,Wipe / slide up 0.35s,-,
-OVERLAY,00:03.77 (frame 113),00:07.03 (frame 211),layers/text_02_problem_boxed.png,-,-,Fade out 0.17s,Orange boxes appear here
-OVERLAY,00:07.03 (frame 211),00:07.73 (frame 232),layers/text_03_strength.png,-,Slide up 0.25s,Fade out 0.15s,
-OVERLAY,00:07.13 (frame 214),00:07.73 (frame 232),layers/fx_strength_brackets.png,-,Zoom out (shrink) 0.3s,Fade out 0.15s,
-OVERLAY,00:07.73 (frame 232),00:08.83 (frame 265),layers/text_04_cardio.png,-,Slide up 0.3s,Fade out 0.15s,
-OVERLAY,00:07.93 (frame 238),00:08.83 (frame 265),layers/fx_cardio_rings.png,-,Zoom in 0.3s,Fade out 0.15s,Optional loop: Pulse
-OVERLAY,00:08.83 (frame 265),00:09.93 (frame 298),layers/text_05_mobility.png,-,Slide up 0.3s,Fade out 0.15s,
-OVERLAY,00:09.93 (frame 298),00:10.67 (frame 320),layers/text_06_balance.png,-,Slide up 0.25s,Fade out 0.15s,
-OVERLAY,00:10.67 (frame 320),00:11.73 (frame 352),layers/text_07_reaction.png,-,Slide up 0.3s,Fade out 0.15s,
-OVERLAY,00:11.73 (frame 352),00:12.20 (frame 366),layers/text_08_question_plain.png,-,Wipe / slide up 0.4s,-,
-OVERLAY,00:12.20 (frame 366),00:13.57 (frame 407),layers/text_09_question_boxed.png,-,-,Fade out 0.17s,Orange box on MEASURE UP
-OVERLAY,00:13.57 (frame 407),00:14.47 (frame 434),layers/text_10_solution_plain.png,-,Wipe / slide up 0.4s,-,
-OVERLAY,00:14.47 (frame 434),00:17.57 (frame 527),layers/text_11_solution_boxed.png,-,-,Fade out 0.17s,Orange box on BEYOND APPEARANCES
-OVERLAY,00:16.03 (frame 481),00:17.57 (frame 527),layers/fx_solution_scan_brackets.png,-,Zoom out (shrink) 0.3s,Fade out 0.15s,
-AUDIO,00:00.00 (frame 0),00:19.40 (frame 582),“Baboon” – Rj Pasin (add in CapCut/TikTok/IG),-,-,Fade out at end,Start the song exactly where the reference TikTok starts it; the drop must land at 00:03.01
+OVERLAY,00:03.03 (frame 91),00:03.77 (frame 113),layers/text_problem_a_plain.png,-,Wipe / slide up 0.32s,-,
+OVERLAY,00:03.77 (frame 113),00:05.93 (frame 178),layers/text_problem_a_boxed.png,-,-,Fade out 0.17s,Orange box(es) appear here
+OVERLAY,00:05.93 (frame 178),00:06.47 (frame 194),layers/text_strength.png,-,Slide up 0.14s,Fade out 0.10s,
+OVERLAY,00:06.00 (frame 180),00:06.47 (frame 194),layers/fx_strength_brackets.png,-,Zoom out (shrink) 0.3s,Fade out 0.15s,
+OVERLAY,00:06.47 (frame 194),00:07.20 (frame 216),layers/text_cardio.png,-,Slide up 0.14s,Fade out 0.10s,
+OVERLAY,00:06.57 (frame 197),00:07.20 (frame 216),layers/fx_cardio_rings.png,-,Zoom in 0.3s (optional loop: Pulse),Fade out 0.15s,
+OVERLAY,00:07.20 (frame 216),00:07.73 (frame 232),layers/text_mobility.png,-,Slide up 0.14s,Fade out 0.10s,
+OVERLAY,00:07.73 (frame 232),00:08.30 (frame 249),layers/text_balance.png,-,Slide up 0.14s,Fade out 0.10s,
+OVERLAY,00:08.30 (frame 249),00:08.83 (frame 265),layers/text_reaction.png,-,Slide up 0.14s,Fade out 0.10s,
+OVERLAY,00:08.83 (frame 265),00:09.23 (frame 277),layers/text_question_plain.png,-,Wipe / slide up 0.32s,-,
+OVERLAY,00:09.23 (frame 277),00:10.30 (frame 309),layers/text_question_boxed.png,-,-,Fade out 0.17s,Orange box(es) appear here
+OVERLAY,00:10.30 (frame 309),00:11.00 (frame 330),layers/text_solution_a_plain.png,-,Wipe / slide up 0.32s,-,
+OVERLAY,00:11.00 (frame 330),00:12.83 (frame 385),layers/text_solution_a_boxed.png,-,-,Fade out 0.17s,Orange box(es) appear here
+OVERLAY,00:11.90 (frame 357),00:12.83 (frame 385),layers/fx_solution_b_scan.png,-,Zoom out (shrink) 0.3s,Fade out 0.15s,
+AUDIO,00:00.00 (frame 0),00:14.23 (frame 427),“Baboon” – Rj Pasin (add in CapCut / TikTok / Instagram; drop on 00:03.01),-,-,-,"Cut to “Baboon” (Rj Pasin) as used in the reference TikTok: 165 BPM, 3+3+2 accents, drop at 3.007 s. 14.23 s. Exported silent."

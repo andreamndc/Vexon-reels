@@ -204,7 +204,7 @@ def layout(words, fnt, maxw):
     if cur: lines.append(cur)
     return lines
 
-def text_block(layer, words, lt, span, cy, size, maxw, box_at):
+def text_block(layer, words, lt, span, cy, size, maxw, box_at, t_in=0.32, out_f=5):
     """Uppercase kinetic text: lines mask-wipe up; key words get an orange box wiping in behind them
     (trailing punctuation stays outside the box); lines are balanced so no word is left alone."""
     txt = [(w.upper(), h) for w, h in words]
@@ -220,14 +220,14 @@ def text_block(layer, words, lt, span, cy, size, maxw, box_at):
         break
     y0 = min(max(cy - total / 2, SY0 + 20), SY1 - 20 - total)
     sp = fnt.getlength(' ')
-    out_r = ease((lt - (span - 5 / FPS)) / (5 / FPS))
+    out_r = ease((lt - (span - out_f / FPS)) / (out_f / FPS))
     for li, line in enumerate(lines):
         lw = sum(fnt.getlength(w) for w, _ in line) + sp * (len(line) - 1)
         x = (W - lw) / 2; ly = y0 + li * lh
-        r = ease((lt - li * 0.07) / 0.32)
+        r = ease((lt - li * 0.07 * t_in / 0.32) / t_in)
         if r <= 0: continue
         CH = int(size * 1.5); lc = Image.new('RGBA', (W, CH), (0, 0, 0, 0)); ld = ImageDraw.Draw(lc)
-        off = max((1 - r) * (lh + 10) - out_r * (lh + 10), -(lh + 10))
+        off = max((1 - r) * (lh + 10) - out_r * CH, -CH)  # wipe fully out of the line mask (no box sliver left)
         bx = x
         for w, hl in line:
             ww = fnt.getlength(w)
@@ -241,6 +241,7 @@ def text_block(layer, words, lt, span, cy, size, maxw, box_at):
                 m = Image.new('L', lc.size, 0); ImageDraw.Draw(m).rectangle((bx - 12, 0, bx - 12 + (bw + 24) * br, CH), fill=255)
                 lc.paste(nv, (0, 0), Image.composite(nv, Image.new('RGBA', lc.size, (0, 0, 0, 0)), m).getchannel('A'))
             bx += ww + sp
+        if out_r > 0: lc.putalpha(lc.getchannel('A').point(lambda v: int(v * (1 - out_r) ** 2)))  # fade as it wipes out
         sh = Image.new('RGBA', lc.size, (0, 0, 0, 0)); sh.paste(lc, (0, int(off)))
         layer.alpha_composite(sh, (0, int(ly - 6)))
     return y0, total
@@ -421,13 +422,13 @@ def render_frame(fi):
             elif ts['kind'] == 'cta':
                 cy = ts.get('ty', 900)
                 arr = arr * (1 - band(cy + 50, 600, 0.55) * bf) if LAYER not in ('fx', 'nob') else arr
-                text_block(layer, ts['_words'], tl, a1 - a0, cy, ts.get('size', 96), 900, ts.get('box_at', BEAT))
+                text_block(layer, ts['_words'], tl, a1 - a0, cy, ts.get('size', 96), 900, ts.get('box_at', BEAT), ts.get('text_in', 0.32), ts.get('text_out_f', 5))
             else:
                 cy = ts.get('ty', 1130)
                 arr = arr * (1 - band(cy, 520, 0.55) * bf) if LAYER not in ('fx', 'nob') else arr
                 if ts.get('num'): numeral(layer, ts['num'], tl, a1 - a0, ts.get('num_y', 150))
                 n = len(ts['_words']); size = ts.get('size', 92 if n <= 9 else (80 if n <= 14 else 70))
-                text_block(layer, ts['_words'], tl, a1 - a0, cy, size, 940, ts.get('box_at', 2 * BEAT))
+                text_block(layer, ts['_words'], tl, a1 - a0, cy, size, 940, ts.get('box_at', 2 * BEAT), ts.get('text_in', 0.32), ts.get('text_out_f', 5))
         layer.putalpha(ImageChops.multiply(layer.getchannel('A'), SAFE_MASK))  # line wipes stop at the safe-zone edge
         bb = layer.getchannel('A').point(lambda v: 255 if v > 24 else 0).getbbox()
         if bb and (bb[0] < SX0 or bb[1] < SY0 or bb[2] > SX1 or bb[3] > SY1): VIOLATIONS.append((round(t, 2), bb))

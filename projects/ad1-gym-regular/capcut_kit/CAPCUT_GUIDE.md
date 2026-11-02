@@ -9,7 +9,7 @@ The edit is cut to that track's beat grid:
 - **Accents:** each bar is 2.9085 s, with accents in a 3+3+2 pattern.
 - **Drop:** the main drop is at **00:03.01**.
 
-Every cut lands on an accent: 3.01, 4.83, 7.01, 7.73, 8.82, 9.91, 10.64, 11.73, 13.55, 15.73 and 17.55 s. The ad ends on the bar line at 19.37 s.
+The ad is **14.23 s** long to fit the music. Cuts land on the song's accents and 8th-note pulses: 3.01 (drop), 4.83, 5.92, 6.46, 7.19, 7.73, 8.28, 8.82, 10.28, 11.73 and 12.82 s, and it ends at 14.23 s.
 
 The song is **not included**; it's copyrighted. Add it in CapCut, TikTok or Instagram, and start it at the same point the reference TikTok does (its first hit at about 0.1 s and the drop at 3.01 s). The quickest way on TikTok is *Use this sound* on the reference video. Check that the drop hits exactly on the cut from boxing to rowing.
 
@@ -22,14 +22,15 @@ The song is **not included**; it's copyrighted. Add it in CapCut, TikTok or Inst
 
 ## Build it in CapCut (about 15 minutes)
 1. **New project, ratio 9:16, 30 fps.** Set the canvas background to navy `#0b1525`.
-2. **Main track:** import `clips/01` to `clips/11` and the navy PNG (`12`), in order. Set the PNG's length to 1.83 s (55 frames).
+2. **Main track:** import `clips/01` to `clips/11` and the navy PNG (`12`), in order. Set the PNG's length to 1.40 s (42 frames), so the timeline ends at 14.23 s.
 3. **Music:** add "Baboon" from 0:00, aligned as above.
 4. **Overlays:** for each `layers/*.png`, use *Overlay → Add overlay*. Set it to fill the canvas (already 1080×1920) and place it at the times in `timeline.csv`. Positions are baked in.
-5. **Hook (one sentence):** the four hook lines build the sentence on the song's intro hits (0.10, 0.46, 0.83 and 1.19 s). All four stay on screen together until the drop at 3.01 s. Use a quick zoom-out "slam" in-animation (about 0.2 s).
+5. **Hook (one sentence):** the four hook lines build the sentence on the song's intro hits (0.10, 0.47, 0.83 and 1.20 s). All four stay on screen together until the drop at 3.01 s. Use a quick zoom-out "slam" in-animation (about 0.2 s).
 6. **Other overlays:** set the *In* and *Out* animations from `timeline.csv`. If a CapCut preset name differs in your version, pick the closest one.
 7. **Transitions:** keep them short (≤0.3 s). CapCut overlaps clips during transitions, so re-check that every cut still sits on the beat.
-   - For the strength cut (7.01 s), use no transition. Instead, add the *Shake* effect for about 0.2 s.
-8. **Logo:** add the official Vexon Med logo over the navy slot (17.55–19.37 s).
+   - The five indicator shots are only 0.5–0.7 s each, so use very quick transitions (≤0.2 s) or plain cuts there.
+   - For the cuts into Strength (5.92 s) and Mobility (7.19 s), use no transition. Instead, add the *Shake* effect for about 0.2 s.
+8. **Logo:** add the official Vexon Med logo over the navy slot (12.82–14.23 s).
 9. **Export:** 1080p, 30 fps.
 
 ## Native, editable text (optional)

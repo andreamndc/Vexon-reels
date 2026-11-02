@@ -1,5 +1,5 @@
 {
- "title": "VEXON MED \u00b7 AD #1 \u00b7 Gym regular \u00b7 cut to \u201cBaboon\u201d \u00b7 Storyboard",
+ "title": "VEXON MED \u00b7 AD #1 \u00b7 Gym regular \u00b7 14.23 s cut to \u201cBaboon\u201d \u00b7 Storyboard",
  "safe_zone": [
   65,
   270,
@@ -13,7 +13,7 @@
  "fps": 30,
  "bpm": 165.03,
  "beat_offset": 0.098,
- "music_note": "Cut to \u201cBaboon\u201d (Rj Pasin) as used in the reference TikTok: 165 BPM, 3+3+2 accents, drop at 3.007 s. Exported silent.",
+ "music_note": "Cut to \u201cBaboon\u201d (Rj Pasin) as used in the reference TikTok: 165 BPM, 3+3+2 accents, drop at 3.007 s. 14.23 s. Exported silent.",
  "look": {
   "grade": true,
   "grain": true,
@@ -72,21 +72,21 @@
    "kind": "plain",
    "src": "OUT",
    "ss": 4.4,
-   "sec": 2.181,
-   "speed": 0.88,
+   "sec": 1.09,
+   "speed": 1.0,
    "z": [
     1.0,
     1.06
    ],
    "cx": 0.55,
    "tin": "cut",
-   "note": "Zoom-blur push on the bar downbeat (4.83 s) into the outdoor machine push. Line holds."
+   "note": "Zoom-blur push on the bar downbeat (4.83 s). Line holds to 5.92 s."
   },
   {
    "name": "STRENGTH",
    "src": "PLATE",
    "ss": 22.75,
-   "sec": 0.727,
+   "sec": 0.545,
    "z": [
     1.04,
     1.0
@@ -94,15 +94,17 @@
    "tin": "cut",
    "ty": 560,
    "size": 150,
-   "box_at": 0.1,
-   "note": "Hard hit on the accent (7.01 s). Brackets snap onto the grip device.",
+   "box_at": 0.06,
+   "note": "Hard hit on the accent (5.92 s). Brackets snap onto the grip device.",
+   "text_in": 0.14,
+   "text_out_f": 3,
    "kind": "plain"
   },
   {
    "name": "CARDIO",
    "src": "ROW",
    "ss": 11.6,
-   "sec": 1.091,
+   "sec": 0.728,
    "z": [
     1.0,
     1.05
@@ -110,15 +112,17 @@
    "tin": "cut",
    "ty": 1090,
    "size": 128,
-   "box_at": 0.1,
-   "note": "Whip on the bar downbeat (7.73 s). Rings from the VO2 mask.",
+   "box_at": 0.06,
+   "note": "Whip on 6.46 s. Rings from the VO2 mask.",
+   "text_in": 0.14,
+   "text_out_f": 3,
    "kind": "plain"
   },
   {
    "name": "MOBILITY",
    "src": "PLATE",
    "ss": 15.7,
-   "sec": 1.09,
+   "sec": 0.545,
    "ramp": [
     1.6,
     0.6
@@ -130,15 +134,17 @@
    "tin": "cut",
    "ty": 1120,
    "size": 150,
-   "box_at": 0.1,
-   "note": "Paper cutout on 8.82 s. Speed ramp into the squat.",
+   "box_at": 0.06,
+   "note": "Hard hit on 7.19 s. Speed ramp into the squat.",
+   "text_in": 0.14,
+   "text_out_f": 3,
    "kind": "plain"
   },
   {
    "name": "BALANCE",
    "src": "PLATE",
    "ss": 5.45,
-   "sec": 0.728,
+   "sec": 0.546,
    "z": [
     1.0,
     1.05
@@ -146,15 +152,17 @@
    "tin": "cut",
    "ty": 640,
    "size": 150,
-   "box_at": 0.1,
-   "note": "Vertical whip on 9.91 s down to the feet on the force plate.",
+   "box_at": 0.06,
+   "note": "Vertical whip on the bar downbeat (7.73 s) to the feet on the force plate.",
+   "text_in": 0.14,
+   "text_out_f": 3,
    "kind": "plain"
   },
   {
    "name": "REACTION",
    "src": "COG",
    "ss": 2.35,
-   "sec": 1.09,
+   "sec": 0.545,
    "speed": 1.2,
    "z": [
     1.0,
@@ -163,8 +171,10 @@
    "tin": "cut",
    "ty": 1110,
    "size": 136,
-   "box_at": 0.1,
-   "note": "Zoom-blur on the bar downbeat (10.64 s).",
+   "box_at": 0.06,
+   "note": "Zoom-blur on 8.28 s.",
+   "text_in": 0.14,
+   "text_out_f": 3,
    "kind": "plain"
   },
   {
@@ -172,7 +182,7 @@
    "kind": "plain",
    "src": "SCAN",
    "ss": 5.75,
-   "sec": 1.818,
+   "sec": 1.454,
    "speed": 0.7,
    "z": [
     1.18,
@@ -182,22 +192,22 @@
    "tin": "cut",
    "ty": 930,
    "size": 118,
-   "box_at": 0.45,
-   "note": "Zoom punch on 11.73 s into the 3D body scan; slow pull-out, darker grade."
+   "box_at": 0.4,
+   "note": "Zoom punch on the accent (8.82 s) into the 3D body scan."
   },
   {
    "name": "SOLUTION a",
    "src": "SCAN",
    "ss": 11.45,
-   "sec": 2.181,
+   "sec": 1.454,
    "z": [
     1.0,
     1.07
    ],
    "tin": "cut",
    "ty": 1080,
-   "box_at": 0.9,
-   "note": "Flash on the bar downbeat (13.55 s). Body-composition assessment.",
+   "box_at": 0.7,
+   "note": "Flash on 10.28 s. Body-composition assessment.",
    "kind": "plain"
   },
   {
@@ -205,24 +215,24 @@
    "kind": "plain",
    "src": "COG",
    "ss": 11.0,
-   "sec": 1.818,
+   "sec": 1.091,
    "z": [
     1.0,
     1.06
    ],
    "cx": 0.45,
    "tin": "cut",
-   "note": "Panel drop on 15.73 s to the decision-making results screen."
+   "note": "Panel drop on the accent (11.73 s) to the results screen."
   },
   {
    "name": "LOGO SLOT",
    "kind": "end",
    "src": null,
-   "sec": 1.818,
+   "sec": 1.407,
    "tin": "cut",
-   "fade": 0.5,
+   "fade": 0.4,
    "fill": "navy",
-   "note": "Fade to navy on 17.55 s; ends on the bar line at 19.37 s. Client adds the logo."
+   "note": "Fade to navy on the accent (12.82 s); ends at 14.23 s with the music. Client adds the logo."
   }
  ]
 }

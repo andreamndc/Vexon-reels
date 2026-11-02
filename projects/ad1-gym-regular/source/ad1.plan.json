@@ -1,49 +1,334 @@
 {
-  "title": "VEXON MED · AD #1 · Gym regular · cut to “Baboon” · Storyboard",
-  "safe_zone": [65, 270, 1015, 1250],
-  "size": [1080, 1920], "fps": 30, "bpm": 165.03, "beat_offset": 0.098,
-  "music_note": "Cut to “Baboon” (Rj Pasin) as used in the reference TikTok: 165 BPM, 3+3+2 accents, drop at 3.007 s. Exported silent.",
-  "look": {"grade": true, "grain": true, "beat_pulse": true, "card_border": false},
-  "sources": {"OUT": "clips/c11.mp4", "ROW": "clips/c12.mp4", "SCAN": "clips/c13.mp4", "COG": "clips/c14.mp4", "PLATE": "clips/c15.mp4"},
-  "shots": [
-    {"name": "HOOK", "kind": "title", "src": "OUT", "ss": 9.30, "sec": 3.007, "ramp": [1.0, 0.72], "z": [1.0, 1.1], "kicks": [5.27], "kick_amt": 0.07, "bright": -0.08, "tin": "cut", "band_y": 865, "band_h": 620,
-     "note": "One boxing take, one sentence. Lines slam in on the song's intro hits (0.10 / 0.46 / 0.83 / 1.19 s); punch-in on the bar at 1.92 s; cut on the drop at 3.01 s.",
-     "title_words": [
-       {"text": "I CAN’T BELIEVE", "beat": 0.27, "size": 112, "y": 650, "color": "cream"},
-       {"text": "I SCORED AS LOW", "beat": 1.27, "size": 138, "y": 792, "color": "orange"},
-       {"text": "AS I DID AS A", "beat": 2.27, "size": 112, "y": 934, "color": "cream"},
-       {"text": "GYM REGULAR.", "beat": 3.27, "size": 168, "y": 1082, "color": "orange"}]},
-    {"name": "PROBLEM a", "src": "ROW", "ss": 5.35, "sec": 1.818, "z": [1.0, 1.08], "cx": 0.45, "tin": "flash", "ty": 1050, "text_span": 2,
-     "text": "Working out consistently doesn’t mean every area of your performance is optimized.",
-     "highlight": ["every", "area", "of", "your", "performance"],
-     "note": "White flash on the drop (3.01 s). Rowing stroke."},
-    {"name": "PROBLEM b", "kind": "plain", "src": "OUT", "ss": 4.40, "sec": 2.181, "speed": 0.88, "z": [1.0, 1.06], "cx": 0.55, "tin": "zoom", "cont": true,
-     "note": "Zoom-blur push on the bar downbeat (4.83 s) into the outdoor machine push. Line holds."},
-    {"name": "STRENGTH", "src": "PLATE", "ss": 22.75, "sec": 0.727, "z": [1.04, 1.0], "tin": "hit", "ty": 560, "size": 150, "box_at": 0.1,
-     "text": "Strength.", "highlight": ["strength"], "fx": {"kind": "brackets", "box": [300, 980, 720, 1460], "at": 0.12},
-     "note": "Hard hit on the accent (7.01 s). Brackets snap onto the grip device."},
-    {"name": "CARDIO", "src": "ROW", "ss": 11.6, "sec": 1.091, "z": [1.0, 1.05], "tin": "whip", "ty": 1090, "size": 128, "box_at": 0.1,
-     "text": "Cardiovascular fitness.", "highlight": ["cardiovascular", "fitness"], "fx": {"kind": "rings", "c": [560, 330], "at": 0.2},
-     "note": "Whip on the bar downbeat (7.73 s). Rings from the VO2 mask."},
-    {"name": "MOBILITY", "src": "PLATE", "ss": 15.7, "sec": 1.090, "ramp": [1.6, 0.6], "z": [1.0, 1.06], "tin": "cutout", "ty": 1120, "size": 150, "box_at": 0.1,
-     "text": "Mobility.", "highlight": ["mobility"],
-     "note": "Paper cutout on 8.82 s. Speed ramp into the squat."},
-    {"name": "BALANCE", "src": "PLATE", "ss": 5.45, "sec": 0.728, "z": [1.0, 1.05], "tin": "vwhip", "ty": 640, "size": 150, "box_at": 0.1,
-     "text": "Balance.", "highlight": ["balance"],
-     "note": "Vertical whip on 9.91 s down to the feet on the force plate."},
-    {"name": "REACTION", "src": "COG", "ss": 2.35, "sec": 1.090, "speed": 1.2, "z": [1.0, 1.06], "tin": "zoom", "ty": 1110, "size": 136, "box_at": 0.1,
-     "text": "Reaction time.", "highlight": ["reaction", "time"],
-     "note": "Zoom-blur on the bar downbeat (10.64 s)."},
-    {"name": "QUESTION", "kind": "cta", "src": "SCAN", "ss": 5.75, "sec": 1.818, "speed": 0.7, "z": [1.18, 1.0], "bright": -0.12, "tin": "punch", "ty": 930, "size": 118, "box_at": 0.45,
-     "text": "How do you actually measure up?", "highlight": ["measure", "up"],
-     "note": "Zoom punch on 11.73 s into the 3D body scan; slow pull-out, darker grade."},
-    {"name": "SOLUTION a", "src": "SCAN", "ss": 11.45, "sec": 2.181, "z": [1.0, 1.07], "tin": "flash", "ty": 1080, "text_span": 2, "box_at": 0.9,
-     "text": "Vexon Med goes beyond appearances to assess how your body performs.", "highlight": ["beyond", "appearances"],
-     "note": "Flash on the bar downbeat (13.55 s). Body-composition assessment."},
-    {"name": "SOLUTION b", "kind": "plain", "src": "COG", "ss": 11.0, "sec": 1.818, "z": [1.0, 1.06], "cx": 0.45, "tin": "panels", "cont": true,
-     "fx": {"kind": "scan", "box": [250, 560, 1000, 1080], "at": 0.3},
-     "note": "Panel drop on 15.73 s to the decision-making results screen."},
-    {"name": "LOGO SLOT", "kind": "end", "src": null, "sec": 1.818, "tin": "fade", "fade": 0.5, "fill": "navy",
-     "note": "Fade to navy on 17.55 s; ends on the bar line at 19.37 s. Client adds the logo."}
-  ]
+ "title": "VEXON MED · AD #1 · Gym regular · 14.23 s cut to “Baboon” · Storyboard",
+ "safe_zone": [
+  65,
+  270,
+  1015,
+  1250
+ ],
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 165.03,
+ "beat_offset": 0.098,
+ "music_note": "Cut to “Baboon” (Rj Pasin) as used in the reference TikTok: 165 BPM, 3+3+2 accents, drop at 3.007 s. 14.23 s. Exported silent.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "card_border": false
+ },
+ "sources": {
+  "OUT": "clips/c11.mp4",
+  "ROW": "clips/c12.mp4",
+  "SCAN": "clips/c13.mp4",
+  "COG": "clips/c14.mp4",
+  "PLATE": "clips/c15.mp4"
+ },
+ "shots": [
+  {
+   "name": "HOOK",
+   "kind": "title",
+   "src": "OUT",
+   "ss": 9.3,
+   "sec": 3.007,
+   "ramp": [
+    1.0,
+    0.72
+   ],
+   "z": [
+    1.0,
+    1.1
+   ],
+   "kicks": [
+    5.27
+   ],
+   "kick_amt": 0.07,
+   "bright": -0.08,
+   "tin": "cut",
+   "band_y": 865,
+   "band_h": 620,
+   "note": "One boxing take, one sentence. Lines slam in on the song's intro hits (0.10 / 0.46 / 0.83 / 1.19 s); punch-in on the bar at 1.92 s; cut on the drop at 3.01 s.",
+   "title_words": [
+    {
+     "text": "I CAN’T BELIEVE",
+     "beat": 0.27,
+     "size": 112,
+     "y": 650,
+     "color": "cream"
+    },
+    {
+     "text": "I SCORED AS LOW",
+     "beat": 1.27,
+     "size": 138,
+     "y": 792,
+     "color": "orange"
+    },
+    {
+     "text": "AS I DID AS A",
+     "beat": 2.27,
+     "size": 112,
+     "y": 934,
+     "color": "cream"
+    },
+    {
+     "text": "GYM REGULAR.",
+     "beat": 3.27,
+     "size": 168,
+     "y": 1082,
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "name": "PROBLEM a",
+   "src": "ROW",
+   "ss": 5.35,
+   "sec": 1.818,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "cx": 0.45,
+   "tin": "flash",
+   "ty": 1050,
+   "text_span": 2,
+   "text": "Working out consistently doesn’t mean every area of your performance is optimized.",
+   "highlight": [
+    "every",
+    "area",
+    "of",
+    "your",
+    "performance"
+   ],
+   "note": "White flash on the drop (3.01 s). Rowing stroke."
+  },
+  {
+   "name": "PROBLEM b",
+   "kind": "plain",
+   "src": "OUT",
+   "ss": 4.4,
+   "sec": 1.09,
+   "speed": 1.0,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "cx": 0.55,
+   "tin": "zoom",
+   "cont": true,
+   "note": "Zoom-blur push on the bar downbeat (4.83 s). Line holds to 5.92 s."
+  },
+  {
+   "name": "STRENGTH",
+   "src": "PLATE",
+   "ss": 22.75,
+   "sec": 0.545,
+   "z": [
+    1.04,
+    1.0
+   ],
+   "tin": "hit",
+   "ty": 560,
+   "size": 150,
+   "box_at": 0.06,
+   "text": "Strength.",
+   "highlight": [
+    "strength"
+   ],
+   "fx": {
+    "kind": "brackets",
+    "box": [
+     300,
+     980,
+     720,
+     1460
+    ],
+    "at": 0.06
+   },
+   "note": "Hard hit on the accent (5.92 s). Brackets snap onto the grip device.",
+   "text_in": 0.14,
+   "text_out_f": 3
+  },
+  {
+   "name": "CARDIO",
+   "src": "ROW",
+   "ss": 11.6,
+   "sec": 0.728,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "whip",
+   "ty": 1090,
+   "size": 128,
+   "box_at": 0.06,
+   "text": "Cardiovascular fitness.",
+   "highlight": [
+    "cardiovascular",
+    "fitness"
+   ],
+   "fx": {
+    "kind": "rings",
+    "c": [
+     560,
+     330
+    ],
+    "at": 0.1
+   },
+   "note": "Whip on 6.46 s. Rings from the VO2 mask.",
+   "text_in": 0.14,
+   "text_out_f": 3
+  },
+  {
+   "name": "MOBILITY",
+   "src": "PLATE",
+   "ss": 15.7,
+   "sec": 0.545,
+   "ramp": [
+    1.6,
+    0.6
+   ],
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "hit",
+   "ty": 1120,
+   "size": 150,
+   "box_at": 0.06,
+   "text": "Mobility.",
+   "highlight": [
+    "mobility"
+   ],
+   "note": "Hard hit on 7.19 s. Speed ramp into the squat.",
+   "text_in": 0.14,
+   "text_out_f": 3
+  },
+  {
+   "name": "BALANCE",
+   "src": "PLATE",
+   "ss": 5.45,
+   "sec": 0.546,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "vwhip",
+   "ty": 640,
+   "size": 150,
+   "box_at": 0.06,
+   "text": "Balance.",
+   "highlight": [
+    "balance"
+   ],
+   "note": "Vertical whip on the bar downbeat (7.73 s) to the feet on the force plate.",
+   "text_in": 0.14,
+   "text_out_f": 3
+  },
+  {
+   "name": "REACTION",
+   "src": "COG",
+   "ss": 2.35,
+   "sec": 0.545,
+   "speed": 1.2,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "zoom",
+   "ty": 1110,
+   "size": 136,
+   "box_at": 0.06,
+   "text": "Reaction time.",
+   "highlight": [
+    "reaction",
+    "time"
+   ],
+   "note": "Zoom-blur on 8.28 s.",
+   "text_in": 0.14,
+   "text_out_f": 3
+  },
+  {
+   "name": "QUESTION",
+   "kind": "cta",
+   "src": "SCAN",
+   "ss": 5.75,
+   "sec": 1.454,
+   "speed": 0.7,
+   "z": [
+    1.18,
+    1.0
+   ],
+   "bright": -0.12,
+   "tin": "punch",
+   "ty": 930,
+   "size": 118,
+   "box_at": 0.4,
+   "text": "How do you actually measure up?",
+   "highlight": [
+    "measure",
+    "up"
+   ],
+   "note": "Zoom punch on the accent (8.82 s) into the 3D body scan."
+  },
+  {
+   "name": "SOLUTION a",
+   "src": "SCAN",
+   "ss": 11.45,
+   "sec": 1.454,
+   "z": [
+    1.0,
+    1.07
+   ],
+   "tin": "flash",
+   "ty": 1080,
+   "text_span": 2,
+   "box_at": 0.7,
+   "text": "Vexon Med goes beyond appearances to assess how your body performs.",
+   "highlight": [
+    "beyond",
+    "appearances"
+   ],
+   "note": "Flash on 10.28 s. Body-composition assessment."
+  },
+  {
+   "name": "SOLUTION b",
+   "kind": "plain",
+   "src": "COG",
+   "ss": 11.0,
+   "sec": 1.091,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "cx": 0.45,
+   "tin": "panels",
+   "cont": true,
+   "fx": {
+    "kind": "scan",
+    "box": [
+     250,
+     560,
+     1000,
+     1080
+    ],
+    "at": 0.15
+   },
+   "note": "Panel drop on the accent (11.73 s) to the results screen."
+  },
+  {
+   "name": "LOGO SLOT",
+   "kind": "end",
+   "src": null,
+   "sec": 1.407,
+   "tin": "fade",
+   "fade": 0.4,
+   "fill": "navy",
+   "note": "Fade to navy on the accent (12.82 s); ends at 14.23 s with the music. Client adds the logo."
+  }
+ ],
+ "audio_label": "“Baboon” – Rj Pasin (add in CapCut / TikTok / Instagram; drop on 00:03.01)"
 }
