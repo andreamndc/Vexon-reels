@@ -1,0 +1,34 @@
+track,start,end,file,transition_in,animation_in,animation_out,notes
+VIDEO,00:00.00,00:04.00,clips/01_hook_boxing.mp4,-,-,-,One continuous take; speed ramp and the punch-in at 00:02.00 are already in the clip
+VIDEO,00:04.00,00:06.00,clips/02_problem_rowing.mp4,Whip pan left (0.25s),-,-,
+VIDEO,00:06.00,00:07.50,clips/03_problem_outdoor_push.mp4,Zoom in / pull in with blur (0.2s),-,-,
+VIDEO,00:07.50,00:08.50,clips/04_strength_grip.mp4,White flash (0.2s),-,-,
+VIDEO,00:08.50,00:09.50,clips/05_cardio_vo2_bike.mp4,Whip pan left (0.25s),-,-,
+VIDEO,00:09.50,00:10.50,clips/06_mobility_squat.mp4,Torn paper / rip (0.3s),-,-,
+VIDEO,00:10.50,00:11.50,clips/07_balance_force_plate.mp4,Whip pan down (0.25s),-,-,
+VIDEO,00:11.50,00:12.50,clips/08_reaction_tablet.mp4,Hard cut + Shake effect 0.2s,-,-,
+VIDEO,00:12.50,00:14.50,clips/09_question_body_scan.mp4,Zoom in punch (0.2s),-,-,
+VIDEO,00:14.50,00:16.50,clips/10_solution_body_comp.mp4,White flash (0.2s),-,-,
+VIDEO,00:16.50,00:18.00,clips/11_solution_results_screen.mp4,Slide down / blinds (0.3s),-,-,
+VIDEO,00:18.00,00:19.50,clips/12_logo_slot_navy_0b1525.png,Dissolve / mix (0.6s),-,-,Blank: add the official logo here
+OVERLAY,00:00.00,00:04.00,layers/hook_0_band.png,-,Fade in 0.25s,Fade out 0.2s,Soft dark band behind hook text
+OVERLAY,00:00.00,00:01.80,layers/hook_1_I_CANT_BELIEVE.png,-,Zoom out (shrink) 0.2s,Slide up + fade 0.2s,
+OVERLAY,00:00.50,00:01.80,layers/hook_2_I_SCORED_AS_LOW.png,-,Zoom out (shrink) 0.2s,Slide up + fade 0.2s,
+OVERLAY,00:01.00,00:01.80,layers/hook_3_AS_I_DID.png,-,Zoom out (shrink) 0.2s,Slide up + fade 0.2s,
+OVERLAY,00:02.00,00:04.00,layers/hook_4_AS_A.png,-,Zoom out (shrink) 0.2s,Fade out 0.15s,
+OVERLAY,00:02.25,00:04.00,layers/hook_5_GYM_REGULAR.png,-,Zoom out (shrink) 0.2s,Fade out 0.15s,
+OVERLAY,00:04.00,00:05.00,layers/text_01_problem_plain.png,-,Wipe / slide up 0.35s,-,
+OVERLAY,00:05.00,00:07.50,layers/text_02_problem_boxed.png,-,-,Fade out 0.17s,Orange boxes appear at 00:05.00
+OVERLAY,00:07.50,00:08.50,layers/text_03_strength.png,-,Slide up 0.3s,Fade out 0.15s,
+OVERLAY,00:08.00,00:08.50,layers/fx_strength_brackets.png,-,Zoom out (shrink) 0.3s,Fade out 0.15s,Brackets frame the grip device
+OVERLAY,00:08.50,00:09.50,layers/text_04_cardio.png,-,Slide up 0.3s,Fade out 0.15s,
+OVERLAY,00:09.00,00:09.50,layers/fx_cardio_rings.png,-,Zoom in 0.3s,Fade out 0.15s,Rings on the VO2 mask (optional loop: Pulse)
+OVERLAY,00:09.50,00:10.50,layers/text_05_mobility.png,-,Slide up 0.3s,Fade out 0.15s,
+OVERLAY,00:10.50,00:11.50,layers/text_06_balance.png,-,Slide up 0.3s,Fade out 0.15s,
+OVERLAY,00:11.50,00:12.50,layers/text_07_reaction.png,-,Slide up 0.3s,Fade out 0.15s,
+OVERLAY,00:12.50,00:13.05,layers/text_08_question_plain.png,-,Wipe / slide up 0.4s,-,
+OVERLAY,00:13.05,00:14.50,layers/text_09_question_boxed.png,-,-,Fade out 0.17s,Orange box on MEASURE UP appears at 00:13.05
+OVERLAY,00:14.50,00:15.40,layers/text_10_solution_plain.png,-,Wipe / slide up 0.4s,-,
+OVERLAY,00:15.40,00:18.00,layers/text_11_solution_boxed.png,-,-,Fade out 0.17s,Orange box on BEYOND APPEARANCES appears at 00:15.40
+OVERLAY,00:17.00,00:18.00,layers/fx_solution_scan_brackets.png,-,Zoom out (shrink) 0.3s,Fade out 0.15s,Brackets on the results screen
+AUDIO,00:00.00,00:19.50,audio/VexonMed_Ad1_score_120bpm.wav,-,-,Already fades out,Starts at 00:00.00; 120 BPM so every cut lands on a beat

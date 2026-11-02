@@ -1,0 +1,224 @@
+{
+ "title": "VEXON MED \u00b7 AD #1 \u00b7 Gym regular \u00b7 Storyboard",
+ "safe_zone": [
+  65,
+  270,
+  1015,
+  1250
+ ],
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 120,
+ "music_note": "Original instrumental score cut at 120 BPM (composed for this ad, royalty-free). Hits land on every section change.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "card_border": false
+ },
+ "sources": {
+  "OUT": "clips/c11.mp4",
+  "ROW": "clips/c12.mp4",
+  "SCAN": "clips/c13.mp4",
+  "COG": "clips/c14.mp4",
+  "PLATE": "clips/c15.mp4"
+ },
+ "shots": [
+  {
+   "name": "HOOK",
+   "kind": "plain",
+   "src": "OUT",
+   "ss": 9.28,
+   "beats": 8,
+   "ramp": [
+    0.88,
+    0.42
+   ],
+   "z": [
+    1.0,
+    1.1
+   ],
+   "kicks": [
+    4
+   ],
+   "kick_amt": 0.08,
+   "bright": -0.08,
+   "tin": "cut",
+   "note": "One continuous boxing take (source 9.28-11.9 s), speed ramp 0.88x easing to 0.42x. Beat 1 slams in line by line and lifts away; on beat 4 a punch-in zoom lands AS A GYM REGULAR. on the same shot."
+  },
+  {
+   "name": "PROBLEM a",
+   "src": "ROW",
+   "ss": 5.35,
+   "beats": 4,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "cx": 0.45,
+   "tin": "cut",
+   "ty": 1050,
+   "note": "Whip pan out of the punch into the rowing stroke.",
+   "kind": "plain"
+  },
+  {
+   "name": "PROBLEM b",
+   "kind": "plain",
+   "src": "OUT",
+   "ss": 4.35,
+   "beats": 3,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "cx": 0.55,
+   "tin": "cut",
+   "note": "Zoom-blur push into the outdoor machine push. Line holds."
+  },
+  {
+   "name": "STRENGTH",
+   "src": "PLATE",
+   "ss": 22.75,
+   "beats": 2,
+   "z": [
+    1.04,
+    1.0
+   ],
+   "tin": "cut",
+   "ty": 560,
+   "size": 150,
+   "box_at": 0.12,
+   "note": "Flash. Brackets lock onto the grip dynamometer.",
+   "kind": "plain"
+  },
+  {
+   "name": "CARDIO",
+   "src": "ROW",
+   "ss": 11.6,
+   "beats": 2,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "cut",
+   "ty": 1090,
+   "size": 128,
+   "box_at": 0.12,
+   "note": "Whip. Rings pulse from the VO2 mask.",
+   "kind": "plain"
+  },
+  {
+   "name": "MOBILITY",
+   "src": "PLATE",
+   "ss": 15.7,
+   "beats": 2,
+   "ramp": [
+    1.6,
+    0.6
+   ],
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "cut",
+   "ty": 1120,
+   "size": 150,
+   "box_at": 0.12,
+   "note": "Paper cutout. Speed ramp into the bottom of the squat.",
+   "kind": "plain"
+  },
+  {
+   "name": "BALANCE",
+   "src": "PLATE",
+   "ss": 5.45,
+   "beats": 2,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "cut",
+   "ty": 640,
+   "size": 150,
+   "box_at": 0.12,
+   "note": "Vertical whip follows the squat down to the feet on the force plate.",
+   "kind": "plain"
+  },
+  {
+   "name": "REACTION",
+   "src": "COG",
+   "ss": 2.35,
+   "beats": 2,
+   "speed": 1.2,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "cut",
+   "ty": 1110,
+   "size": 136,
+   "box_at": 0.12,
+   "note": "Hard cut with shake on the tap.",
+   "kind": "plain"
+  },
+  {
+   "name": "QUESTION",
+   "kind": "plain",
+   "src": "SCAN",
+   "ss": 5.75,
+   "beats": 4,
+   "speed": 0.7,
+   "z": [
+    1.18,
+    1.0
+   ],
+   "bright": -0.12,
+   "tin": "cut",
+   "ty": 930,
+   "size": 118,
+   "box_at": 0.55,
+   "note": "Zoom punch into the 3D body scan. Slow pull-out, darker grade; music drops out."
+  },
+  {
+   "name": "SOLUTION a",
+   "src": "SCAN",
+   "ss": 11.45,
+   "beats": 4,
+   "z": [
+    1.0,
+    1.07
+   ],
+   "tin": "cut",
+   "ty": 1080,
+   "box_at": 0.9,
+   "note": "Flash on the drop. Body-composition assessment.",
+   "kind": "plain"
+  },
+  {
+   "name": "SOLUTION b",
+   "kind": "plain",
+   "src": "COG",
+   "ss": 11.0,
+   "beats": 3,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "cx": 0.45,
+   "tin": "cut",
+   "note": "Panel drop to the decision-making results screen; scan line sweeps it."
+  },
+  {
+   "name": "LOGO SLOT",
+   "kind": "end",
+   "src": null,
+   "beats": 3,
+   "tin": "cut",
+   "fade": 0.6,
+   "fill": "navy",
+   "note": "Soft fade to clean navy. Blank: client adds the logo."
+  }
+ ]
+}

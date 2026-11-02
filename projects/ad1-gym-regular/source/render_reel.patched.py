@@ -18,6 +18,7 @@ SKILL = os.path.dirname(HERE)
 # ---------------------------------------------------------------- config
 plan_path, OUT = sys.argv[1], sys.argv[2]
 STILLS = None
+LAYER = sys.argv[sys.argv.index('--layers') + 1] if '--layers' in sys.argv else None
 if '--stills' in sys.argv:
     STILLS = [float(x) for x in sys.argv[sys.argv.index('--stills') + 1].split(',')]
 P = json.load(open(plan_path))
@@ -346,6 +347,8 @@ def render_frame(fi):
     k = shot_at(t); s = SHOTS[k]; lt = t - s['t0']; fr = lt * FPS
     if s.get('src') is None:
         arr = np.zeros((H, W, 3), np.float32); arr[:] = color(s.get('fill', 'navy')); z = 1
+    elif LAYER:
+        arr = np.full((H, W, 3), 255.0, np.float32); z = shot_zoom(k, t)
     else:
         img, z = shot_image(k, t); arr = np.asarray(img, np.float32)
 
@@ -412,24 +415,28 @@ def render_frame(fi):
             sk, a0, a1 = span; ts = SHOTS[sk]; tl = t - a0
             bf = min(1, tl / 0.25) * min(1, (a1 - t) / 0.2)
             if ts['kind'] == 'title':
-                arr = arr * (1 - band(ts.get('band_y', 820), ts.get('band_h', 560), 0.5) * bf)
+                arr = arr * (1 - band(ts.get('band_y', 820), ts.get('band_h', 560), 0.5) * bf) if LAYER not in ('fx', 'nob') else arr
                 hook_title(layer, ts['title_words'], tl, a1 - a0)
             elif ts['kind'] == 'cta':
                 cy = ts.get('ty', 900)
-                arr = arr * (1 - band(cy + 50, 600, 0.55) * bf)
+                arr = arr * (1 - band(cy + 50, 600, 0.55) * bf) if LAYER not in ('fx', 'nob') else arr
                 text_block(layer, ts['_words'], tl, a1 - a0, cy, ts.get('size', 96), 900, ts.get('box_at', BEAT))
             else:
                 cy = ts.get('ty', 1130)
-                arr = arr * (1 - band(cy, 520, 0.55) * bf)
+                arr = arr * (1 - band(cy, 520, 0.55) * bf) if LAYER not in ('fx', 'nob') else arr
                 if ts.get('num'): numeral(layer, ts['num'], tl, a1 - a0, ts.get('num_y', 150))
                 n = len(ts['_words']); size = ts.get('size', 92 if n <= 9 else (80 if n <= 14 else 70))
                 text_block(layer, ts['_words'], tl, a1 - a0, cy, size, 940, ts.get('box_at', 2 * BEAT))
         layer.putalpha(ImageChops.multiply(layer.getchannel('A'), SAFE_MASK))  # line wipes stop at the safe-zone edge
         bb = layer.getchannel('A').point(lambda v: 255 if v > 24 else 0).getbbox()
         if bb and (bb[0] < SX0 or bb[1] < SY0 or bb[2] > SX1 or bb[3] > SY1): VIOLATIONS.append((round(t, 2), bb))
-        if s.get('fx'): callout(layer, s['fx'], lt, s['dur'], z)
+        if LAYER == 'fx': layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        if s.get('fx') and LAYER not in ('text', 'nob'): callout(layer, s['fx'], lt, s['dur'], z)
         sh = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         sh.putalpha(layer.getchannel('A').filter(ImageFilter.GaussianBlur(12)).point(lambda v: min(255, int(v * 1.2))))
+        if LAYER:  # band (black, alpha = darkening) under shadow + graphics
+            bg = Image.new('RGBA', (W, H), (0, 0, 0, 0)); bg.putalpha(Image.fromarray((255 - arr[..., 0]).clip(0, 255).astype(np.uint8)))
+            return Image.alpha_composite(Image.alpha_composite(bg, sh), layer)
         la = np.asarray(Image.alpha_composite(sh, layer), np.float32); al = la[..., 3:4] / 255
         arr = arr * (1 - al) + la[..., :3] * al
 
@@ -446,6 +453,10 @@ def render_frame(fi):
     return np.clip(arr, 0, 255).astype(np.uint8)
 
 # ---------------------------------------------------------------- main
+if LAYER:
+    for ts_ in [float(x) for x in sys.argv[sys.argv.index('--at') + 1].split(',')]:
+        render_frame(int(round(ts_ * FPS))).save(f'{OUT}_{ts_:05.2f}.png')
+    sys.exit()
 if STILLS:
     for ts_ in STILLS:
         im_ = Image.fromarray(render_frame(int(round(ts_ * FPS))))
