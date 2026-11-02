@@ -1,0 +1,193 @@
+{
+ "_comment": "Cognitive Performance & Healthy Aging reel. Source paths are relative to this file; put the raw clips in footage/.",
+ "title": "VEXON · Cognitive Performance & Healthy Aging · Storyboard",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 128,
+ "music_note": "15.0 s = 8 bars @ 128 BPM. Exported silent; add the sound in-app or send a licensed file to mux.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "card_border": false
+ },
+ "sources": {
+  "BIKE": "footage/IMG_2295.MOV",
+  "VR": "footage/IMG_8866.mov"
+ },
+ "shots": [
+  {
+   "name": "HOOK · body",
+   "kind": "title",
+   "src": "BIKE",
+   "ss": 0.3,
+   "bars": 1,
+   "text_span": 2,
+   "z": [
+    1.0,
+    1.1
+   ],
+   "bright": -0.08,
+   "tin": "cut",
+   "band_y": 830,
+   "note": "Physical: VO2 bike test. 'YOU’RE MEASURING / YOUR BODY.' slam in on beats 1–2 with font flicker.",
+   "title_words": [
+    {
+     "text": "YOU’RE MEASURING",
+     "beat": 0,
+     "size": 96,
+     "y": 600,
+     "color": "cream"
+    },
+    {
+     "text": "YOUR BODY.",
+     "beat": 1,
+     "size": 130,
+     "y": 730,
+     "color": "cream"
+    },
+    {
+     "text": "WHAT ABOUT",
+     "beat": 4,
+     "size": 96,
+     "y": 905,
+     "color": "cream"
+    },
+    {
+     "text": "YOUR BRAIN?",
+     "beat": 5,
+     "size": 140,
+     "y": 1055,
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "name": "HOOK · brain",
+   "kind": "plain",
+   "src": "VR",
+   "ss": 0.0,
+   "bars": 1,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "bright": -0.06,
+   "tin": "whip",
+   "cont": true,
+   "note": "Whip pan from body to brain (VR cognitive test) on the bar line; 'WHAT ABOUT / YOUR BRAIN?' slams in, BRAIN in orange."
+  },
+  {
+   "name": "CTA",
+   "kind": "cta",
+   "src": "BIKE",
+   "ss": 3.0,
+   "bars": 1.5,
+   "z": [
+    1.1,
+    1.0
+   ],
+   "bright": -0.12,
+   "speed": 0.8,
+   "tin": "punch",
+   "ty": 900,
+   "text": "Click the link in our bio to book your longevity assessment.",
+   "highlight": [
+    "longevity",
+    "assessment"
+   ],
+   "note": "Zoom punch, 0.8x slow-mo. CTA centred in the safe zone; orange box on 'longevity assessment'.",
+   "maxw": 820
+  },
+  {
+   "name": "EDU 1/2",
+   "src": "BIKE",
+   "ss": 12.0,
+   "bars": 1,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "flash",
+   "ty": 1230,
+   "text": "Attention, processing speed, and other cognitive functions",
+   "highlight": [
+    "cognitive",
+    "functions"
+   ],
+   "fx": {
+    "kind": "scan",
+    "box": [
+     300,
+     400,
+     930,
+     900
+    ]
+   },
+   "note": "White flash. Scan line sweeps the test data screen; first half of the sentence.",
+   "maxw": 820,
+   "size": 74
+  },
+  {
+   "name": "EDU 2/2",
+   "src": "BIKE",
+   "ss": 7.0,
+   "bars": 1,
+   "z": [
+    1.18,
+    1.0
+   ],
+   "tin": "cutout",
+   "text": "are part of the bigger picture of healthy aging.",
+   "highlight": [
+    "healthy",
+    "aging"
+   ],
+   "note": "Paper-cutout reveal; pull-out to the wide shot = 'the bigger picture'.",
+   "maxw": 820
+  },
+  {
+   "name": "VEXON SOLUTION",
+   "src": "VR",
+   "ss": 1.5,
+   "bars": 1.5,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "speed": 0.85,
+   "tin": "flash",
+   "ty": 1220,
+   "text": "Vexon Med takes a deeper look at cognitive performance through neurocognitive testing.",
+   "highlight": [
+    "neurocognitive",
+    "testing"
+   ],
+   "fx": {
+    "kind": "brackets",
+    "box": [
+     600,
+     400,
+     1040,
+     880
+    ],
+    "tag": "COGNITIVE TEST"
+   },
+   "note": "Flash in. Brackets lock onto the VR headset; orange box on 'neurocognitive testing'.",
+   "maxw": 820,
+   "size": 70
+  },
+  {
+   "name": "END SLOT",
+   "kind": "end",
+   "src": null,
+   "bars": 1,
+   "tin": "fade",
+   "fill": "navy",
+   "note": "Soft fade to clean navy. Blank for the client's logo."
+  }
+ ]
+}
