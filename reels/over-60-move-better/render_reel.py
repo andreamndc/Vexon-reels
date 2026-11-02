@@ -127,7 +127,7 @@ def back(x): x = clamp(x); c = 1.7; return 1 + (c + 1) * (x - 1) ** 3 + c * (x -
 
 readers = [Reader(s) if s.get('src') else None for s in SHOTS]
 
-HITS = ('flash', 'cutout', 'whip', 'panels', 'punch', 'hit', 'zoomblur', 'scanwipe')
+HITS = ('flash', 'cutout', 'whip', 'panels', 'punch', 'hit', 'zoomblur', 'scanwipe', 'spin', 'slice')
 
 def shot_zoom(k, t):
     s = SHOTS[k]; lt = t - s['t0']
@@ -158,10 +158,20 @@ def shot_image(k, t):
     if s['tin'] == 'zoomblur':
         r = 1 - lt / (8 / FPS)
         if r > 0: z *= 1 + 0.45 * ease(r) ** 2; rb = max(rb, r)
+    ang = 0
+    if nxt and nxt['tin'] == 'spin':
+        r = (lt - (s['dur'] - 5 / FPS)) / (5 / FPS)
+        if r > 0: ang = 16 * r * r; rb = max(rb, r)
+    if s['tin'] == 'spin':
+        r = 1 - lt / (8 / FPS)
+        if r > 0: ang = -16 * ease(r) ** 2; rb = max(rb, r)
+    if ang:
+        a_ = math.radians(abs(ang)); z *= math.cos(a_) + (H / W) * math.sin(a_)
     if abs(z - 1) > 1e-3:
         cw, ch = W / z, H / z; x0, y0 = (W - cw) / 2, (H - ch) / 2
         img = img.resize((W, H), Image.BICUBIC, box=(x0, y0, x0 + cw, y0 + ch))
     if blur > 0.5: img = img.filter(ImageFilter.GaussianBlur(blur))
+    if ang: img = img.rotate(ang, Image.BICUBIC)
     if rb > 0.05: img = radial(img, 0.16 * rb)
     return img, z
 
@@ -197,6 +207,14 @@ def hblur(a, amt):
     out = np.zeros_like(a)
     for j in range(7): out += np.roll(a, int((j - 3) * amt / 7), axis=1)
     return out / 7
+
+def shift2(a, dx, dy):
+    """Translate an HxWxC array by (dx, dy) with zero fill (no wrap-around)."""
+    out = np.zeros_like(a); h, w = a.shape[:2]
+    if abs(dx) >= w or abs(dy) >= h: return out
+    ys, yd = (slice(0, h - dy), slice(dy, h)) if dy >= 0 else (slice(-dy, h), slice(0, h + dy))
+    xs, xd = (slice(0, w - dx), slice(dx, w)) if dx >= 0 else (slice(-dx, w), slice(0, w + dx))
+    out[yd, xd] = a[ys, xs]; return out
 
 def shift(a, dx):
     dx = int(dx); out = np.zeros_like(a)
@@ -386,6 +404,28 @@ def render_frame(fi):
         g[:, 0, 0] = np.clip(1 - (ly - ys) / 160, 0, 1) * (ys < ly) * 0.55
         arr = arr * (1 - g) + np.array(ORANGE, np.float32) * g
         arr[max(0, ly - 3):ly + 3] = ORANGE
+    if s['tin'] == 'slice' and fr < 10:
+        # previous frame splits along a diagonal; the halves slide apart along the cut to reveal the new shot
+        r = ease(fr / 10); new = arr; old = prev()
+        ys, xs = np.mgrid[0:H, 0:W]
+        above = (ys < H * 0.62 - (H * 0.24) * xs / W)[..., None].astype(np.float32)
+        vx, vy = W, -H * 0.24; n_ = math.hypot(vx, vy); d = r * 1500
+        dx, dy = int(vx / n_ * d), int(vy / n_ * d)
+        A, mA = shift2(old, -dx, -dy), shift2(above, -dx, -dy)
+        B, mB = shift2(old, dx, dy), shift2(1 - above, dx, dy)
+        arr = new * (1 - mA - mB).clip(0, 1) + A * mA + B * mB
+        edge = (np.abs(ys - (H * 0.62 - (H * 0.24) * xs / W)) < 3)[..., None]
+        arr = np.where(edge & (r < 0.45), np.array(ORANGE, np.float32), arr)
+    if s['tin'] == 'lightleak' and fr < 14:
+        # warm brand-gold light sweep that dissolves one shot into the next
+        r = fr / 14; mix = easeio((r - 0.2) / 0.6)
+        arr = prev() * (1 - mix) + arr * mix
+        ys, xs = np.mgrid[0:H:4, 0:W:4]
+        cx_, cy_ = -300 + r * (W + 600), H * 0.35 + r * H * 0.3
+        g = np.exp(-(((xs - cx_) / 520.0) ** 2 + ((ys - cy_) / 900.0) ** 2)) * math.sin(math.pi * r)
+        g = np.asarray(Image.fromarray((g * 255).astype(np.uint8)).resize((W, H), Image.BILINEAR), np.float32)[..., None] / 255
+        leak = np.array(COL['gold'], np.float32) * 0.6 + np.array(ORANGE, np.float32) * 0.4
+        arr = arr + (leak * 1.1 - arr * 0.25) * g * 0.95
     if s['tin'] == 'fade' and fr < 18:
         r = easeio(fr / 18); arr = prev() * (1 - r) + arr * r
 

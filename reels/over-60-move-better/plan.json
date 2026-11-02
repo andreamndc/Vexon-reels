@@ -108,12 +108,12 @@
     1.0,
     1.08
    ],
-   "tin": "whip",
+   "tin": "spin",
    "cont": true,
-   "note": "Whip pan on the jump's upward motion into the rower. 'HERE'S WHY' lands as its own beat in an orange box."
+   "note": "Spin-whip: the frame rolls out on the jump and rolls into the rower. 'HERE'S WHY' lands as its own beat in an orange box."
   },
   {
-   "name": "01 Strength",
+   "name": "Strength",
    "src": "ROW",
    "ss": 9.4,
    "bars": 2,
@@ -121,8 +121,6 @@
     1.22,
     1.32
    ],
-   "num": "01",
-   "num_y": 300,
    "ty": 1180,
    "tin": "zoomblur",
    "text": "We work to prioritize strength.",
@@ -132,7 +130,7 @@
    "note": "Zoom-blur punch into a tighter angle on the same rower (seamless angle change)."
   },
   {
-   "name": "02 Mobility",
+   "name": "Mobility",
    "src": "JUMP",
    "ss": 4.6,
    "bars": 2,
@@ -140,10 +138,8 @@
     1.06,
     1.0
    ],
-   "num": "02",
-   "num_y": 300,
    "ty": 1180,
-   "tin": "hit",
+   "tin": "slice",
    "ramp": [
     [
      0,
@@ -166,7 +162,7 @@
    "highlight": [
     "mobility"
    ],
-   "note": "Match cut: rower's compressed catch → jumper's deep crouch. Ramps into slow-mo through the range of motion."
+   "note": "Diagonal slice: the rowing frame splits along the cut line and slides apart to reveal the jumper's deep crouch. Ramps into slow-mo."
   },
   {
    "kind": "burst",
@@ -188,7 +184,7 @@
    "src": "BIKE",
    "ss": 4.6,
    "beats": 1,
-   "tin": "hit"
+   "tin": "whip"
   },
   {
    "kind": "burst",
@@ -198,7 +194,7 @@
    "tin": "hit"
   },
   {
-   "name": "03 Cardio",
+   "name": "Cardio",
    "src": "BIKE",
    "ss": 8.0,
    "bars": 2.5,
@@ -207,10 +203,8 @@
     1.08
    ],
    "speed": 0.85,
-   "num": "03",
-   "num_y": 980,
    "ty": 545,
-   "tin": "cutout",
+   "tin": "lightleak",
    "text": "We monitor cardiovascular and metabolic health.",
    "highlight": [
     "cardiovascular",
@@ -225,10 +219,10 @@
     "tag": "VO2 MAX TEST",
     "tag_side": "left_below"
    },
-   "note": "Paper-cutout reveal from movement into assessment. Sonar rings pulse on the breathing mask."
+   "note": "Warm gold light-leak dissolve from movement into assessment. Sonar rings pulse on the breathing mask."
   },
   {
-   "name": "04 Progress",
+   "name": "Progress",
    "src": "BIKE",
    "ss": 14.2,
    "bars": 1.5,
@@ -237,8 +231,6 @@
     1.06
    ],
    "speed": 0.8,
-   "num": "04",
-   "num_y": 900,
    "ty": 545,
    "tin": "scanwipe",
    "text_span": 2,
@@ -270,7 +262,7 @@
     1.18
    ],
    "speed": 0.3,
-   "tin": "cut",
+   "tin": "panels",
    "cont": true,
    "fx": {
     "kind": "brackets",
@@ -282,7 +274,7 @@
     ],
     "tag": "ASSESSMENT"
    },
-   "note": "Cut on the beat to the results screen; brackets snap onto it."
+   "note": "Panel drop on the beat to the results screen; brackets snap onto it."
   },
   {
    "name": "CTA",
