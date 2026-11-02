@@ -1,0 +1,319 @@
+{
+ "title": "VEXON · Why some people over 60 move better · Storyboard",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 144,
+ "text_maxw": 860,
+ "music_note": "Cut to 'Trunks' (A$AP Rocky) at ~144 BPM. Exported silent; add the sound in-app starting on a downbeat.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "card_border": false
+ },
+ "sources": {
+  "JUMP": "../../footage/IMG_0095.MP4",
+  "ROW": "../../footage/IMG_0203.MP4",
+  "BIKE": "../../footage/IMG_0220.MP4"
+ },
+ "shots": [
+  {
+   "name": "HOOK A",
+   "kind": "title",
+   "src": "JUMP",
+   "ss": 0.85,
+   "bars": 1.5,
+   "z": [
+    1.0,
+    1.1
+   ],
+   "tin": "cut",
+   "text_span": 2,
+   "band_y": 900,
+   "ramp": [
+    [
+     0,
+     1.15
+    ],
+    [
+     0.3,
+     1.15
+    ],
+    [
+     0.5,
+     0.35
+    ],
+    [
+     1,
+     0.35
+    ]
+   ],
+   "note": "Speed ramp: real-time into the jump, slow-mo at the peak. Hook words slam in beat by beat.",
+   "title_words": [
+    {
+     "text": "MY",
+     "beat": 0,
+     "size": 84,
+     "y": 500,
+     "color": "cream"
+    },
+    {
+     "text": "60+",
+     "beat": 1,
+     "size": 250,
+     "y": 680,
+     "color": "orange"
+    },
+    {
+     "text": "AGE CLIENTS CAN MOVE",
+     "beat": 2,
+     "size": 88,
+     "y": 880,
+     "color": "cream"
+    },
+    {
+     "text": "BETTER THAN SOME",
+     "beat": 3,
+     "size": 88,
+     "y": 985,
+     "color": "cream"
+    },
+    {
+     "text": "30-YEAR-OLDS…",
+     "beat": 4,
+     "size": 140,
+     "y": 1120,
+     "color": "cream"
+    },
+    {
+     "text": "HERE'S WHY",
+     "beat": 7,
+     "size": 96,
+     "y": 1310,
+     "color": "cream",
+     "box": true
+    }
+   ]
+  },
+  {
+   "name": "HOOK B",
+   "kind": "plain",
+   "src": "ROW",
+   "ss": 20.0,
+   "bars": 1.5,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "whip",
+   "cont": true,
+   "note": "Whip pan on the jump's upward motion into the rower. 'HERE'S WHY' lands as its own beat in an orange box."
+  },
+  {
+   "name": "01 Strength",
+   "src": "ROW",
+   "ss": 9.4,
+   "bars": 2,
+   "z": [
+    1.22,
+    1.32
+   ],
+   "num": "01",
+   "num_y": 300,
+   "ty": 1180,
+   "tin": "zoomblur",
+   "text": "We work to prioritize strength.",
+   "highlight": [
+    "strength"
+   ],
+   "note": "Zoom-blur punch into a tighter angle on the same rower (seamless angle change)."
+  },
+  {
+   "name": "02 Mobility",
+   "src": "JUMP",
+   "ss": 4.6,
+   "bars": 2,
+   "z": [
+    1.06,
+    1.0
+   ],
+   "num": "02",
+   "num_y": 300,
+   "ty": 1180,
+   "tin": "hit",
+   "ramp": [
+    [
+     0,
+     0.9
+    ],
+    [
+     0.25,
+     0.9
+    ],
+    [
+     0.45,
+     0.45
+    ],
+    [
+     1,
+     0.45
+    ]
+   ],
+   "text": "We work on mobility.",
+   "highlight": [
+    "mobility"
+   ],
+   "note": "Match cut: rower's compressed catch → jumper's deep crouch. Ramps into slow-mo through the range of motion."
+  },
+  {
+   "kind": "burst",
+   "src": "JUMP",
+   "ss": 7.0,
+   "beats": 1,
+   "tin": "flash",
+   "note": "4-cut beat montage (quarter notes)."
+  },
+  {
+   "kind": "burst",
+   "src": "ROW",
+   "ss": 21.5,
+   "beats": 1,
+   "tin": "hit"
+  },
+  {
+   "kind": "burst",
+   "src": "BIKE",
+   "ss": 4.6,
+   "beats": 1,
+   "tin": "hit"
+  },
+  {
+   "kind": "burst",
+   "src": "JUMP",
+   "ss": 3.2,
+   "beats": 1,
+   "tin": "hit"
+  },
+  {
+   "name": "03 Cardio",
+   "src": "BIKE",
+   "ss": 8.0,
+   "bars": 2.5,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "speed": 0.85,
+   "num": "03",
+   "num_y": 980,
+   "ty": 545,
+   "tin": "cutout",
+   "text": "We monitor cardiovascular and metabolic health.",
+   "highlight": [
+    "cardiovascular",
+    "metabolic"
+   ],
+   "fx": {
+    "kind": "rings",
+    "c": [
+     705,
+     880
+    ],
+    "tag": "VO2 MAX TEST",
+    "tag_side": "left_below"
+   },
+   "note": "Paper-cutout reveal from movement into assessment. Sonar rings pulse on the breathing mask."
+  },
+  {
+   "name": "04 Progress",
+   "src": "BIKE",
+   "ss": 14.2,
+   "bars": 1.5,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "speed": 0.8,
+   "num": "04",
+   "num_y": 900,
+   "ty": 545,
+   "tin": "scanwipe",
+   "text_span": 2,
+   "text": "And we measure progress instead of guessing.",
+   "highlight": [
+    "measure",
+    "progress"
+   ],
+   "fx": {
+    "kind": "scan",
+    "box": [
+     60,
+     780,
+     820,
+     1400
+    ],
+    "tag": "LIVE DATA"
+   },
+   "note": "Orange scan-line wipe in. Scan sweeps the coach reading the live test data."
+  },
+  {
+   "name": "04b",
+   "kind": "plain",
+   "src": "BIKE",
+   "ss": 18.42,
+   "bars": 1,
+   "z": [
+    1.12,
+    1.18
+   ],
+   "speed": 0.3,
+   "tin": "cut",
+   "cont": true,
+   "fx": {
+    "kind": "brackets",
+    "box": [
+     70,
+     790,
+     430,
+     1560
+    ],
+    "tag": "ASSESSMENT"
+   },
+   "note": "Cut on the beat to the results screen; brackets snap onto it."
+  },
+  {
+   "name": "CTA",
+   "kind": "cta",
+   "src": "ROW",
+   "ss": 13.6,
+   "bars": 2.5,
+   "z": [
+    1.1,
+    1.0
+   ],
+   "bright": -0.06,
+   "speed": 0.8,
+   "ty": 1180,
+   "tin": "punch",
+   "text": "Ready for your assessment? Click the link in our bio.",
+   "highlight": [
+    "assessment",
+    "link",
+    "bio"
+   ],
+   "note": "Zoom punch into the smiling rower, 0.8x slow-mo. No arrow."
+  },
+  {
+   "name": "END SLOT",
+   "kind": "end",
+   "src": null,
+   "bars": 1.25,
+   "tin": "fade",
+   "fill": "navy",
+   "note": "Fade to clean navy slot; client adds the logo manually."
+  }
+ ]
+}
