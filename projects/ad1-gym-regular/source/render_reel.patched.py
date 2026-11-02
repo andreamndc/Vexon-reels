@@ -29,6 +29,7 @@ FPS = P.get('fps', 30)
 BPM = P.get('bpm', 140)
 BEAT = 60 / BPM
 BAR = 4 * BEAT
+BOFF = P.get('beat_offset', 0.0)  # time of a beat in the song (aligns the beat pulse with an external track)
 
 def hex2rgb(h): h = h.lstrip('#'); return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 BR = {'orange': '#ff7a1a', 'gold': '#f7b137', 'cream': '#fbf7ef', 'navy': '#0b1525', 'white': '#ffffff'}
@@ -74,7 +75,7 @@ def font(kind, size):
 SHOTS = P['shots']
 t = 0.0
 for s in SHOTS:
-    s['dur'] = s['bars'] * BAR if 'bars' in s else s.get('beats', 1) * BEAT
+    s['dur'] = s['sec'] if 'sec' in s else (s['bars'] * BAR if 'bars' in s else s.get('beats', 1) * BEAT)
     s['t0'] = t; t += s['dur']; s['t1'] = t
     s.setdefault('tin', 'cut'); s.setdefault('kind', 'line' if 'text' in s else ('end' if s.get('src') is None else 'plain'))
     if 'text' in s:
@@ -138,7 +139,7 @@ def shot_zoom(k, t):
     if s['kind'] == 'burst':
         z = 1.14 - 0.12 * ease(lt / s['dur'])
     elif LOOK['beat_pulse']:
-        ph = (t % (2 * BEAT)) / BEAT
+        ph = ((t - BOFF) % (2 * BEAT)) / BEAT
         z *= 1 + 0.022 * math.exp(-ph * 5)
     return z
 
@@ -264,7 +265,7 @@ def callout(layer, fx, lt, span, z):
     out = 1 - ease((lt - (span - 5 / FPS)) / (5 / FPS))
     if fx['kind'] in ('brackets', 'scan'):
         x0, y0 = xf(fx['box'][:2], z); x1, y1 = xf(fx['box'][2:], z)
-        r = back((lt - BEAT) / 0.35)
+        st_ = fx.get('at', BEAT); r = back((lt - st_) / 0.35)
         if r <= 0: return
         cx, cy = (x0 + x1) / 2, (y0 + y1) / 2; s = 1 + 0.25 * (1 - r)
         x0, x1 = cx + (x0 - cx) * s, cx + (x1 - cx) * s; y0, y1 = cy + (y0 - cy) * s, cy + (y1 - cy) * s
@@ -272,14 +273,14 @@ def callout(layer, fx, lt, span, z):
         for (px, py, sx, sy) in [(x0, y0, 1, 1), (x1, y0, -1, 1), (x0, y1, 1, -1), (x1, y1, -1, -1)]:
             d.line([(px, py + sy * L), (px, py), (px + sx * L, py)], fill=CREAM + (a,), width=7)
         if fx['kind'] == 'scan':
-            ph = ((lt - BEAT) % (4 * BEAT)) / (4 * BEAT); sy = y0 + (y1 - y0) * ph
+            ph = ((lt - st_) % (4 * BEAT)) / (4 * BEAT); sy = y0 + (y1 - y0) * ph
             d.rectangle((x0 + 12, sy - 2, x1 - 12, sy + 2), fill=ORANGE + (int(a * 0.9),))
             for g in range(1, 8):
                 d.rectangle((x0 + 12, sy - 2 - g * 9, x1 - 12, sy - 2 - (g - 1) * 9), fill=ORANGE + (int(a * 0.12 * (8 - g) / 7),))
-        tr = ease((lt - BEAT - 0.15) / 0.25)
+        tr = ease((lt - st_ - 0.15) / 0.25)
         if tr > 0 and fx.get('tag'): tag(d, x0, y0 - 66 + (1 - tr) * 20, fx['tag'], int(255 * tr * out))
     elif fx['kind'] == 'rings':
-        c = xf(fx['c'], z); st = BEAT
+        c = xf(fx['c'], z); st = fx.get('at', BEAT)
         if lt < st: return
         for k in range(3):
             v = (lt - st) / BEAT - k * 0.33
