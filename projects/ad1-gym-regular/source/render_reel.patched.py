@@ -132,6 +132,8 @@ def shot_zoom(k, t):
     s = SHOTS[k]; lt = t - s['t0']
     z0, z1 = s.get('z', [1.04, 1.04])
     z = z0 + (z1 - z0) * easeio(lt / s['dur'])
+    for kb in s.get('kicks', []):  # in-shot punch-in that holds (marks a beat without cutting)
+        z *= 1 + s.get('kick_amt', 0.08) * back((lt - kb * BEAT) / 0.14)
     if s['kind'] == 'burst':
         z = 1.14 - 0.12 * ease(lt / s['dur'])
     elif LOOK['beat_pulse']:
@@ -392,6 +394,9 @@ def render_frame(fi):
     # camera shake + RGB split on hits
     hitr = max(0, 1 - fr / 6) if s['tin'] in HITS and s['kind'] != 'end' else 0
     if s['kind'] == 'burst': hitr = max(hitr, 0.8 * max(0, 1 - fr / 4))
+    for kb in s.get('kicks', []):
+        kf = fr - kb * BEAT * FPS
+        if 0 <= kf < 5: hitr = max(hitr, 0.7 * (1 - kf / 5))
     if hitr > 0:
         rr = random.Random(fi)
         dx = int(rr.uniform(-1, 1) * 22 * hitr); dy = int(rr.uniform(-1, 1) * 22 * hitr)
