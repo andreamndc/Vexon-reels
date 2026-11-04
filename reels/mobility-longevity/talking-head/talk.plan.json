@@ -1,5 +1,5 @@
 {
- "_comment": "VEXON 'Mobility and Longevity' talking-head refinement: Marina (matted) over B-roll + cutaways, synced captions. Paths relative to this file: raw clips in footage/, matte from scripts/matte.py in matte/.",
+ "_comment": "VEXON 'Mobility and Longevity' talking-head refinement: Marina (matted) over B-roll + cutaways, synced captions.",
  "title": "VEXON · Mobility and Longevity · Talking head",
  "size": [
   1080,
@@ -171,16 +171,53 @@
   },
   {
    "t0": 33.76,
-   "mode": "talk",
-   "src": "ROW",
-   "ss": 2.0,
-   "speed": 0.5,
+   "mode": "pip",
+   "src": "BIKE",
+   "ss": 5.0,
+   "speed": 0.7,
    "z": [
     1.0,
     1.06
    ],
-   "tin": "xfade",
-   "note": "Vexon Med + CTA"
+   "tin": "morph",
+   "place": {
+    "scale": 0.58,
+    "x": 300
+   },
+   "note": "'At Vexon Med, we measure it': Marina glides into the corner over the data screen"
+  },
+  {
+   "t0": 35.92,
+   "mode": "pip",
+   "src": "ROW",
+   "ss": 6.4,
+   "z": [
+    1.06,
+    1.0
+   ],
+   "tin": "cutout",
+   "place": {
+    "scale": 0.58,
+    "x": 300
+   },
+   "note": "'build a plan around it': coach with tablet"
+  },
+  {
+   "t0": 37.28,
+   "mode": "pip",
+   "src": "BIKE",
+   "ss": 0.2,
+   "speed": 0.6,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "whip",
+   "place": {
+    "scale": 0.58,
+    "x": 300
+   },
+   "note": "CTA over the VO2 assessment"
   }
  ],
  "captions": [
