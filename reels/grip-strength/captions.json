@@ -1,0 +1,632 @@
+[
+ {
+  "text": "Grip strength is about more than just",
+  "words": [
+   {
+    "w": "Grip",
+    "s": 0.0,
+    "e": 0.4
+   },
+   {
+    "w": "strength",
+    "s": 0.4,
+    "e": 0.71
+   },
+   {
+    "w": "is",
+    "s": 0.72,
+    "e": 0.88
+   },
+   {
+    "w": "about",
+    "s": 0.88,
+    "e": 1.12
+   },
+   {
+    "w": "more",
+    "s": 1.12,
+    "e": 1.28
+   },
+   {
+    "w": "than",
+    "s": 1.28,
+    "e": 1.44
+   },
+   {
+    "w": "just",
+    "s": 1.44,
+    "e": 1.65
+   }
+  ]
+ },
+ {
+  "text": "being able to hold on.",
+  "words": [
+   {
+    "w": "being",
+    "s": 1.68,
+    "e": 1.84
+   },
+   {
+    "w": "able",
+    "s": 1.84,
+    "e": 2.0
+   },
+   {
+    "w": "to",
+    "s": 2.0,
+    "e": 2.15
+   },
+   {
+    "w": "hold",
+    "s": 2.16,
+    "e": 2.4
+   },
+   {
+    "w": "on.",
+    "s": 2.4,
+    "e": 2.62
+   }
+  ]
+ },
+ {
+  "text": "It’s an important indicator",
+  "words": [
+   {
+    "w": "It’s",
+    "s": 3.8,
+    "e": 4.04
+   },
+   {
+    "w": "an",
+    "s": 4.04,
+    "e": 4.2
+   },
+   {
+    "w": "important",
+    "s": 4.2,
+    "e": 4.44
+   },
+   {
+    "w": "indicator",
+    "s": 4.44,
+    "e": 5.0
+   }
+  ]
+ },
+ {
+  "text": "of overall strength, physical function,",
+  "words": [
+   {
+    "w": "of",
+    "s": 5.0,
+    "e": 5.14
+   },
+   {
+    "w": "overall",
+    "s": 5.16,
+    "e": 5.48
+   },
+   {
+    "w": "strength,",
+    "s": 5.48,
+    "e": 5.9
+   },
+   {
+    "w": "physical",
+    "s": 5.96,
+    "e": 6.36
+   },
+   {
+    "w": "function,",
+    "s": 6.36,
+    "e": 6.76
+   }
+  ]
+ },
+ {
+  "text": "and how your body performs as you age.",
+  "words": [
+   {
+    "w": "and",
+    "s": 6.76,
+    "e": 6.84
+   },
+   {
+    "w": "how",
+    "s": 6.84,
+    "e": 7.0
+   },
+   {
+    "w": "your",
+    "s": 7.0,
+    "e": 7.13
+   },
+   {
+    "w": "body",
+    "s": 7.16,
+    "e": 7.4
+   },
+   {
+    "w": "performs",
+    "s": 7.4,
+    "e": 7.85
+   },
+   {
+    "w": "as",
+    "s": 7.88,
+    "e": 8.04
+   },
+   {
+    "w": "you",
+    "s": 8.04,
+    "e": 8.2
+   },
+   {
+    "w": "age.",
+    "s": 8.2,
+    "e": 8.53
+   }
+  ]
+ },
+ {
+  "text": "So, what can a dead hang tell us?",
+  "words": [
+   {
+    "w": "So,",
+    "s": 9.0,
+    "e": 9.32
+   },
+   {
+    "w": "what",
+    "s": 9.32,
+    "e": 9.48
+   },
+   {
+    "w": "can",
+    "s": 9.48,
+    "e": 9.64
+   },
+   {
+    "w": "a",
+    "s": 9.64,
+    "e": 9.72
+   },
+   {
+    "w": "dead",
+    "s": 9.72,
+    "e": 10.04
+   },
+   {
+    "w": "hang",
+    "s": 10.04,
+    "e": 10.44
+   },
+   {
+    "w": "tell",
+    "s": 10.44,
+    "e": 10.6
+   },
+   {
+    "w": "us?",
+    "s": 10.6,
+    "e": 10.79
+   }
+  ]
+ },
+ {
+  "text": "How long can you maintain your hold?",
+  "words": [
+   {
+    "w": "How",
+    "s": 11.16,
+    "e": 11.4
+   },
+   {
+    "w": "long",
+    "s": 11.4,
+    "e": 11.56
+   },
+   {
+    "w": "can",
+    "s": 11.56,
+    "e": 11.72
+   },
+   {
+    "w": "you",
+    "s": 11.72,
+    "e": 11.88
+   },
+   {
+    "w": "maintain",
+    "s": 11.88,
+    "e": 12.28
+   },
+   {
+    "w": "your",
+    "s": 12.28,
+    "e": 12.44
+   },
+   {
+    "w": "hold?",
+    "s": 12.44,
+    "e": 12.71
+   }
+  ]
+ },
+ {
+  "text": "Can you maintain a comfortable, controlled position?",
+  "words": [
+   {
+    "w": "Can",
+    "s": 13.37,
+    "e": 13.61
+   },
+   {
+    "w": "you",
+    "s": 13.61,
+    "e": 13.69
+   },
+   {
+    "w": "maintain",
+    "s": 13.69,
+    "e": 14.09
+   },
+   {
+    "w": "a",
+    "s": 14.09,
+    "e": 14.17
+   },
+   {
+    "w": "comfortable,",
+    "s": 14.17,
+    "e": 14.65
+   },
+   {
+    "w": "controlled",
+    "s": 14.65,
+    "e": 15.13
+   },
+   {
+    "w": "position?",
+    "s": 15.13,
+    "e": 15.55
+   }
+  ]
+ },
+ {
+  "text": "Does one hand fatigue noticeably faster?",
+  "words": [
+   {
+    "w": "Does",
+    "s": 16.38,
+    "e": 16.62
+   },
+   {
+    "w": "one",
+    "s": 16.62,
+    "e": 16.86
+   },
+   {
+    "w": "hand",
+    "s": 16.86,
+    "e": 17.18
+   },
+   {
+    "w": "fatigue",
+    "s": 17.18,
+    "e": 17.74
+   },
+   {
+    "w": "noticeably",
+    "s": 17.74,
+    "e": 18.36
+   },
+   {
+    "w": "faster?",
+    "s": 18.38,
+    "e": 18.9
+   }
+  ]
+ },
+ {
+  "text": "And is your endurance improving with consistent training?",
+  "words": [
+   {
+    "w": "And",
+    "s": 19.63,
+    "e": 19.79
+   },
+   {
+    "w": "is",
+    "s": 19.79,
+    "e": 19.95
+   },
+   {
+    "w": "your",
+    "s": 19.95,
+    "e": 20.11
+   },
+   {
+    "w": "endurance",
+    "s": 20.11,
+    "e": 20.59
+   },
+   {
+    "w": "improving",
+    "s": 20.59,
+    "e": 21.07
+   },
+   {
+    "w": "with",
+    "s": 21.07,
+    "e": 21.19
+   },
+   {
+    "w": "consistent",
+    "s": 21.23,
+    "e": 21.71
+   },
+   {
+    "w": "training?",
+    "s": 21.71,
+    "e": 22.42
+   }
+  ]
+ },
+ {
+  "text": "These small measurements can offer insight",
+  "words": [
+   {
+    "w": "These",
+    "s": 23.01,
+    "e": 23.25
+   },
+   {
+    "w": "small",
+    "s": 23.25,
+    "e": 23.49
+   },
+   {
+    "w": "measurements",
+    "s": 23.49,
+    "e": 24.05
+   },
+   {
+    "w": "can",
+    "s": 24.05,
+    "e": 24.21
+   },
+   {
+    "w": "offer",
+    "s": 24.21,
+    "e": 24.45
+   },
+   {
+    "w": "insight",
+    "s": 24.45,
+    "e": 24.85
+   }
+  ]
+ },
+ {
+  "text": "into your strength, endurance, and physical capabilities over time.",
+  "words": [
+   {
+    "w": "into",
+    "s": 24.85,
+    "e": 25.09
+   },
+   {
+    "w": "your",
+    "s": 25.09,
+    "e": 25.17
+   },
+   {
+    "w": "strength,",
+    "s": 25.17,
+    "e": 25.62
+   },
+   {
+    "w": "endurance,",
+    "s": 25.65,
+    "e": 26.21
+   },
+   {
+    "w": "and",
+    "s": 26.21,
+    "e": 26.29
+   },
+   {
+    "w": "physical",
+    "s": 26.29,
+    "e": 26.61
+   },
+   {
+    "w": "capabilities",
+    "s": 26.61,
+    "e": 27.49
+   },
+   {
+    "w": "over",
+    "s": 27.49,
+    "e": 27.73
+   },
+   {
+    "w": "time.",
+    "s": 27.73,
+    "e": 27.95
+   }
+  ]
+ },
+ {
+  "text": "Because maintaining strength and physical function",
+  "words": [
+   {
+    "w": "Because",
+    "s": 28.29,
+    "e": 28.53
+   },
+   {
+    "w": "maintaining",
+    "s": 28.53,
+    "e": 29.01
+   },
+   {
+    "w": "strength",
+    "s": 29.01,
+    "e": 29.33
+   },
+   {
+    "w": "and",
+    "s": 29.33,
+    "e": 29.49
+   },
+   {
+    "w": "physical",
+    "s": 29.49,
+    "e": 29.89
+   },
+   {
+    "w": "function",
+    "s": 29.89,
+    "e": 30.4
+   }
+  ]
+ },
+ {
+  "text": "plays an important role in mobility,",
+  "words": [
+   {
+    "w": "plays",
+    "s": 30.45,
+    "e": 30.85
+   },
+   {
+    "w": "an",
+    "s": 30.85,
+    "e": 31.01
+   },
+   {
+    "w": "important",
+    "s": 31.01,
+    "e": 31.25
+   },
+   {
+    "w": "role",
+    "s": 31.25,
+    "e": 31.49
+   },
+   {
+    "w": "in",
+    "s": 31.49,
+    "e": 31.65
+   },
+   {
+    "w": "mobility,",
+    "s": 31.65,
+    "e": 32.29
+   }
+  ]
+ },
+ {
+  "text": "independence, and healthy aging.",
+  "words": [
+   {
+    "w": "independence,",
+    "s": 32.29,
+    "e": 32.93
+   },
+   {
+    "w": "and",
+    "s": 32.93,
+    "e": 33.09
+   },
+   {
+    "w": "healthy",
+    "s": 33.09,
+    "e": 33.49
+   },
+   {
+    "w": "aging.",
+    "s": 33.49,
+    "e": 33.91
+   }
+  ]
+ },
+ {
+  "text": "A dead hang is one small piece of the picture.",
+  "words": [
+   {
+    "w": "A",
+    "s": 34.29,
+    "e": 34.45
+   },
+   {
+    "w": "dead",
+    "s": 34.45,
+    "e": 34.77
+   },
+   {
+    "w": "hang",
+    "s": 34.77,
+    "e": 35.12
+   },
+   {
+    "w": "is",
+    "s": 35.17,
+    "e": 35.29
+   },
+   {
+    "w": "one",
+    "s": 35.33,
+    "e": 35.57
+   },
+   {
+    "w": "small",
+    "s": 35.57,
+    "e": 35.8
+   },
+   {
+    "w": "piece",
+    "s": 35.81,
+    "e": 36.11
+   },
+   {
+    "w": "of",
+    "s": 36.13,
+    "e": 36.29
+   },
+   {
+    "w": "the",
+    "s": 36.29,
+    "e": 36.37
+   },
+   {
+    "w": "picture.",
+    "s": 36.37,
+    "e": 36.81
+   }
+  ]
+ },
+ {
+  "text": "Measure what matters.",
+  "words": [
+   {
+    "w": "Measure",
+    "s": 37.17,
+    "e": 37.69
+   },
+   {
+    "w": "what",
+    "s": 37.73,
+    "e": 37.97
+   },
+   {
+    "w": "matters.",
+    "s": 37.97,
+    "e": 38.47
+   }
+  ]
+ }
+]

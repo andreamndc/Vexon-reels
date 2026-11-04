@@ -1,0 +1,353 @@
+{
+ "_comment": "Grip strength reel with Cam's VO (refinement of the dead-hang reel). Sources point at the raw uploads; captions.json holds word timings after the inserted pauses.",
+ "title": "VEXON · Grip strength (Cam VO) · Storyboard",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bpm": 131,
+ "music_note": "Cut to Cam's voiceover; music sits under it in-app at low volume.",
+ "look": {
+  "grade": true,
+  "grain": true,
+  "beat_pulse": true,
+  "pulse": 0.006,
+  "card_border": false
+ },
+ "sources": {
+  "HANG_SR": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/e7933d02-IMG_0123.MP4",
+  "TUCK": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/ddac9cdf-IMG_2313.MOV",
+  "WHITE": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/325db3ab-IMG_2303.MOV",
+  "DRESS": "/root/.claude/uploads/92186584-7cfc-5d16-b829-c291bc071b69/d397bcb7-IMG_2597.MOV"
+ },
+ "captions": {
+  "file": "captions.json",
+  "size": 50,
+  "y": 1160,
+  "maxw": 880
+ },
+ "shots": [
+  {
+   "name": "HOOK",
+   "kind": "title",
+   "src": "WHITE",
+   "ss": 0.0,
+   "secs": 3.68,
+   "z": [
+    1.45,
+    1.6
+   ],
+   "zc": [
+    620,
+    300
+   ],
+   "band_y": 800,
+   "note": "Grip close-up. Words slam in with the VO (house flicker), then hold through a 1 s pause.",
+   "title_words": [
+    {
+     "text": "GRIP STRENGTH",
+     "beat": 0,
+     "size": 136,
+     "y": 650,
+     "color": "cream"
+    },
+    {
+     "text": "IS ABOUT MORE THAN JUST",
+     "beat": 1.57,
+     "size": 84,
+     "y": 785,
+     "color": "cream"
+    },
+    {
+     "text": "HOLDING ON.",
+     "beat": 4.72,
+     "size": 164,
+     "y": 925,
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "name": "Indicator",
+   "kind": "plain",
+   "src": "HANG_SR",
+   "ss": 0.2,
+   "secs": 5.2,
+   "speed": 0.85,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "dissolve",
+   "tdur": 12,
+   "note": "VO + captions only: older client's timed hang, coach watching."
+  },
+  {
+   "name": "Intro question",
+   "src": "HANG_SR",
+   "ss": 18.7,
+   "secs": 2.16,
+   "z": [
+    1.18,
+    1.26
+   ],
+   "zc": [
+    660,
+    860
+   ],
+   "tin": "slide",
+   "text": "So, what can a dead hang tell us?",
+   "highlight": [
+    "dead",
+    "hang"
+   ],
+   "note": "Push. Centred question pops in with the VO.",
+   "ty": 820,
+   "size": 88,
+   "maxw": 940,
+   "pop": 0.08,
+   "reveal": 0.38,
+   "stagger": 0.08,
+   "box_beats": 1.5,
+   "text_delay": 0.05,
+   "band_y": 840,
+   "band_h": 480,
+   "band_s": 0.5
+  },
+  {
+   "name": "Q1 How long",
+   "src": "HANG_SR",
+   "ss": 9.9,
+   "secs": 2.21,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "wipe",
+   "text": "How long can you maintain your hold?",
+   "highlight": [
+    "how",
+    "long"
+   ],
+   "note": "Stopwatch phone in frame.",
+   "ty": 820,
+   "size": 88,
+   "maxw": 940,
+   "pop": 0.08,
+   "reveal": 0.38,
+   "stagger": 0.08,
+   "box_beats": 1.5,
+   "text_delay": 0.05,
+   "band_y": 840,
+   "band_h": 480,
+   "band_s": 0.5
+  },
+  {
+   "name": "Q2 Controlled",
+   "src": "DRESS",
+   "ss": 0.1,
+   "secs": 3.01,
+   "speed": 0.95,
+   "z": [
+    1.06,
+    1.0
+   ],
+   "tin": "slide",
+   "text": "Can you maintain a comfortable, controlled position?",
+   "highlight": [
+    "controlled"
+   ],
+   "note": "Relaxed, steady hang.",
+   "ty": 820,
+   "size": 88,
+   "maxw": 940,
+   "pop": 0.08,
+   "reveal": 0.38,
+   "stagger": 0.08,
+   "box_beats": 1.5,
+   "text_delay": 0.05,
+   "band_y": 840,
+   "band_h": 480,
+   "band_s": 0.5
+  },
+  {
+   "name": "Q3 One hand",
+   "src": "TUCK",
+   "ss": 0.0,
+   "secs": 3.25,
+   "speed": 0.9,
+   "z": [
+    1.45,
+    1.55
+   ],
+   "zc": [
+    740,
+    330
+   ],
+   "tin": "wipe",
+   "text": "Does one hand fatigue noticeably faster?",
+   "highlight": [
+    "one",
+    "hand"
+   ],
+   "note": "New: close-up on both hands on the bar.",
+   "ty": 820,
+   "size": 88,
+   "maxw": 940,
+   "pop": 0.08,
+   "reveal": 0.38,
+   "stagger": 0.08,
+   "box_beats": 1.5,
+   "text_delay": 0.05,
+   "band_y": 840,
+   "band_h": 480,
+   "band_s": 0.5
+  },
+  {
+   "name": "Q4 Endurance",
+   "src": "HANG_SR",
+   "ss": 13.7,
+   "secs": 3.38,
+   "z": [
+    1.12,
+    1.2
+   ],
+   "zc": [
+    560,
+    760
+   ],
+   "tin": "slide",
+   "text": "Is your endurance improving with consistent training?",
+   "highlight": [
+    "endurance"
+   ],
+   "note": "Back to the long timed hang.",
+   "ty": 820,
+   "size": 88,
+   "maxw": 940,
+   "pop": 0.08,
+   "reveal": 0.38,
+   "stagger": 0.08,
+   "box_beats": 1.5,
+   "text_delay": 0.05,
+   "band_y": 840,
+   "band_h": 480,
+   "band_s": 0.5
+  },
+  {
+   "name": "Measurements a",
+   "kind": "plain",
+   "src": "HANG_SR",
+   "ss": 4.6,
+   "secs": 1.86,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "dissolve",
+   "tdur": 12,
+   "note": "New: coach with the timer, turning to camera."
+  },
+  {
+   "name": "Measurements b",
+   "kind": "plain",
+   "src": "HANG_SR",
+   "ss": 6.46,
+   "secs": 3.42,
+   "z": [
+    1.2,
+    1.28
+   ],
+   "zc": [
+    620,
+    820
+   ],
+   "tin": "cut",
+   "note": "Punch-in on the same moment: the hang continues while he times it."
+  },
+  {
+   "name": "Independence",
+   "kind": "plain",
+   "src": "HANG_SR",
+   "ss": 22.0,
+   "secs": 6.0,
+   "speed": 0.86,
+   "z": [
+    1.0,
+    1.14
+   ],
+   "zc": [
+    560,
+    820
+   ],
+   "tin": "dissolve",
+   "tdur": 16,
+   "note": "Slow push-in on the steady hang: mobility, independence, healthy aging."
+  },
+  {
+   "name": "FINAL a",
+   "src": "HANG_SR",
+   "ss": 27.2,
+   "secs": 2.88,
+   "speed": 0.85,
+   "z": [
+    1.04,
+    1.0
+   ],
+   "tin": "dissolve",
+   "tdur": 14,
+   "ty": 820,
+   "size": 88,
+   "reveal": 0.5,
+   "stagger": 0.12,
+   "text_delay": 0.1,
+   "band_y": 860,
+   "band_h": 480,
+   "text": "A dead hang is one small piece of the picture.",
+   "highlight": [
+    "small",
+    "piece"
+   ],
+   "note": "He finishes the hang."
+  },
+  {
+   "name": "FINAL b",
+   "src": "TUCK",
+   "ss": 0.6,
+   "secs": 2.55,
+   "speed": 0.9,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "slide",
+   "ty": 800,
+   "size": 130,
+   "maxw": 950,
+   "lh_k": 1.08,
+   "reveal": 0.45,
+   "stagger": 0.14,
+   "box_beats": 1.5,
+   "text_delay": 0.1,
+   "band_y": 800,
+   "band_h": 520,
+   "band_s": 0.6,
+   "text": "Measure what matters.",
+   "highlight": [
+    "matters"
+   ],
+   "note": "The real banner sits below the line."
+  },
+  {
+   "name": "END SLOT",
+   "kind": "end",
+   "src": null,
+   "secs": 2.5,
+   "tin": "dissolve",
+   "tdur": 20,
+   "fill": "navy",
+   "note": "Clean navy logo slot."
+  }
+ ]
+}
