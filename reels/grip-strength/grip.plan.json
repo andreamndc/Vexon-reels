@@ -1,5 +1,5 @@
 {
- "_comment": "Grip strength reel with Cam's VO (refinement of the dead-hang reel). Sources point at the raw uploads; captions.json holds word timings after the inserted pauses.",
+ "_comment": "Grip strength reel with Cam's VO at its original timing (~39 s). Captions marked hide are lines already shown as big on-screen text.",
  "title": "VEXON · Grip strength (Cam VO) · Storyboard",
  "size": [
   1080,
@@ -33,7 +33,7 @@
    "kind": "title",
    "src": "WHITE",
    "ss": 0.0,
-   "secs": 3.68,
+   "secs": 3.3,
    "z": [
     1.45,
     1.6
@@ -43,7 +43,7 @@
     300
    ],
    "band_y": 800,
-   "note": "Grip close-up. Words slam in with the VO (house flicker), then hold through a 1 s pause.",
+   "note": "Grip close-up. Words slam in with the VO (house flicker).",
    "title_words": [
     {
      "text": "GRIP STRENGTH",
@@ -61,7 +61,7 @@
     },
     {
      "text": "HOLDING ON.",
-     "beat": 4.72,
+     "beat": 3.67,
      "size": 164,
      "y": 925,
      "color": "orange"
@@ -73,7 +73,7 @@
    "kind": "plain",
    "src": "HANG_SR",
    "ss": 0.2,
-   "secs": 5.2,
+   "secs": 4.58,
    "speed": 0.85,
    "z": [
     1.0,
@@ -119,7 +119,7 @@
    "name": "Q1 How long",
    "src": "HANG_SR",
    "ss": 9.9,
-   "secs": 2.21,
+   "secs": 1.76,
    "z": [
     1.0,
     1.05
@@ -147,7 +147,7 @@
    "name": "Q2 Controlled",
    "src": "DRESS",
    "ss": 0.1,
-   "secs": 3.01,
+   "secs": 2.56,
    "speed": 0.95,
    "z": [
     1.06,
@@ -175,7 +175,7 @@
    "name": "Q3 One hand",
    "src": "TUCK",
    "ss": 0.0,
-   "secs": 3.25,
+   "secs": 2.8,
    "speed": 0.9,
    "z": [
     1.45,
@@ -208,7 +208,7 @@
    "name": "Q4 Endurance",
    "src": "HANG_SR",
    "ss": 13.7,
-   "secs": 3.38,
+   "secs": 2.88,
    "z": [
     1.12,
     1.2
@@ -315,7 +315,7 @@
    "name": "FINAL b",
    "src": "TUCK",
    "ss": 0.6,
-   "secs": 2.55,
+   "secs": 2.5,
    "speed": 0.9,
    "z": [
     1.0,
