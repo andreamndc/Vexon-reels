@@ -114,20 +114,31 @@
   },
   {
    "name": "Strength",
-   "src": "ROW",
-   "ss": 9.4,
    "bars": 2,
-   "z": [
-    1.22,
-    1.32
-   ],
-   "ty": 1180,
+   "ty": 520,
    "tin": "zoomblur",
    "text": "We work to prioritize strength.",
    "highlight": [
     "strength"
    ],
-   "note": "Zoom-blur punch into a tighter angle on the same rower (seamless angle change)."
+   "note": "Zoom-blur into the VO2 bike test. Sonar rings pulse on the breathing mask.",
+   "src": "BIKE",
+   "ss": 8.0,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "speed": 0.85,
+   "fx": {
+    "kind": "rings",
+    "c": [
+     705,
+     880
+    ],
+    "tag": "VO2 MAX TEST",
+    "tag_side": "left_below",
+    "rmax": 230
+   }
   },
   {
    "name": "Mobility",
@@ -195,31 +206,21 @@
   },
   {
    "name": "Cardio",
-   "src": "BIKE",
-   "ss": 8.0,
    "bars": 2.5,
-   "z": [
-    1.0,
-    1.08
-   ],
-   "speed": 0.85,
-   "ty": 545,
+   "ty": 1180,
    "tin": "lightleak",
    "text": "We monitor cardiovascular and metabolic health.",
    "highlight": [
     "cardiovascular",
     "metabolic"
    ],
-   "fx": {
-    "kind": "rings",
-    "c": [
-     705,
-     880
-    ],
-    "tag": "VO2 MAX TEST",
-    "tag_side": "left_below"
-   },
-   "note": "Warm gold light-leak dissolve from movement into assessment. Sonar rings pulse on the breathing mask."
+   "note": "Warm gold light-leak dissolve into a tight angle on the rower.",
+   "src": "ROW",
+   "ss": 9.4,
+   "z": [
+    1.22,
+    1.32
+   ]
   },
   {
    "name": "Progress",

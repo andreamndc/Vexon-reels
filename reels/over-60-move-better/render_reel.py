@@ -308,7 +308,7 @@ def callout(layer, fx, lt, span, z):
         for k in range(3):
             v = (lt - st) / BEAT - k * 0.33
             if v < 0: continue
-            ph = v % 1.0; rad = 70 + 230 * ease(ph)
+            ph = v % 1.0; rad = 70 + (fx.get('rmax', 300) - 70) * ease(ph)
             d.ellipse((c[0] - rad, c[1] - rad, c[0] + rad, c[1] + rad), outline=ORANGE + (int(220 * (1 - ph) * out),), width=6)
         r = back((lt - st) / 0.3)
         d.ellipse((c[0] - 14 * r, c[1] - 14 * r, c[0] + 14 * r, c[1] + 14 * r), fill=ORANGE + (int(255 * out),))
