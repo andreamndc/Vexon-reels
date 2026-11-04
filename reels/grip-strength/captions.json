@@ -417,7 +417,7 @@
   ]
  },
  {
-  "text": "into your strength, endurance, and physical capabilities over time.",
+  "text": "into your strength, endurance,",
   "words": [
    {
     "w": "into",
@@ -438,7 +438,12 @@
     "w": "endurance,",
     "s": 22.799999237060547,
     "e": 23.35999870300293
-   },
+   }
+  ]
+ },
+ {
+  "text": "and physical capabilities over time.",
+  "words": [
    {
     "w": "and",
     "s": 23.35999870300293,

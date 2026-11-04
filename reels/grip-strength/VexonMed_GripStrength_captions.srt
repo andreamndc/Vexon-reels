@@ -43,25 +43,29 @@ And is your endurance improving with consistent training?
 These small measurements can offer insight
 
 12
-00:00:21,920 --> 00:00:25,350
-into your strength, endurance, and physical capabilities over time.
+00:00:21,920 --> 00:00:23,270
+into your strength, endurance,
 
 13
+00:00:23,280 --> 00:00:25,350
+and physical capabilities over time.
+
+14
 00:00:25,360 --> 00:00:27,510
 Because maintaining strength and physical function
 
-14
+15
 00:00:27,520 --> 00:00:29,350
 plays an important role in mobility,
 
-15
+16
 00:00:29,360 --> 00:00:31,350
 independence, and healthy aging.
 
-16
+17
 00:00:31,360 --> 00:00:34,230
 A dead hang is one small piece of the picture.
 
-17
+18
 00:00:34,240 --> 00:00:36,070
 Measure what matters.

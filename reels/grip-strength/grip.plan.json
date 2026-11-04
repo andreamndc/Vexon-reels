@@ -1,5 +1,5 @@
 {
- "_comment": "Grip strength reel with Cam's VO at its original timing (~39 s). Captions marked hide are lines already shown as big on-screen text.",
+ "_comment": "Grip strength reel with Cam's VO at its original timing (~39 s). Captions: Public Sans Bold, all caps; chunks marked hide are already shown as big on-screen text.",
  "title": "VEXON · Grip strength (Cam VO) · Storyboard",
  "size": [
   1080,
@@ -23,9 +23,11 @@
  },
  "captions": {
   "file": "captions.json",
-  "size": 50,
+  "size": 46,
   "y": 1160,
-  "maxw": 880
+  "maxw": 920,
+  "font": "sub_bold",
+  "upper": true
  },
  "shots": [
   {
