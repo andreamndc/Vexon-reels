@@ -1,37 +1,38 @@
-# Vexon Med · Ad #1 · CapCut rebuild kit (cut to “Baboon”)
+# Vexon Med · Ad #1 · CapCut rebuild kit (20 s, cut to the @asrpromedia sound)
 
 This kit rebuilds the finished ad (`../VexonMed_Ad1_GymRegular_9x16.mp4`, one folder up; also in `reference/` in the zip) as an editable CapCut timeline.
 It works in CapCut desktop and mobile. `timeline.csv` lists every item with its exact start and end time, as seconds plus frame number at 30 fps.
 
-## Music: "Baboon" (Rj Pasin), as used in the reference TikTok
-The edit is cut to that track's beat grid:
-- **Tempo:** 165 BPM.
-- **Accents:** each bar is 2.9085 s, with accents in a 3+3+2 pattern.
-- **Drop:** the main drop is at **00:03.01**.
+## Music: "original sound" by @asrpromedia (the reference TikTok)
+The edit is cut to that sound's beat grid:
+- **Tempo:** 118 BPM, with a beat every 0.508 s and a bar every 2.03 s.
+- **Structure:** the first beat is at **00:00.50**. Full energy runs to 16.26 s, where the outro begins, and the sound ends at 20.2 s.
 
-The ad is **14.23 s** long to fit the music. Cuts land on the song's accents and 8th-note pulses: 3.01 (drop), 4.83, 5.92, 6.46, 7.19, 7.73, 8.28, 8.82, 10.28, 11.73 and 12.82 s, and it ends at 14.23 s.
+The ad is **20.0 s**. Every cut sits on a beat or half-beat: 3.80, 5.58, 7.11, 7.87, 8.63, 9.39, 10.16, 10.92, 12.95, 14.22 (the downbeat after the break), 16.26 (outro, fade to navy), 17.53 and 18.80 s.
 
-The song is **not included**; it's copyrighted. Add it in CapCut, TikTok or Instagram, and start it at the same point the reference TikTok does (its first hit at about 0.1 s and the drop at 3.01 s). The quickest way on TikTok is *Use this sound* on the reference video. Check that the drop hits exactly on the cut from boxing to rowing.
+The sound is **not included**: it belongs to the TikTok creator. On TikTok, use *Use this sound* on the reference video. In CapCut, import it and start it at 0:00. Check that the fade to navy lands exactly where the outro starts (16.26 s).
 
 ## What's in the kit
 | folder | contents |
 |---|---|
-| `clips/` | 11 shots, each already trimmed, graded, reframed to 9:16 and speed-ramped, at the exact frame length it runs in the ad. There is no text and no transitions. Shot 12 is the navy logo slot as a PNG. |
+| `clips/` | 11 shots, each already trimmed, graded, reframed to 9:16 and speed-ramped, at the exact frame length it runs in the ad. There is no text and no transitions. Clips 12–14 are navy (`#0b1525`) PNGs: two text cards and the empty logo slot. |
 | `layers/` | Transparent 1080×1920 PNGs of every text card and callout, in the exact Vexon styling, pre-positioned inside the Instagram ad safe zone. |
 | `timeline.csv` | Every item: track, start, end, file, transition, in/out animation. |
 
 ## Build it in CapCut (about 15 minutes)
 1. **New project, ratio 9:16, 30 fps.** Set the canvas background to navy `#0b1525`.
-2. **Main track:** import `clips/01` to `clips/11` and the navy PNG (`12`), in order. Set the PNG's length to 1.40 s (42 frames), so the timeline ends at 14.23 s.
-3. **Music:** add "Baboon" from 0:00, aligned as above.
+2. **Main track:** import `clips/01` to `clips/14`, in order. Set the navy PNGs to 1.27 s, 1.27 s and 1.20 s (38, 38 and 36 frames), so the timeline ends at 20.00 s.
+3. **Music:** add the @asrpromedia sound from 0:00.
 4. **Overlays:** for each `layers/*.png`, use *Overlay → Add overlay*. Set it to fill the canvas (already 1080×1920) and place it at the times in `timeline.csv`. Positions are baked in.
-5. **Hook (one sentence):** the four hook lines build the sentence on the song's intro hits (0.10, 0.47, 0.83 and 1.20 s). All four stay on screen together until the drop at 3.01 s. Use a quick zoom-out "slam" in-animation (about 0.2 s).
+5. **Hook (one sentence):** line 1 is on screen from the first frame. Lines 2–4 land on the first three beats (0.50, 1.00 and 1.51 s), and the whole sentence holds until 3.80 s. Use a quick zoom-out "slam" in-animation (about 0.2 s).
 6. **Other overlays:** set the *In* and *Out* animations from `timeline.csv`. If a CapCut preset name differs in your version, pick the closest one.
 7. **Transitions:** keep them short (≤0.3 s). CapCut overlaps clips during transitions, so re-check that every cut still sits on the beat.
-   - The five indicator shots are only 0.5–0.7 s each, so use very quick transitions (≤0.2 s) or plain cuts there.
-   - For the cuts into Strength (5.92 s) and Mobility (7.19 s), use no transition. Instead, add the *Shake* effect for about 0.2 s.
-8. **Logo:** add the official Vexon Med logo over the navy slot (12.82–14.23 s).
-9. **Export:** 1080p, 30 fps.
+   - The five indicator shots are 0.76 s each, so keep transitions there at ≤0.2 s.
+   - For the cut into Reaction time (10.16 s), use no transition. Instead, add the *Shake* effect for about 0.2 s.
+   - Into the first navy card (16.26 s), use a ~0.45 s dissolve. Its text starts at 16.47 s.
+8. **End cards:** "THIS IS FUNCTIONAL CAPACITY." (16.26–17.53 s) and "THIS IS VEXON MED." (17.53–18.80 s) on navy, with orange boxes on the key words.
+9. **Logo:** add the official Vexon Med logo over the empty navy slot (18.80–20.00 s).
+10. **Export:** 1080p, 30 fps.
 
 ## Native, editable text (optional)
 - **Font:** Oswald SemiBold in ALL CAPS (free on Google Fonts). Use Public Sans for tags.

@@ -9,8 +9,9 @@ P = json.load(open(plan)); BEAT = 60 / P['bpm']
 for d in ('clips', 'layers'): shutil.rmtree(os.path.join(kit, d), ignore_errors=True); os.makedirs(os.path.join(kit, d))
 F = lambda x: math.ceil(x * 30 - 1e-6)
 def render(p, out, mode, times):
+    times = [round(t, 2) for t in times]
     json.dump(p, open('_kit_plan.json', 'w'))
-    subprocess.run(['python3', RR, '_kit_plan.json', out, '--layers', mode, '--at', ','.join(f'{t:.3f}' for t in times)], check=True, capture_output=True)
+    subprocess.run(['python3', RR, '_kit_plan.json', out, '--layers', mode, '--at', ','.join(f'{t:.2f}' for t in times)], check=True, capture_output=True)
     return [f'{out}_{round(t * 30) / 30:05.2f}.png' if False else f'{out}_{t:05.2f}.png' for t in times]
 def slug(s): return ''.join(c if c.isalnum() else '_' for c in s.upper()).strip('_')
 
@@ -55,19 +56,20 @@ for k, s in enumerate(shots):
             ov(a, b, fn, 'Zoom out (shrink) 0.2s', 'Fade out 0.13s', 'Lands on a song hit')
     elif s.get('text'):
         n = slug(s['name']).lower(); bx = s.get('box_at', BEAT if s['kind'] == 'cta' else 2 * BEAT)
+        t0 = s['t0'] + s.get('text_delay', 0.0)
         tin = s.get('text_in', 0.32); out_s = s.get('text_out_f', 5) / 30
         if bx > 0.2:  # plain state, then boxed state
             Q = copy.deepcopy(P); Q['shots'][k]['box_at'] = 99
-            src = render(Q, os.path.join(kit, 'layers', '_p'), 'text', [min(s['t0'] + 1.0, span_end - out_s - 0.05)])[0]
+            src = render(Q, os.path.join(kit, 'layers', '_p'), 'text', [min(t0 + 1.0, span_end - out_s - 0.05)])[0]
             os.rename(src, os.path.join(kit, 'layers', f'text_{n}_plain.png'))
-            ov(s['t0'], s['t0'] + bx, f'layers/text_{n}_plain.png', f'Wipe / slide up {tin:.2f}s', '-')
-            src = render(P, os.path.join(kit, 'layers', '_x'), 'text', [min(s['t0'] + bx + 0.4, span_end - out_s - 0.03)])[0]
+            ov(t0, t0 + bx, f'layers/text_{n}_plain.png', f'Wipe / slide up {tin:.2f}s', '-')
+            src = render(P, os.path.join(kit, 'layers', '_x'), 'text', [min(t0 + bx + 0.4, span_end - out_s - 0.03)])[0]
             os.rename(src, os.path.join(kit, 'layers', f'text_{n}_boxed.png'))
-            ov(s['t0'] + bx, span_end, f'layers/text_{n}_boxed.png', '-', f'Fade out {out_s:.2f}s', 'Orange box(es) appear here')
+            ov(t0 + bx, span_end, f'layers/text_{n}_boxed.png', '-', f'Fade out {out_s:.2f}s', 'Orange box(es) appear here')
         else:
-            src = render(P, os.path.join(kit, 'layers', '_x'), 'text', [min(s['t0'] + 0.4, span_end - out_s - 0.03)])[0]
+            src = render(P, os.path.join(kit, 'layers', '_x'), 'text', [min(t0 + 0.4, span_end - out_s - 0.03)])[0]
             os.rename(src, os.path.join(kit, 'layers', f'text_{n}.png'))
-            ov(s['t0'], span_end, f'layers/text_{n}.png', f'Slide up {tin:.2f}s', f'Fade out {out_s:.2f}s')
+            ov(t0, span_end, f'layers/text_{n}.png', f'Slide up {tin:.2f}s', f'Fade out {out_s:.2f}s')
 for k, s in enumerate(shots):
     if s.get('fx'):
         n = slug(s['name']).lower(); at = s['fx'].get('at', BEAT)

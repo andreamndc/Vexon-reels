@@ -339,7 +339,7 @@ def shot_at(t):
 def text_span(k):
     s = SHOTS[k]
     if s.get('cont'): return text_span(k - 1)
-    if s['kind'] not in ('title', 'line', 'cta'): return None
+    if s['kind'] not in ('title', 'line', 'cta', 'card'): return None
     end = SHOTS[k + s.get('text_span', 1) - 1]['t1']
     return (k, s['t0'], end)
 
@@ -347,9 +347,11 @@ def text_span(k):
 def render_frame(fi):
     t = fi / FPS
     k = shot_at(t); s = SHOTS[k]; lt = t - s['t0']; fr = lt * FPS
-    if s.get('src') is None:
+    if LAYER:
+        arr = np.full((H, W, 3), 255.0, np.float32); z = shot_zoom(k, t) if s.get('src') else 1
+    elif s.get('src') is None:
         arr = np.zeros((H, W, 3), np.float32); arr[:] = color(s.get('fill', 'navy')); z = 1
-    elif LAYER:
+    elif False:
         arr = np.full((H, W, 3), 255.0, np.float32); z = shot_zoom(k, t)
     else:
         img, z = shot_image(k, t); arr = np.asarray(img, np.float32)
@@ -410,12 +412,12 @@ def render_frame(fi):
         if sp:
             arr = arr.copy(); arr[..., 0] = np.roll(arr[..., 0], sp, 1); arr[..., 2] = np.roll(arr[..., 2], -sp, 1)
 
-    if s.get('src') is not None:
+    if s.get('src') is not None or s['kind'] == 'card':  # 'card' = text on a solid navy slot
         layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         span = text_span(k)
         if span:
-            sk, a0, a1 = span; ts = SHOTS[sk]; tl = t - a0
-            bf = min(1, tl / 0.25) * min(1, (a1 - t) / 0.2)
+            sk, a0, a1 = span; ts = SHOTS[sk]; tl = t - a0 - ts.get('text_delay', 0.0)
+            bf = max(0.0, min(1, tl / 0.25) * min(1, (a1 - t) / 0.2))
             if ts['kind'] == 'title':
                 arr = arr * (1 - band(ts.get('band_y', 820), ts.get('band_h', 560), 0.5) * bf) if LAYER not in ('fx', 'nob') else arr
                 hook_title(layer, ts['title_words'], tl, a1 - a0)
@@ -425,7 +427,7 @@ def render_frame(fi):
                 text_block(layer, ts['_words'], tl, a1 - a0, cy, ts.get('size', 96), 900, ts.get('box_at', BEAT), ts.get('text_in', 0.32), ts.get('text_out_f', 5))
             else:
                 cy = ts.get('ty', 1130)
-                arr = arr * (1 - band(cy, 520, 0.55) * bf) if LAYER not in ('fx', 'nob') else arr
+                arr = arr * (1 - band(cy, 520, 0.55) * bf) if LAYER not in ('fx', 'nob') and ts['kind'] != 'card' else arr
                 if ts.get('num'): numeral(layer, ts['num'], tl, a1 - a0, ts.get('num_y', 150))
                 n = len(ts['_words']); size = ts.get('size', 92 if n <= 9 else (80 if n <= 14 else 70))
                 text_block(layer, ts['_words'], tl, a1 - a0, cy, size, 940, ts.get('box_at', 2 * BEAT), ts.get('text_in', 0.32), ts.get('text_out_f', 5))

@@ -1,5 +1,5 @@
 {
- "title": "VEXON MED \u00b7 AD #1 \u00b7 Gym regular \u00b7 14.23 s cut to \u201cBaboon\u201d \u00b7 Storyboard",
+ "title": "VEXON MED \u00b7 AD #1 \u00b7 Gym regular \u00b7 20 s cut to @asrpromedia sound \u00b7 Storyboard",
  "safe_zone": [
   65,
   270,
@@ -11,9 +11,9 @@
   1920
  ],
  "fps": 30,
- "bpm": 165.03,
- "beat_offset": 0.098,
- "music_note": "Cut to \u201cBaboon\u201d (Rj Pasin) as used in the reference TikTok: 165 BPM, 3+3+2 accents, drop at 3.007 s. 14.23 s. Exported silent.",
+ "bpm": 118.02,
+ "beat_offset": 0.496,
+ "music_note": "Cut to the \u201coriginal sound\u201d on @asrpromedia\u2019s TikTok (118 BPM, bars every 2.03 s; outro from 16.26 s). 20.0 s. Exported silent.",
  "look": {
   "grade": true,
   "grain": true,
@@ -32,31 +32,31 @@
    "name": "HOOK",
    "kind": "plain",
    "src": "OUT",
-   "ss": 9.3,
-   "sec": 3.007,
+   "ss": 9.28,
+   "sec": 3.801,
    "ramp": [
-    1.0,
-    0.72
+    0.92,
+    0.45
    ],
    "z": [
     1.0,
     1.1
    ],
    "kicks": [
-    5.27
+    3.975
    ],
    "kick_amt": 0.07,
    "bright": -0.08,
    "tin": "cut",
    "band_y": 865,
    "band_h": 620,
-   "note": "One boxing take, one sentence. Lines slam in on the song's intro hits (0.10 / 0.46 / 0.83 / 1.19 s); punch-in on the bar at 1.92 s; cut on the drop at 3.01 s."
+   "note": "One boxing take, one sentence. Line 1 is on screen from the first frame; lines 2\u20134 land on the first three beats (0.50 / 1.00 / 1.51 s). Punch-in on the bar at 2.02 s; cut at 3.80 s."
   },
   {
    "name": "PROBLEM a",
    "src": "ROW",
    "ss": 5.35,
-   "sec": 1.818,
+   "sec": 1.779,
    "z": [
     1.0,
     1.08
@@ -64,7 +64,7 @@
    "cx": 0.45,
    "tin": "cut",
    "ty": 1050,
-   "note": "White flash on the drop (3.01 s). Rowing stroke.",
+   "note": "Whip pan on 3.80 s into the rowing stroke.",
    "kind": "plain"
   },
   {
@@ -72,7 +72,7 @@
    "kind": "plain",
    "src": "OUT",
    "ss": 4.4,
-   "sec": 1.09,
+   "sec": 1.525,
    "speed": 1.0,
    "z": [
     1.0,
@@ -80,13 +80,13 @@
    ],
    "cx": 0.55,
    "tin": "cut",
-   "note": "Zoom-blur push on the bar downbeat (4.83 s). Line holds to 5.92 s."
+   "note": "Zoom-blur push on 5.58 s into the outdoor machine push. Line holds to 7.11 s."
   },
   {
    "name": "STRENGTH",
    "src": "PLATE",
    "ss": 22.75,
-   "sec": 0.545,
+   "sec": 0.763,
    "z": [
     1.04,
     1.0
@@ -94,17 +94,17 @@
    "tin": "cut",
    "ty": 560,
    "size": 150,
-   "box_at": 0.06,
-   "note": "Hard hit on the accent (5.92 s). Brackets snap onto the grip device.",
-   "text_in": 0.14,
-   "text_out_f": 3,
+   "box_at": 0.08,
+   "note": "White flash on 7.11 s. Brackets snap onto the grip device.",
+   "text_in": 0.16,
+   "text_out_f": 4,
    "kind": "plain"
   },
   {
    "name": "CARDIO",
    "src": "ROW",
    "ss": 11.6,
-   "sec": 0.728,
+   "sec": 0.762,
    "z": [
     1.0,
     1.05
@@ -112,17 +112,17 @@
    "tin": "cut",
    "ty": 1090,
    "size": 128,
-   "box_at": 0.06,
-   "note": "Whip on 6.46 s. Rings from the VO2 mask.",
-   "text_in": 0.14,
-   "text_out_f": 3,
+   "box_at": 0.08,
+   "note": "Whip on 7.87 s. Rings from the VO2 mask.",
+   "text_in": 0.16,
+   "text_out_f": 4,
    "kind": "plain"
   },
   {
    "name": "MOBILITY",
    "src": "PLATE",
    "ss": 15.7,
-   "sec": 0.545,
+   "sec": 0.763,
    "ramp": [
     1.6,
     0.6
@@ -134,17 +134,17 @@
    "tin": "cut",
    "ty": 1120,
    "size": 150,
-   "box_at": 0.06,
-   "note": "Hard hit on 7.19 s. Speed ramp into the squat.",
-   "text_in": 0.14,
-   "text_out_f": 3,
+   "box_at": 0.08,
+   "note": "Paper cutout on 8.63 s. Speed ramp into the squat.",
+   "text_in": 0.16,
+   "text_out_f": 4,
    "kind": "plain"
   },
   {
    "name": "BALANCE",
    "src": "PLATE",
    "ss": 5.45,
-   "sec": 0.546,
+   "sec": 0.762,
    "z": [
     1.0,
     1.05
@@ -152,17 +152,17 @@
    "tin": "cut",
    "ty": 640,
    "size": 150,
-   "box_at": 0.06,
-   "note": "Vertical whip on the bar downbeat (7.73 s) to the feet on the force plate.",
-   "text_in": 0.14,
-   "text_out_f": 3,
+   "box_at": 0.08,
+   "note": "Vertical whip on 9.39 s to the feet on the force plate.",
+   "text_in": 0.16,
+   "text_out_f": 4,
    "kind": "plain"
   },
   {
    "name": "REACTION",
    "src": "COG",
    "ss": 2.35,
-   "sec": 0.545,
+   "sec": 0.763,
    "speed": 1.2,
    "z": [
     1.0,
@@ -171,10 +171,10 @@
    "tin": "cut",
    "ty": 1110,
    "size": 136,
-   "box_at": 0.06,
-   "note": "Zoom-blur on 8.28 s.",
-   "text_in": 0.14,
-   "text_out_f": 3,
+   "box_at": 0.08,
+   "note": "Hard hit on the downbeat at 10.16 s.",
+   "text_in": 0.16,
+   "text_out_f": 4,
    "kind": "plain"
   },
   {
@@ -182,7 +182,7 @@
    "kind": "plain",
    "src": "SCAN",
    "ss": 5.75,
-   "sec": 1.454,
+   "sec": 2.034,
    "speed": 0.7,
    "z": [
     1.18,
@@ -192,22 +192,22 @@
    "tin": "cut",
    "ty": 930,
    "size": 118,
-   "box_at": 0.4,
-   "note": "Zoom punch on the accent (8.82 s) into the 3D body scan."
+   "box_at": 0.6,
+   "note": "Zoom punch on 10.92 s into the 3D body scan; slow pull-out."
   },
   {
    "name": "SOLUTION a",
    "src": "SCAN",
    "ss": 11.45,
-   "sec": 1.454,
+   "sec": 1.27,
    "z": [
     1.0,
     1.07
    ],
    "tin": "cut",
    "ty": 1080,
-   "box_at": 0.7,
-   "note": "Flash on 10.28 s. Body-composition assessment.",
+   "box_at": 0.9,
+   "note": "Flash on 12.95 s. Body-composition assessment.",
    "kind": "plain"
   },
   {
@@ -215,24 +215,49 @@
    "kind": "plain",
    "src": "COG",
    "ss": 11.0,
-   "sec": 1.091,
+   "sec": 2.034,
    "z": [
     1.0,
     1.06
    ],
    "cx": 0.45,
    "tin": "cut",
-   "note": "Panel drop on the accent (11.73 s) to the results screen."
+   "note": "Panel drop on the downbeat after the break (14.22 s) to the results screen."
+  },
+  {
+   "name": "CARD 1",
+   "kind": "end",
+   "src": null,
+   "fill": "navy",
+   "tin": "cut",
+   "fade": 0.45,
+   "ty": 900,
+   "size": 118,
+   "box_at": 0.3,
+   "note": "Fade to navy on the outro downbeat (16.26 s); line wipes up, orange box on FUNCTIONAL CAPACITY.",
+   "sec": 1.271
+  },
+  {
+   "name": "CARD 2",
+   "kind": "end",
+   "src": null,
+   "fill": "navy",
+   "tin": "cut",
+   "ty": 900,
+   "size": 118,
+   "box_at": 0.3,
+   "note": "On 17.53 s: THIS IS VEXON MED.",
+   "sec": 1.271
   },
   {
    "name": "LOGO SLOT",
    "kind": "end",
    "src": null,
-   "sec": 1.407,
-   "tin": "cut",
-   "fade": 0.4,
    "fill": "navy",
-   "note": "Fade to navy on the accent (12.82 s); ends at 14.23 s with the music. Client adds the logo."
+   "tin": "cut",
+   "note": "Clean navy slot 18.80\u201320.00 s for the official logo.",
+   "sec": 1.202
   }
- ]
+ ],
+ "audio_label": "\u201coriginal sound\u201d \u2013 @asrpromedia (add in TikTok / CapCut; first beat at 00:00.50)"
 }
