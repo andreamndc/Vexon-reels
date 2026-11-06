@@ -28,6 +28,7 @@ FPS = P.get('fps', 30)
 BPM = P.get('bpm', 140)
 BEAT = 60 / BPM
 BAR = 4 * BEAT
+OFFSET = P.get('beat_offset', 0.0)  # seconds from video start to the first downbeat of the music
 
 def hex2rgb(h): h = h.lstrip('#'); return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 BR = {'orange': '#ff7a1a', 'gold': '#f7b137', 'cream': '#fbf7ef', 'navy': '#0b1525', 'white': '#ffffff'}
@@ -120,7 +121,7 @@ def shot_zoom(k, t):
     if s['kind'] == 'burst':
         z = 1.14 - 0.12 * ease(lt / s['dur'])
     elif LOOK['beat_pulse']:
-        ph = (t % (2 * BEAT)) / BEAT
+        ph = ((t - OFFSET) % (2 * BEAT)) / BEAT
         z *= 1 + 0.022 * math.exp(-ph * 5)
     return z
 
