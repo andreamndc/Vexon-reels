@@ -5,9 +5,9 @@
   1920
  ],
  "fps": 30,
- "bpm": 119.8,
+ "bpm": 123.0,
  "text_maxw": 860,
- "music_note": "Synced to the supplied audio (~120 BPM, detected beat grid). Music starts at 0.07 s of the file; breakdown 18-21.5 s carries the results screen and the CTA entrance.",
+ "music_note": "Synced to the supplied audio #2 (~123 BPM, detected beat grid). Music starts at 0.79 s of the file.",
  "look": {
   "grade": true,
   "grain": true,
@@ -89,14 +89,14 @@
     },
     {
      "text": "HERE'S WHY",
-     "beat": 7,
+     "beat": 8,
      "size": 96,
      "y": 1310,
      "color": "cream",
      "box": true
     }
    ],
-   "beats": 5
+   "beats": 4.5
   },
   {
    "name": "HOOK B",
@@ -109,8 +109,8 @@
    ],
    "tin": "spin",
    "cont": true,
-   "note": "Spin-whip: the frame rolls out on the jump and rolls into the rower. 'HERE'S WHY' lands as its own beat in an orange box.",
-   "beats": 5
+   "note": "Spin-whip lands on the big hit at 3.0 s. 'HERE'S WHY' on beat 8.",
+   "beats": 7.5
   },
   {
    "name": "Strength",
@@ -138,7 +138,7 @@
     "tag_side": "left_below",
     "rmax": 230
    },
-   "beats": 6
+   "beats": 7
   },
   {
    "name": "Mobility",
@@ -177,6 +177,24 @@
    "beats": 6
   },
   {
+   "name": "Cardio",
+   "ty": 1180,
+   "tin": "lightleak",
+   "text": "We monitor cardiovascular and metabolic health.",
+   "highlight": [
+    "cardiovascular",
+    "metabolic"
+   ],
+   "note": "Warm gold light-leak dissolve into a tight angle on the rower.",
+   "src": "ROW",
+   "ss": 9.4,
+   "z": [
+    1.22,
+    1.32
+   ],
+   "beats": 7
+  },
+  {
    "kind": "burst",
    "src": "JUMP",
    "ss": 7.0,
@@ -204,24 +222,6 @@
    "ss": 3.2,
    "beats": 0.5,
    "tin": "hit"
-  },
-  {
-   "name": "Cardio",
-   "ty": 1180,
-   "tin": "lightleak",
-   "text": "We monitor cardiovascular and metabolic health.",
-   "highlight": [
-    "cardiovascular",
-    "metabolic"
-   ],
-   "note": "Warm gold light-leak dissolve into a tight angle on the rower.",
-   "src": "ROW",
-   "ss": 9.4,
-   "z": [
-    1.22,
-    1.32
-   ],
-   "beats": 8
   },
   {
    "name": "Progress",
@@ -307,61 +307,70 @@
    "tin": "fade",
    "fill": "navy",
    "note": "Fade to clean navy slot; client adds the logo manually.",
-   "beats": 3
+   "beats": 4
   }
  ],
  "beat_times": [
-  0.07,
-  0.6,
-  1.09,
-  1.6,
-  2.11,
-  2.62,
+  0.79,
+  1.3,
+  1.79,
+  2.28,
+  2.76,
   3.25,
-  3.85,
-  4.37,
-  4.85,
-  5.36,
-  5.87,
-  6.36,
-  6.87,
-  7.36,
-  7.87,
-  8.36,
-  8.87,
-  9.38,
-  9.87,
-  10.36,
-  10.87,
-  11.38,
-  11.87,
-  12.35,
-  12.86,
-  13.37,
-  13.86,
-  14.37,
-  14.86,
-  15.37,
-  15.86,
+  3.74,
+  4.23,
+  4.71,
+  5.2,
+  5.69,
+  6.18,
+  6.66,
+  7.17,
+  7.64,
+  8.13,
+  8.61,
+  9.1,
+  9.59,
+  10.08,
+  10.57,
+  11.08,
+  11.56,
+  12.05,
+  12.52,
+  13.0,
+  13.49,
+  13.96,
+  14.44,
+  14.93,
+  15.42,
+  15.91,
   16.37,
   16.86,
-  17.37,
-  17.86,
-  18.37,
-  18.85,
-  19.37,
-  19.85,
-  20.36,
-  20.85,
-  21.36,
-  21.87,
-  22.38,
-  22.99,
-  23.5,
-  24.06,
-  24.61,
-  25.12,
-  25.63,
-  26.12
+  17.32,
+  17.81,
+  18.3,
+  18.78,
+  19.27,
+  19.76,
+  20.25,
+  20.74,
+  21.2,
+  21.69,
+  22.15,
+  22.66,
+  23.13,
+  23.61,
+  24.08,
+  24.57,
+  25.03,
+  25.54,
+  25.98,
+  26.47,
+  26.98,
+  27.47,
+  27.96,
+  28.42,
+  28.91,
+  29.37,
+  29.86
  ]
 }
