@@ -64,15 +64,31 @@ def font(kind, size):
 
 # ---------------------------------------------------------------- timeline
 SHOTS = P['shots']
-t = 0.0
+# Optional real beat grid from the song (seconds, as detected in the audio file). Shot lengths are still
+# counted in beats, but every boundary lands on the actual detected beat, so cuts follow tempo drift.
+# Video t=0 is the first listed beat; finalize.sh is given that time as the music offset.
+BT = P.get('beat_times')
+if BT:
+    BT = np.array(BT, float) - BT[0]
+    _per = float(np.median(np.diff(BT[-8:])))
+def beat_time(b):
+    if BT is None: return b * BEAT
+    return float(_bt(b))
+def _bt(b):
+    if b <= len(BT) - 1:
+        i = int(math.floor(b)); f = b - i
+        return BT[i] if f == 0 else BT[i] + (BT[min(i + 1, len(BT) - 1)] - BT[i]) * f
+    return BT[-1] + (b - (len(BT) - 1)) * _per
+bcount = 0.0
 for s in SHOTS:
-    s['dur'] = s['bars'] * BAR if 'bars' in s else s.get('beats', 1) * BEAT
-    s['t0'] = t; t += s['dur']; s['t1'] = t
+    nb = s['bars'] * 4 if 'bars' in s else s.get('beats', 1)
+    s['b0'] = bcount; s['t0'] = float(beat_time(bcount)); bcount += nb; s['t1'] = float(beat_time(bcount))
+    s['dur'] = s['t1'] - s['t0']
     s.setdefault('tin', 'cut'); s.setdefault('kind', 'line' if 'text' in s else ('end' if s.get('src') is None else 'plain'))
     if 'text' in s:
         hl = [h.lower() for h in s.get('highlight', [])]
         s['_words'] = [(w, any(h in w.lower().strip('.,?!…') for h in hl)) for w in s['text'].split()]
-TOTAL = t
+TOTAL = SHOTS[-1]['t1']
 
 # ---------------------------------------------------------------- footage
 GRADE = ("eq=contrast=1.10:brightness={b}:saturation=0.88,"
@@ -136,7 +152,10 @@ def shot_zoom(k, t):
     if s['kind'] == 'burst':
         z = 1.14 - 0.12 * ease(lt / s['dur'])
     elif LOOK['beat_pulse']:
-        ph = (t % (2 * BEAT)) / BEAT
+        if BT is not None:
+            j = int(np.searchsorted(BT, t, 'right')) - 1; j -= j % 2
+            ph = (t - BT[j]) / BEAT if 0 <= j < len(BT) else (t % (2 * BEAT)) / BEAT
+        else: ph = (t % (2 * BEAT)) / BEAT
         z *= 1 + 0.022 * math.exp(-ph * 5)
     return z
 
@@ -323,12 +342,12 @@ def callout(layer, fx, lt, span, z):
                 tag(d, c[0] + 120, c[1] - 230 + (1 - tr) * 20, fx['tag'], int(255 * tr * out))
 
 FLICK = ['serif', 'sub_light', 'title', 'serif', 'sub']
-def hook_title(layer, words, lt, span):
+def hook_title(layer, words, lt, span, sh=None):
     """Approved hook: each word group SLAMS in on its beat (scale 1.6 -> 1) with a 4-step font flicker
     (serif / Public Sans light / Oswald / serif / Public Sans), then locks to Oswald. No underline."""
     out = ease((lt - (span - 4 / FPS)) / (4 / FPS))
     for wd in words:
-        bt = lt - wd['beat'] * BEAT
+        bt = lt - ((beat_time(sh['b0'] + wd['beat']) - sh['t0']) if sh else wd['beat'] * BEAT)
         if bt < 0: continue
         fi = int(bt * FPS)
         kind = FLICK[(fi // 2) % len(FLICK)] if fi < 8 else 'title'
@@ -448,7 +467,7 @@ def render_frame(fi):
             bf = min(1, tl / 0.25) * min(1, (a1 - t) / 0.2)
             if ts['kind'] == 'title':
                 arr = arr * (1 - band(ts.get('band_y', 820), 560, 0.5) * bf)
-                hook_title(layer, ts['title_words'], tl, a1 - a0)
+                hook_title(layer, ts['title_words'], tl, a1 - a0, ts)
             elif ts['kind'] == 'cta':
                 cy = ts.get('ty', 900)
                 arr = arr * (1 - band(cy + 50, 600, 0.55) * bf)

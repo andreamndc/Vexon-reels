@@ -1,13 +1,13 @@
 {
- "title": "VEXON · Why some people over 60 move better · Storyboard",
+ "title": "VEXON · Why some people over 60 move better · Storyboard (new audio)",
  "size": [
   1080,
   1920
  ],
  "fps": 30,
- "bpm": 144,
+ "bpm": 119.8,
  "text_maxw": 860,
- "music_note": "Cut to 'Trunks' (A$AP Rocky) at ~144 BPM. Exported silent; add the sound in-app starting on a downbeat.",
+ "music_note": "Synced to the supplied audio (~120 BPM, detected beat grid). Music starts at 0.07 s of the file; breakdown 18-21.5 s carries the results screen and the CTA entrance.",
  "look": {
   "grade": true,
   "grain": true,
@@ -25,7 +25,6 @@
    "kind": "title",
    "src": "JUMP",
    "ss": 0.85,
-   "bars": 1.5,
    "z": [
     1.0,
     1.1
@@ -96,25 +95,25 @@
      "color": "cream",
      "box": true
     }
-   ]
+   ],
+   "beats": 5
   },
   {
    "name": "HOOK B",
    "kind": "plain",
    "src": "ROW",
    "ss": 20.0,
-   "bars": 1.5,
    "z": [
     1.0,
     1.08
    ],
    "tin": "spin",
    "cont": true,
-   "note": "Spin-whip: the frame rolls out on the jump and rolls into the rower. 'HERE'S WHY' lands as its own beat in an orange box."
+   "note": "Spin-whip: the frame rolls out on the jump and rolls into the rower. 'HERE'S WHY' lands as its own beat in an orange box.",
+   "beats": 5
   },
   {
    "name": "Strength",
-   "bars": 2,
    "ty": 520,
    "tin": "zoomblur",
    "text": "We work to prioritize strength.",
@@ -138,13 +137,13 @@
     "tag": "VO2 MAX TEST",
     "tag_side": "left_below",
     "rmax": 230
-   }
+   },
+   "beats": 6
   },
   {
    "name": "Mobility",
    "src": "JUMP",
    "ss": 4.6,
-   "bars": 2,
    "z": [
     1.06,
     1.0
@@ -173,13 +172,14 @@
    "highlight": [
     "mobility"
    ],
-   "note": "Diagonal slice: the rowing frame splits along the cut line and slides apart to reveal the jumper's deep crouch. Ramps into slow-mo."
+   "note": "Diagonal slice: the rowing frame splits along the cut line and slides apart to reveal the jumper's deep crouch. Ramps into slow-mo.",
+   "beats": 6
   },
   {
    "kind": "burst",
    "src": "JUMP",
    "ss": 7.0,
-   "beats": 1,
+   "beats": 0.5,
    "tin": "flash",
    "note": "4-cut beat montage (quarter notes)."
   },
@@ -187,26 +187,25 @@
    "kind": "burst",
    "src": "ROW",
    "ss": 21.5,
-   "beats": 1,
+   "beats": 0.5,
    "tin": "hit"
   },
   {
    "kind": "burst",
    "src": "BIKE",
    "ss": 4.6,
-   "beats": 1,
+   "beats": 0.5,
    "tin": "whip"
   },
   {
    "kind": "burst",
    "src": "JUMP",
    "ss": 3.2,
-   "beats": 1,
+   "beats": 0.5,
    "tin": "hit"
   },
   {
    "name": "Cardio",
-   "bars": 2.5,
    "ty": 1180,
    "tin": "lightleak",
    "text": "We monitor cardiovascular and metabolic health.",
@@ -220,13 +219,13 @@
    "z": [
     1.22,
     1.32
-   ]
+   ],
+   "beats": 8
   },
   {
    "name": "Progress",
    "src": "BIKE",
    "ss": 14.2,
-   "bars": 1.5,
    "z": [
     1.0,
     1.06
@@ -250,14 +249,14 @@
     ],
     "tag": "LIVE DATA"
    },
-   "note": "Orange scan-line wipe in. Scan sweeps the coach reading the live test data."
+   "note": "Orange scan-line wipe in. Scan sweeps the coach reading the live test data.",
+   "beats": 4
   },
   {
    "name": "04b",
    "kind": "plain",
    "src": "BIKE",
    "ss": 18.42,
-   "bars": 1,
    "z": [
     1.12,
     1.18
@@ -275,14 +274,14 @@
     ],
     "tag": "ASSESSMENT"
    },
-   "note": "Panel drop on the beat to the results screen; brackets snap onto it."
+   "note": "Panel drop on the beat to the results screen; brackets snap onto it.",
+   "beats": 4
   },
   {
    "name": "CTA",
    "kind": "cta",
    "src": "ROW",
    "ss": 13.6,
-   "bars": 2.5,
    "z": [
     1.1,
     1.0
@@ -297,16 +296,71 @@
     "link",
     "bio"
    ],
-   "note": "Zoom punch into the smiling rower, 0.8x slow-mo. No arrow."
+   "note": "Zoom punch into the smiling rower, 0.8x slow-mo. No arrow.",
+   "beats": 10
   },
   {
    "name": "END SLOT",
    "kind": "end",
    "src": null,
-   "bars": 1.25,
    "tin": "fade",
    "fill": "navy",
-   "note": "Fade to clean navy slot; client adds the logo manually."
+   "note": "Fade to clean navy slot; client adds the logo manually.",
+   "beats": 3
   }
+ ],
+ "beat_times": [
+  0.07,
+  0.6,
+  1.09,
+  1.6,
+  2.11,
+  2.62,
+  3.25,
+  3.85,
+  4.37,
+  4.85,
+  5.36,
+  5.87,
+  6.36,
+  6.87,
+  7.36,
+  7.87,
+  8.36,
+  8.87,
+  9.38,
+  9.87,
+  10.36,
+  10.87,
+  11.38,
+  11.87,
+  12.35,
+  12.86,
+  13.37,
+  13.86,
+  14.37,
+  14.86,
+  15.37,
+  15.86,
+  16.37,
+  16.86,
+  17.37,
+  17.86,
+  18.37,
+  18.85,
+  19.37,
+  19.85,
+  20.36,
+  20.85,
+  21.36,
+  21.87,
+  22.38,
+  22.99,
+  23.5,
+  24.06,
+  24.61,
+  25.12,
+  25.63,
+  26.12
  ]
 }
