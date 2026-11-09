@@ -1,0 +1,1153 @@
+{
+ "_comment": "VEXON 'Functional capacity' talking-head reel (Marina, new script). Pauses removed with cut_pauses.py, matte from matte.py. footage/marina_cut.mp4 = cut_pauses.py(original take, keep.json).",
+ "title": "VEXON · Functional capacity · Talking head",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "look": {
+  "grade": true,
+  "grain": true
+ },
+ "sources": {
+  "MARINA": "footage/marina_cut.mp4",
+  "FGR": "matte/fgr.mp4",
+  "ALPHA": "matte/alpha.mp4",
+  "ROW": "footage/IMG_1915.mov",
+  "BOX": "footage/IMG_1011.mov",
+  "BIKE": "footage/IMG_1607.MOV"
+ },
+ "talent": {
+  "fgr": "FGR",
+  "alpha": "ALPHA",
+  "scale": 1.0,
+  "dy": 220,
+  "end": 39.97,
+  "last": 39.93
+ },
+ "audio": {
+  "src": "MARINA",
+  "process": "natural",
+  "gain_db": 16
+ },
+ "caption_y": 520,
+ "caption_size": 74,
+ "segments": [
+  {
+   "t0": 0.0,
+   "mode": "talk",
+   "src": "BOX",
+   "ss": 15.0,
+   "speed": 0.6,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "note": "Hook: Marina over soft-focus boxing; caption slams in."
+  },
+  {
+   "t0": 4.7,
+   "mode": "broll",
+   "src": "BOX",
+   "ss": 2.0,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "cutout",
+   "note": "'lose muscle mass'"
+  },
+  {
+   "t0": 8.14,
+   "mode": "talk",
+   "src": "ROW",
+   "ss": 6.0,
+   "speed": 0.5,
+   "z": [
+    1.04,
+    1.0
+   ],
+   "tin": "xfade"
+  },
+  {
+   "t0": 12.54,
+   "mode": "broll",
+   "src": "ROW",
+   "ss": 0.3,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "whip",
+   "note": "'very trainable': coach-led rowing"
+  },
+  {
+   "t0": 14.46,
+   "mode": "broll",
+   "src": "BIKE",
+   "ss": 0.2,
+   "z": [
+    1.0,
+    1.05
+   ],
+   "tin": "xfade",
+   "note": "'at any age': older athlete"
+  },
+  {
+   "t0": 15.9,
+   "mode": "broll",
+   "src": "BIKE",
+   "ss": 4.3,
+   "z": [
+    1.02,
+    1.1
+   ],
+   "tin": "whip",
+   "note": "'measure it first': data screen"
+  },
+  {
+   "t0": 16.86,
+   "mode": "talk",
+   "src": "BIKE",
+   "ss": 4.6,
+   "speed": 0.5,
+   "z": [
+    1.06,
+    1.0
+   ],
+   "tin": "xfade"
+  },
+  {
+   "t0": 19.82,
+   "mode": "broll",
+   "src": "BOX",
+   "ss": 9.0,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "cutout",
+   "num": "01",
+   "note": "Q1 control"
+  },
+  {
+   "t0": 21.66,
+   "mode": "broll",
+   "src": "ROW",
+   "ss": 4.0,
+   "z": [
+    1.08,
+    1.0
+   ],
+   "tin": "whip",
+   "num": "02",
+   "note": "Q2 range of motion"
+  },
+  {
+   "t0": 23.9,
+   "mode": "broll",
+   "src": "BIKE",
+   "ss": 1.4,
+   "speed": 0.5,
+   "z": [
+    1.0,
+    1.08
+   ],
+   "tin": "cutout",
+   "num": "03",
+   "note": "Q3 every stage of life"
+  },
+  {
+   "t0": 26.62,
+   "mode": "talk",
+   "src": "BOX",
+   "ss": 17.0,
+   "speed": 0.5,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "xfade",
+   "note": "Payoff: 10, 20, 30 YEARS FROM NOW."
+  },
+  {
+   "t0": 34.04,
+   "mode": "talk",
+   "src": "ROW",
+   "ss": 2.0,
+   "speed": 0.5,
+   "z": [
+    1.0,
+    1.06
+   ],
+   "tin": "xfade",
+   "note": "Vexon Med + CTA"
+  }
+ ],
+ "captions": [
+  {
+   "t0": 0.0,
+   "text": "Functional capacity is",
+   "highlight": [
+    "functional",
+    "capacity"
+   ],
+   "style": "slam",
+   "words": [
+    [
+     0.0,
+     "Functional"
+    ],
+    [
+     0.56,
+     "capacity"
+    ],
+    [
+     1.04,
+     "is"
+    ]
+   ],
+   "t1": 1.14
+  },
+  {
+   "t0": 1.14,
+   "text": "one of the strongest predictors",
+   "highlight": [
+    "strongest",
+    "predictors"
+   ],
+   "style": "slam",
+   "words": [
+    [
+     1.2,
+     "one"
+    ],
+    [
+     1.28,
+     "of"
+    ],
+    [
+     1.36,
+     "the"
+    ],
+    [
+     1.52,
+     "strongest"
+    ],
+    [
+     2.0,
+     "predictors"
+    ]
+   ],
+   "t1": 2.42
+  },
+  {
+   "t0": 2.42,
+   "text": "of how well you’ll age.",
+   "highlight": [
+    "age"
+   ],
+   "style": "slam",
+   "words": [
+    [
+     2.48,
+     "of"
+    ],
+    [
+     2.64,
+     "how"
+    ],
+    [
+     2.8,
+     "well"
+    ],
+    [
+     3.04,
+     "you'll"
+    ],
+    [
+     3.28,
+     "age."
+    ]
+   ],
+   "t1": 3.7
+  },
+  {
+   "t0": 3.7,
+   "text": "Starting in our 30s,",
+   "highlight": [
+    "30s"
+   ],
+   "style": "",
+   "words": [
+    [
+     3.76,
+     "Starting"
+    ],
+    [
+     4.08,
+     "in"
+    ],
+    [
+     4.16,
+     "our"
+    ],
+    [
+     4.32,
+     "30s,"
+    ]
+   ],
+   "t1": 4.74
+  },
+  {
+   "t0": 4.74,
+   "text": "we gradually lose muscle mass,",
+   "highlight": [
+    "muscle",
+    "mass"
+   ],
+   "style": "",
+   "words": [
+    [
+     4.8,
+     "we"
+    ],
+    [
+     4.88,
+     "gradually"
+    ],
+    [
+     5.28,
+     "lose"
+    ],
+    [
+     5.52,
+     "muscle"
+    ],
+    [
+     5.92,
+     "mass"
+    ]
+   ],
+   "t1": 6.1
+  },
+  {
+   "t0": 6.1,
+   "text": "and the loss speeds up",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     6.16,
+     "and"
+    ],
+    [
+     6.32,
+     "the"
+    ],
+    [
+     6.4,
+     "loss"
+    ],
+    [
+     6.72,
+     "speeds"
+    ],
+    [
+     7.12,
+     "up"
+    ]
+   ],
+   "t1": 7.22
+  },
+  {
+   "t0": 7.22,
+   "text": "as we get older.",
+   "highlight": [
+    "older"
+   ],
+   "style": "",
+   "words": [
+    [
+     7.28,
+     "as"
+    ],
+    [
+     7.52,
+     "we"
+    ],
+    [
+     7.6,
+     "get"
+    ],
+    [
+     7.76,
+     "older."
+    ]
+   ],
+   "t1": 8.18
+  },
+  {
+   "t0": 8.18,
+   "text": "Less muscle mass means",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     8.24,
+     "Less"
+    ],
+    [
+     8.48,
+     "muscle"
+    ],
+    [
+     8.8,
+     "mass"
+    ],
+    [
+     9.04,
+     "means"
+    ]
+   ],
+   "t1": 9.22
+  },
+  {
+   "t0": 9.22,
+   "text": "less stability,",
+   "highlight": [
+    "stability"
+   ],
+   "style": "",
+   "words": [
+    [
+     9.28,
+     "less"
+    ],
+    [
+     9.52,
+     "stability,"
+    ]
+   ],
+   "t1": 10.02
+  },
+  {
+   "t0": 10.02,
+   "text": "slower reactions,",
+   "highlight": [
+    "reactions"
+   ],
+   "style": "",
+   "words": [
+    [
+     10.08,
+     "slower"
+    ],
+    [
+     10.48,
+     "reactions,"
+    ]
+   ],
+   "t1": 10.98
+  },
+  {
+   "t0": 10.98,
+   "text": "and a higher risk of falls.",
+   "highlight": [
+    "falls"
+   ],
+   "style": "",
+   "words": [
+    [
+     11.04,
+     "and"
+    ],
+    [
+     11.2,
+     "a"
+    ],
+    [
+     11.36,
+     "higher"
+    ],
+    [
+     11.6,
+     "risk"
+    ],
+    [
+     11.84,
+     "of"
+    ],
+    [
+     12.0,
+     "falls."
+    ]
+   ],
+   "t1": 12.58
+  },
+  {
+   "t0": 12.58,
+   "text": "The good news is that",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     12.64,
+     "The"
+    ],
+    [
+     12.72,
+     "good"
+    ],
+    [
+     12.88,
+     "news"
+    ],
+    [
+     13.04,
+     "is"
+    ],
+    [
+     13.2,
+     "that"
+    ]
+   ],
+   "t1": 13.3
+  },
+  {
+   "t0": 13.3,
+   "text": "this is very trainable",
+   "highlight": [
+    "trainable"
+   ],
+   "style": "",
+   "words": [
+    [
+     13.36,
+     "this"
+    ],
+    [
+     13.52,
+     "is"
+    ],
+    [
+     13.68,
+     "very"
+    ],
+    [
+     13.92,
+     "trainable"
+    ]
+   ],
+   "t1": 14.5
+  },
+  {
+   "t0": 14.5,
+   "text": "at any age,",
+   "highlight": [
+    "any",
+    "age"
+   ],
+   "style": "",
+   "words": [
+    [
+     14.56,
+     "at"
+    ],
+    [
+     14.72,
+     "any"
+    ],
+    [
+     14.88,
+     "age,"
+    ]
+   ],
+   "t1": 15.3
+  },
+  {
+   "t0": 15.3,
+   "text": "but you have to",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     15.36,
+     "but"
+    ],
+    [
+     15.52,
+     "you"
+    ],
+    [
+     15.68,
+     "have"
+    ],
+    [
+     15.84,
+     "to"
+    ]
+   ],
+   "t1": 15.94
+  },
+  {
+   "t0": 15.94,
+   "text": "measure it first.",
+   "highlight": [
+    "measure"
+   ],
+   "style": "",
+   "words": [
+    [
+     16.0,
+     "measure"
+    ],
+    [
+     16.4,
+     "it"
+    ],
+    [
+     16.56,
+     "first."
+    ]
+   ],
+   "t1": 16.9
+  },
+  {
+   "t0": 16.9,
+   "text": "So when we look at",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     16.96,
+     "So"
+    ],
+    [
+     17.2,
+     "when"
+    ],
+    [
+     17.28,
+     "we"
+    ],
+    [
+     17.36,
+     "look"
+    ],
+    [
+     17.52,
+     "at"
+    ]
+   ],
+   "t1": 17.54
+  },
+  {
+   "t0": 17.54,
+   "text": "functional capacity,",
+   "highlight": [
+    "functional",
+    "capacity"
+   ],
+   "style": "",
+   "words": [
+    [
+     17.6,
+     "functional"
+    ],
+    [
+     18.08,
+     "capacity,"
+    ]
+   ],
+   "t1": 18.66
+  },
+  {
+   "t0": 18.66,
+   "text": "we ask three things.",
+   "highlight": [
+    "three"
+   ],
+   "style": "",
+   "words": [
+    [
+     18.72,
+     "we"
+    ],
+    [
+     18.88,
+     "ask"
+    ],
+    [
+     19.12,
+     "three"
+    ],
+    [
+     19.36,
+     "things."
+    ]
+   ],
+   "t1": 19.86
+  },
+  {
+   "t0": 19.86,
+   "text": "One, can you move with control?",
+   "highlight": [
+    "control"
+   ],
+   "style": "",
+   "words": [
+    [
+     19.92,
+     "One,"
+    ],
+    [
+     20.4,
+     "can"
+    ],
+    [
+     20.56,
+     "you"
+    ],
+    [
+     20.64,
+     "move"
+    ],
+    [
+     20.88,
+     "with"
+    ],
+    [
+     21.04,
+     "control?"
+    ]
+   ],
+   "t1": 21.7
+  },
+  {
+   "t0": 21.7,
+   "text": "Two, can you maintain",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     21.76,
+     "Two,"
+    ],
+    [
+     22.16,
+     "can"
+    ],
+    [
+     22.32,
+     "you"
+    ],
+    [
+     22.48,
+     "maintain"
+    ]
+   ],
+   "t1": 22.9
+  },
+  {
+   "t0": 22.9,
+   "text": "your range of motion?",
+   "highlight": [
+    "range",
+    "of",
+    "motion"
+   ],
+   "style": "",
+   "words": [
+    [
+     22.96,
+     "your"
+    ],
+    [
+     23.12,
+     "range"
+    ],
+    [
+     23.36,
+     "of"
+    ],
+    [
+     23.44,
+     "motion?"
+    ]
+   ],
+   "t1": 23.94
+  },
+  {
+   "t0": 23.94,
+   "text": "Three, are you strong enough",
+   "highlight": [
+    "strong"
+   ],
+   "style": "",
+   "words": [
+    [
+     24.0,
+     "Three,"
+    ],
+    [
+     24.48,
+     "are"
+    ],
+    [
+     24.56,
+     "you"
+    ],
+    [
+     24.72,
+     "strong"
+    ],
+    [
+     24.96,
+     "enough"
+    ]
+   ],
+   "t1": 25.3
+  },
+  {
+   "t0": 25.3,
+   "text": "for every stage of life?",
+   "highlight": [
+    "stage",
+    "of",
+    "life"
+   ],
+   "style": "",
+   "words": [
+    [
+     25.36,
+     "for"
+    ],
+    [
+     25.6,
+     "every"
+    ],
+    [
+     25.84,
+     "stage"
+    ],
+    [
+     26.16,
+     "of"
+    ],
+    [
+     26.32,
+     "life?"
+    ]
+   ],
+   "t1": 26.66
+  },
+  {
+   "t0": 26.66,
+   "text": "Functional capacity isn’t",
+   "highlight": [
+    "functional",
+    "capacity"
+   ],
+   "style": "",
+   "words": [
+    [
+     26.72,
+     "Functional"
+    ],
+    [
+     27.2,
+     "capacity"
+    ],
+    [
+     27.68,
+     "isn't"
+    ]
+   ],
+   "t1": 28.02
+  },
+  {
+   "t0": 28.02,
+   "text": "just about how you move today.",
+   "highlight": [
+    "today"
+   ],
+   "style": "",
+   "words": [
+    [
+     28.08,
+     "just"
+    ],
+    [
+     28.24,
+     "about"
+    ],
+    [
+     28.48,
+     "how"
+    ],
+    [
+     28.64,
+     "you"
+    ],
+    [
+     28.8,
+     "move"
+    ],
+    [
+     29.12,
+     "today."
+    ]
+   ],
+   "t1": 29.46
+  },
+  {
+   "t0": 29.46,
+   "text": "It’s about protecting",
+   "highlight": [
+    "protecting"
+   ],
+   "style": "",
+   "words": [
+    [
+     29.52,
+     "It's"
+    ],
+    [
+     29.76,
+     "about"
+    ],
+    [
+     29.92,
+     "protecting"
+    ]
+   ],
+   "t1": 30.42
+  },
+  {
+   "t0": 30.42,
+   "text": "what you’ll be able to do",
+   "highlight": [],
+   "style": "",
+   "words": [
+    [
+     30.48,
+     "what"
+    ],
+    [
+     30.64,
+     "you'll"
+    ],
+    [
+     30.96,
+     "be"
+    ],
+    [
+     31.12,
+     "able"
+    ],
+    [
+     31.2,
+     "to"
+    ],
+    [
+     31.36,
+     "do"
+    ]
+   ],
+   "t1": 31.54
+  },
+  {
+   "t0": 31.54,
+   "text": "10, 20, 30 years from now.",
+   "highlight": [],
+   "style": "numbers",
+   "words": [
+    [
+     31.6,
+     "10,"
+    ],
+    [
+     32.08,
+     "20,"
+    ],
+    [
+     32.56,
+     "30"
+    ],
+    [
+     32.96,
+     "years"
+    ],
+    [
+     33.2,
+     "from"
+    ],
+    [
+     33.44,
+     "now."
+    ]
+   ],
+   "t1": 34.02
+  },
+  {
+   "t0": 34.02,
+   "text": "At Vexon Med,",
+   "highlight": [
+    "vexon",
+    "med"
+   ],
+   "style": "",
+   "words": [
+    [
+     34.08,
+     "At"
+    ],
+    [
+     34.24,
+     "Vexon"
+    ],
+    [
+     34.8,
+     "Med,"
+    ]
+   ],
+   "t1": 35.22
+  },
+  {
+   "t0": 35.22,
+   "text": "we measure it so we can",
+   "highlight": [
+    "measure"
+   ],
+   "style": "",
+   "words": [
+    [
+     35.28,
+     "we"
+    ],
+    [
+     35.36,
+     "measure"
+    ],
+    [
+     35.68,
+     "it"
+    ],
+    [
+     35.84,
+     "so"
+    ],
+    [
+     36.0,
+     "we"
+    ],
+    [
+     36.16,
+     "can"
+    ]
+   ],
+   "t1": 36.26
+  },
+  {
+   "t0": 36.26,
+   "text": "build a plan around it.",
+   "highlight": [
+    "plan"
+   ],
+   "style": "",
+   "words": [
+    [
+     36.32,
+     "build"
+    ],
+    [
+     36.56,
+     "a"
+    ],
+    [
+     36.72,
+     "plan"
+    ],
+    [
+     37.04,
+     "around"
+    ],
+    [
+     37.28,
+     "it."
+    ]
+   ],
+   "t1": 37.54
+  },
+  {
+   "t0": 37.54,
+   "text": "Click the link in our bio",
+   "highlight": [
+    "link",
+    "bio"
+   ],
+   "style": "",
+   "words": [
+    [
+     37.6,
+     "Click"
+    ],
+    [
+     37.84,
+     "the"
+    ],
+    [
+     37.92,
+     "link"
+    ],
+    [
+     38.16,
+     "in"
+    ],
+    [
+     38.24,
+     "our"
+    ],
+    [
+     38.4,
+     "bio"
+    ]
+   ],
+   "t1": 38.66
+  },
+  {
+   "t0": 38.66,
+   "text": "to book your assessment.",
+   "highlight": [
+    "assessment"
+   ],
+   "style": "",
+   "words": [
+    [
+     38.72,
+     "to"
+    ],
+    [
+     38.88,
+     "book"
+    ],
+    [
+     39.04,
+     "your"
+    ],
+    [
+     39.2,
+     "assessment."
+    ]
+   ],
+   "t1": 40.34
+  }
+ ],
+ "end": {
+  "transition": 1.6,
+  "hold": 3.0,
+  "fill": "navy"
+ }
+}
