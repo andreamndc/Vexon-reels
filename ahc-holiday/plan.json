@@ -1,11 +1,11 @@
 {
-  "title": "American Heritage Chocolate · Holiday highlight reel · Storyboard v1",
+  "title": "American Heritage Chocolate · Holiday highlight reel · Storyboard v2 (no text)",
   "size": [
     1080,
     1920
   ],
   "fps": 30,
-  "music_note": "Exported silent. Add the sound in-app (soft, cozy holiday instrumental).",
+  "music_note": "No text burned in (added in CapCut). Exported silent. Blank end card for the logo.",
   "sources": {
     "WAFFLE_HERO": "../footage/chocolate-waffles/Intro_2.mov",
     "WAFFLE_IRON": "../footage/chocolate-waffles/15_mixture_on_iron.mov",
@@ -42,7 +42,11 @@
         1.18
       ],
       "cy": 0.55,
-      "note": "Quick cut: eggnog mug."
+      "note": "Quick cut: eggnog mug.",
+      "tin": {
+        "type": "whip",
+        "d": 0.3
+      }
     },
     {
       "scene": "1 Hook",
@@ -54,7 +58,11 @@
         1.3
       ],
       "cy": 0.66,
-      "note": "Quick cut: pie, cropped tight to lose the lawn."
+      "note": "Quick cut: pie, cropped tight to lose the lawn.",
+      "tin": {
+        "type": "whip",
+        "d": 0.3
+      }
     },
     {
       "scene": "2 Mint Icebox Pie",
@@ -66,7 +74,11 @@
         1.34
       ],
       "cy": 0.66,
-      "note": "Slow push-in on the pie top."
+      "note": "Slow push-in on the pie top.",
+      "tin": {
+        "type": "glow",
+        "d": 0.7
+      }
     },
     {
       "scene": "2 Mint Icebox Pie",
@@ -78,7 +90,11 @@
         1.16
       ],
       "cy": 0.68,
-      "note": "Slice to camera, slow zoom toward the filling."
+      "note": "Slice to camera, slow zoom toward the filling.",
+      "tin": {
+        "type": "dissolve",
+        "d": 0.5
+      }
     },
     {
       "scene": "3 Eggnog + more",
@@ -90,7 +106,11 @@
         1.28
       ],
       "cy": 0.4,
-      "note": "Eggnog pour into the snowflake mug."
+      "note": "Eggnog pour into the snowflake mug.",
+      "tin": {
+        "type": "glow",
+        "d": 0.7
+      }
     },
     {
       "scene": "3 Eggnog + more",
@@ -102,7 +122,11 @@
         1.2
       ],
       "cy": 0.55,
-      "note": "Finished: whipped cream + spice."
+      "note": "Finished: whipped cream + spice.",
+      "tin": {
+        "type": "dissolve",
+        "d": 0.4
+      }
     },
     {
       "scene": "3 Eggnog + more",
@@ -114,7 +138,11 @@
         1.08
       ],
       "cy": 0.62,
-      "note": "Chocolate batter onto the waffle iron."
+      "note": "Chocolate batter onto the waffle iron.",
+      "tin": {
+        "type": "whip",
+        "d": 0.35
+      }
     },
     {
       "scene": "3 Eggnog + more",
@@ -126,7 +154,11 @@
         1.14
       ],
       "cy": 0.7,
-      "note": "Lid closes on the batter."
+      "note": "Lid closes on the batter.",
+      "tin": {
+        "type": "dissolve",
+        "d": 0.3
+      }
     },
     {
       "scene": "3 Eggnog + more",
@@ -138,7 +170,11 @@
         1.12
       ],
       "cy": 0.6,
-      "note": "Cozy beat: mug held up."
+      "note": "Cozy beat: mug held up.",
+      "tin": {
+        "type": "dissolve",
+        "d": 0.4
+      }
     },
     {
       "scene": "4 Swicy difference",
@@ -150,7 +186,11 @@
         1.08
       ],
       "cy": 0.45,
-      "note": "Pie with the AMERICAN HERITAGE bag (the product moment)."
+      "note": "Pie with the AMERICAN HERITAGE bag (the product moment).",
+      "tin": {
+        "type": "glow",
+        "d": 0.7
+      }
     },
     {
       "scene": "4 Swicy difference",
@@ -162,7 +202,11 @@
         1.16
       ],
       "cy": 0.62,
-      "note": "Montage: waffles."
+      "note": "Montage: waffles.",
+      "tin": {
+        "type": "whip",
+        "d": 0.3
+      }
     },
     {
       "scene": "4 Swicy difference",
@@ -174,7 +218,11 @@
         1.3
       ],
       "cy": 0.66,
-      "note": "Montage: pie."
+      "note": "Montage: pie.",
+      "tin": {
+        "type": "whip",
+        "d": 0.3
+      }
     },
     {
       "scene": "4 Swicy difference",
@@ -186,13 +234,17 @@
         1.04
       ],
       "cy": 0.45,
-      "note": "Montage: eggnog sip."
+      "note": "Montage: eggnog sip.",
+      "tin": {
+        "type": "whip",
+        "d": 0.3
+      }
     },
     {
       "scene": "5 Closing",
       "kind": "collage",
       "dur": 2.0,
-      "note": "The spread: eggnog, pie, waffles stacked.",
+      "note": "The spread: bands slide in one by one.",
       "bands": [
         {
           "src": "NOG_MUG_B",
@@ -212,80 +264,29 @@
           "cy": 0.68,
           "z": 1.0
         }
-      ]
+      ],
+      "tin": {
+        "type": "dissolve",
+        "d": 0.3
+      }
     },
     {
       "scene": "5 Closing",
       "kind": "endcard",
       "dur": 2.0,
-      "fade_in": 0.35,
-      "note": "Cream paper card, brown logo, CTA."
+      "note": "Blank cream paper card: space for the logo.",
+      "tin": {
+        "type": "dissolve",
+        "d": 0.6
+      }
     }
   ],
-  "texts": [
-    {
-      "t0": 0.15,
-      "t1": 2.95,
-      "style": "box",
-      "y": 830,
-      "size": 54,
-      "text": "Your favorite holiday flavors\ndeserve a little plot twist."
-    },
-    {
-      "t0": 3.2,
-      "t1": 7.9,
-      "style": "outline",
-      "y": 1040,
-      "size": 62,
-      "text": "A fresh take on a\nholiday favorite."
-    },
-    {
-      "t0": 8.2,
-      "t1": 11.9,
-      "style": "outline",
-      "y": 430,
-      "size": 66,
-      "text": "Unexpected flavor."
-    },
-    {
-      "t0": 12.2,
-      "t1": 16.9,
-      "style": "outline",
-      "y": 430,
-      "size": 66,
-      "text": "Unforgettable treats."
-    },
-    {
-      "t0": 17.2,
-      "t1": 19.9,
-      "style": "outline",
-      "y": 1400,
-      "size": 62,
-      "text": "Meet your new\nholiday baking secret."
-    },
-    {
-      "t0": 20.1,
-      "t1": 22.95,
-      "style": "outline",
-      "y": 1420,
-      "size": 56,
-      "text": "AMERICAN HERITAGE®\nFinely Grated Baking Chocolate"
-    },
-    {
-      "t0": 23.15,
-      "t1": 24.95,
-      "style": "box",
-      "y": 960,
-      "size": 52,
-      "text": "Make something unexpected\nthis holiday season."
-    }
-  ],
-  "endcard": {
-    "logo": "../brand/logo-brown.png",
-    "logo_w": 640,
-    "logo_y": 760,
-    "cta": "Explore our holiday recipes.",
-    "cta_y": 1200,
-    "cta_size": 58
+  "look": {
+    "grade": "colortemperature=temperature=5400:mix=0.55,huesaturation=saturation=-0.55:colors=g:strength=2,eq=contrast=1.05:saturation=1.08:gamma=0.98",
+    "bloom": 0.35,
+    "vignette": 0.18,
+    "snow": 0.8,
+    "snow_flakes": 110,
+    "snow_on_endcard": 0.0
   }
 }
