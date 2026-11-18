@@ -68,6 +68,22 @@ def display_dims(src):
     return _DIMS[src]
 
 
+_TRC = {}
+
+
+def to_sdr(src):
+    """Colour-accurate conversion to SDR BT.709. iPhone HDR (HLG / BT.2020) is tone-mapped the
+    way a phone shows it in SDR; BT.709 sources pass through. No grading."""
+    if src not in _TRC:
+        _TRC[src] = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+                                    'stream=color_transfer', '-of', 'csv=p=0', src],
+                                   capture_output=True, text=True).stdout.strip().split('\n')[0].strip(',')
+    if _TRC[src] in ('arib-std-b67', 'smpte2084'):
+        return ('zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=mobius:desat=0,'
+                'zscale=t=bt709:m=bt709:r=tv,format=yuv420p')
+    return 'null'
+
+
 class Decoder:
     """Streams graded frames of src from time t0, cover-scaled to (w, h). Pads before 0 / after end."""
 
@@ -78,7 +94,7 @@ class Decoder:
         else:
             self.ow, self.oh = int(round(sw * h / sh)), h
         self.pad = max(0, int(round(-t0 * FPS)))
-        vf = f'fps={FPS},scale={self.ow}:{self.oh}:flags=lanczos,{GRADE}'
+        vf = f'{to_sdr(src)},fps={FPS},scale={self.ow}:{self.oh}:flags=lanczos:in_color_matrix=bt709:in_range=tv:out_range=full,format=rgb24,{GRADE}'
         self.p = subprocess.Popen(stderr=subprocess.DEVNULL, args=['ffmpeg', '-nostdin', '-v', 'error', '-ss', f'{max(t0, 0):.3f}', '-i', src,
                                    '-vf', vf, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                                   stdout=subprocess.PIPE)
@@ -362,7 +378,9 @@ def render(out):
     enc = subprocess.Popen(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
                             '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                             '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo',
-                            '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', '-pix_fmt', 'yuv420p',
+                            '-vf', 'scale=in_range=full:out_color_matrix=bt709:out_range=tv,format=yuv420p',
+                            '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-color_range', 'tv',
+                            '-c:v', 'libx264', '-preset', 'medium', '-crf', '16',
                             '-c:a', 'aac', '-b:a', '128k', '-shortest', '-movflags', '+faststart', out],
                            stdin=subprocess.PIPE)
     streams = {}
