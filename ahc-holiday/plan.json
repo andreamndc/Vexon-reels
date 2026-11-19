@@ -1,5 +1,5 @@
 {
-  "title": "American Heritage Chocolate · Holiday highlight reel · v3 (beat-synced, original colours)",
+  "title": "American Heritage Chocolate · Holiday highlight reel · v5 (beat-synced, original colours, new holiday clips)",
   "size": [
     1080,
     1920
@@ -17,7 +17,10 @@
     "PIE_BAG": "../footage/mint-icebox-pie/IMG_5898.mov",
     "PIE_HELD_A": "../footage/mint-icebox-pie/IMG_5901.mov",
     "PIE_HELD_B": "../footage/mint-icebox-pie/IMG_5902.mov",
-    "PIE_SLICE": "../footage/mint-icebox-pie/IMG_5905.mov"
+    "PIE_SLICE": "../footage/mint-icebox-pie/IMG_5905.mov",
+    "MARSH_POPS": "../footage/holiday-extras/marshmallow-pops.mov",
+    "COCO_COOKIES": "../footage/holiday-extras/coconut-cookies.mov",
+    "CHERRY": "../footage/holiday-extras/cherry-dessert.mov"
   },
   "shots": [
     {
@@ -146,14 +149,14 @@
     },
     {
       "scene": "3 Build",
-      "src": "NOG_HOLD",
-      "ss": 0.8,
+      "src": "MARSH_POPS",
+      "ss": 3.9,
       "z": [
-        1.1,
-        1.15
+        1.0,
+        1.05
       ],
-      "cy": 0.6,
-      "note": "Mug held up.",
+      "cy": 0.5,
+      "note": "Marshmallow pops + pinecones.",
       "tin": {
         "type": "cut",
         "d": 0
@@ -178,14 +181,14 @@
     },
     {
       "scene": "3 Build",
-      "src": "WAFFLE_IRON",
-      "ss": 1.3,
+      "src": "COCO_COOKIES",
+      "ss": 2.5,
       "z": [
-        1.15,
-        1.2
+        1.2,
+        1.25
       ],
-      "cy": 0.66,
-      "note": "Batter, tighter.",
+      "cy": 0.5,
+      "note": "Coconut cookies, close.",
       "tin": {
         "type": "cut",
         "d": 0
@@ -194,14 +197,14 @@
     },
     {
       "scene": "3 Build",
-      "src": "WAFFLE_IRON",
-      "ss": 4.0,
+      "src": "CHERRY",
+      "ss": 3.0,
       "z": [
-        1.1,
-        1.14
+        1.25,
+        1.3
       ],
-      "cy": 0.7,
-      "note": "Lid closes.",
+      "cy": 0.35,
+      "note": "Cherry dessert, close.",
       "tin": {
         "type": "cut",
         "d": 0
@@ -242,30 +245,31 @@
     },
     {
       "scene": "3 Eggnog + more",
-      "src": "NOG_MUG_A",
-      "ss": 0.5,
+      "src": "MARSH_POPS",
+      "ss": 0.8,
       "z": [
-        1.12,
-        1.2
+        1.05,
+        1.12
       ],
-      "cy": 0.55,
-      "note": "Whipped cream + spice.",
+      "cy": 0.35,
+      "note": "Marshmallow pops on the wooden stand.",
       "tin": {
         "type": "dissolve",
         "d": 0.4
       },
-      "dur": 1.95
+      "dur": 1.95,
+      "cx": 0.6
     },
     {
       "scene": "3 Eggnog + more",
-      "src": "WAFFLE_IRON",
-      "ss": 0.0,
+      "src": "CHERRY",
+      "ss": 0.2,
       "z": [
         1.0,
         1.08
       ],
-      "cy": 0.62,
-      "note": "Chocolate batter onto the iron.",
+      "cy": 0.45,
+      "note": "Cherry-topped dessert on the snowflake plate.",
       "tin": {
         "type": "whip",
         "d": 0.35
@@ -306,14 +310,14 @@
     },
     {
       "scene": "4 Swicy difference",
-      "src": "NOG_SIP",
-      "ss": 4.5,
+      "src": "COCO_COOKIES",
+      "ss": 0.6,
       "z": [
         1.0,
-        1.05
+        1.1
       ],
       "cy": 0.45,
-      "note": "Eggnog sip.",
+      "note": "Coconut cookies in the greenery.",
       "tin": {
         "type": "dissolve",
         "d": 0.4
