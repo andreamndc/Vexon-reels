@@ -17,14 +17,15 @@ def src(key):
     return glob.glob(os.path.join(FOOT, f'*{key}*'))[0]
 
 SHELF, SKINLAB, SETUP, TREAT = '2_15_05', '2_16_57', '3_32_46', '3_34_32_PM.'
-HOLD, TRAY, PICK = '2_16_39', '2_01_25', '2_15_30'   # hand holding product box; treatment tray pan ending on Elf on the Shelf
+HOLD, TRAY, PICK, WALK = '2_16_39', '2_01_25', '2_15_30', '2ff1841e'   # hand holding product box; treatment tray pan ending on Elf on the Shelf
 def k(n): return round(n * B, 3)
 # t0, t1, source, start, speed, zoom [from, to], crop centre (cx, cy), transition-in
 SHOTS = [
-    # hook (quiet intro): Dr. Strunck treating a patient
-    (0.0, k(5), TREAT, 0.3, 1.0, (1.00, 1.08), (.50, .40), 'cut'),
+    # hook (quiet intro): Dr. Strunck walking through the office
+    (0.0, k(5), WALK, 0.0, 1.0, (1.00, 1.06), (.50, .42), 'cut'),     # Dr. Strunck walking through the office
     # beat drop -> 20% off cosmetic: Strunck b-roll + treatment
-    (k(5), k(9), SETUP, 1.8, 1.0, (1.00, 1.05), (.50, .45), 'snow'),
+    (k(5), k(7), TREAT, 0.3, 1.0, (1.00, 1.05), (.50, .40), 'snow'),
+    (k(7), k(9), SETUP, 2.4, 1.0, (1.00, 1.05), (.50, .45), 'cut'),
     (k(9), k(11), TREAT, 5.0, 1.0, (1.35, 1.42), (.45, .33), 'cut'),
     (k(11), k(13), SETUP, 4.6, 1.0, (1.30, 1.36), (.60, .62), 'cut'),
     # consultation / with patient / treatment room

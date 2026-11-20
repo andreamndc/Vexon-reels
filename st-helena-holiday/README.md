@@ -12,7 +12,10 @@ Rebuild: `python3 make_song.py song.mid && fluidsynth -ni -g 0.6 -r 48000 -F raw
 160 BPM: 1 bar = 1.5 s. Drums enter with a crash at 3.0 s; more crashes at 6.0, 12.0, 18.0 s;
 brass lift from 18.0 s; final hit at 24.0 s, ring-out to 25.0 s.
 
-## v2 render — `out/StHelena_Holiday_Reel_v2.mp4` (24.27 s, current)
+## v3 render — `out/StHelena_Holiday_Reel_v3.mp4` (24.27 s, current)
+Same as v2, but opens on Dr. Strunck walking through the office (`1120.mp4`, 0–3.37 s); the treatment shot moves to the beat drop (3.37–4.72 s) and the laser set-up shot is shortened (4.72–6.07 s).
+
+## v2 render — `out/StHelena_Holiday_Reel_v2.mp4` (24.27 s)
 Music: client-supplied "A Lofi Wonderland" by Mizlo (Epidemic Sound) — place the WAV at
 `music/ES_A_Lofi_Wonderland_-_Mizlo.wav` (not committed; licensed asset). 88.99 BPM, beat 0.6742 s; the track starts
 at 7.402 s so its beat drop lands at 3.37 s; -1 dB, 1 s fade-out (the track ends abruptly).
