@@ -1,6 +1,7 @@
 """GSD St. George reel v3 - photo edit with beat-synced multi-photo layouts and transitions (no text; the client
 adds text). 9:16, 25 s, 138.04 BPM grid (beat 0.4346 s, bar 1.7384 s) from the TikTok sound
-@mayoutfitofficial/7308589082270027013. Exported silent: add the sound in-app starting at the chosen point.
+@mayoutfitofficial/7308589082270027013. Sound starts at 0:04.1 (4.01 s); first downbeat lands at 1.421 s, bass enters at 10.113 s.
+Exported silent: add the sound in-app starting at 0:04.1.
 
 Layouts: full photo (push-in + 2-beat pulse), 3 vertical strips (slide up on 8th notes, middle strip expands to
 full screen), 2x2 grid (panels pop in on beats, then the grid zooms into one panel), top/bottom split (halves
@@ -18,35 +19,37 @@ STILLS = [float(x) for x in sys.argv[sys.argv.index('--stills') + 1].split(',')]
 HERE = os.path.dirname(os.path.abspath(__file__))
 NAVY = (14, 30, 66); GAP = 10
 
-def b(n): return round(n * BAR, 4)
+OFF = 0.216 + 12 * BEAT - 4.01     # song beat grid (phase 0.216 s) seen from a 4.01 s start = 1.4212 s
+def b(n): return 0.0 if n == 0 else round(OFF + (n - 1) * BAR, 4)   # b(1) = first downbeat
 def P(name, z=(1.0, 1.06), c=(.5, .5), c1=None): return (name, z, c, c1 or c)
 
 EXAM_WIDE = P('exam_room', (1.0, 1.06), (.62, .55), (.64, .55))
 HALL_PUSH = P('hallway', (1.30, 1.42), (.45, .50))
 EXTERIOR = P('exterior', (1.0, 1.12), (.45, .55), (.55, .55))
 SHOTS = [
-    # 0-3.48  location: exterior push-in, whip to the window signage
-    dict(t0=b(0), t1=b(1), kind='full', p=P('exterior', (1.0, 1.10), (.42, .55), (.40, .55)), tin='cut'),
+    # 0-3.16  location: exterior push-in (intro), whip to the window signage on the first downbeat
+    dict(t0=b(0), t1=b(1), kind='full', p=P('exterior', (1.0, 1.08), (.42, .55), (.40, .55)), tin='cut'),
     dict(t0=b(1), t1=b(2), kind='full', p=P('exterior', (1.45, 1.55), (.33, .47), (.31, .47)), tin='whip'),
-    # 3.48-6.95  interior: 3 strips slide up on 8th notes, middle (exam room) expands on the last beat
+    # 3.16-6.64  interior: 3 strips slide up on 8th notes, middle (exam room) expands on the last beat
     dict(t0=b(2), t1=b(4), kind='strips', ps=[P('hallway', (1.0, 1.05), (.48, .55)), EXAM_WIDE,
                                                P('reception', (1.0, 1.05), (.5, .55))], tin='punch'),
-    # 6.95-12.17  medical: exam room full, then 2x2 grid pops in on beats and zooms into the hallway panel
+    # 6.64-11.85  medical: exam room, whip to the equipment, grid pops in on the bass entry (10.11) and zooms into the hallway
     dict(t0=b(4), t1=b(5), kind='full', p=EXAM_WIDE, tin='cut'),
-    dict(t0=b(5), t1=b(7), kind='grid', ps=[P('exam_room', (1.55, 1.62), (.70, .42)),
-                                            P('exam_room', (1.45, 1.50), (.50, .48)),
-                                            P('exam_room', (1.25, 1.30), (.20, .62)), HALL_PUSH],
-         zoomto=3, tin='whip'),
-    # 12.17-17.38  availability: hallway, split screen, reception
+    dict(t0=b(5), t1=b(6), kind='full', p=P('exam_room', (1.55, 1.62), (.70, .42)), tin='whip'),
+    dict(t0=b(6), t1=b(7), kind='grid', step=BEAT / 2, ps=[P('exam_room', (1.45, 1.50), (.50, .48)),
+                                            P('exam_room', (1.25, 1.30), (.20, .62)),
+                                            P('reception', (1.35, 1.42), (.5, .60)), HALL_PUSH],
+         zoomto=3, tin='punch'),
+    # 11.85-17.07  availability: hallway, split screen, reception
     dict(t0=b(7), t1=b(8), kind='full', p=HALL_PUSH, tin='cut'),
     dict(t0=b(8), t1=b(9), kind='split', ps=[P('reception', (1.0, 1.05), (.5, .45)),
                                              P('exam_room', (1.15, 1.2), (.30, .62))], tin='cut'),
-    dict(t0=b(9), t1=b(10), kind='full', p=P('reception', (1.35, 1.42), (.5, .60)), tin='whip'),
-    # 17.38-20.86  recap grid of the whole clinic, zoom into the exterior, pull-out
-    dict(t0=b(10), t1=b(11), kind='grid', ps=[EXTERIOR, P('reception', (1.0, 1.04)), P('hallway', (1.0, 1.04)),
+    dict(t0=b(9), t1=b(10), kind='full', p=P('reception', (1.12, 1.0), (.5, .55)), tin='whip'),
+    # 17.07-20.54  recap grid of the whole clinic, zoom into the exterior, then the exterior
+    dict(t0=b(10), t1=b(11), kind='grid', step=BEAT / 2, ps=[EXTERIOR, P('reception', (1.0, 1.04)), P('hallway', (1.0, 1.04)),
                                               P('exam_room', (1.0, 1.04), (.62, .55))], zoomto=0, tin='punch'),
     dict(t0=b(11), t1=b(12), kind='full', p=EXTERIOR, tin='cut'),
-    # 20.86-25  end card: blurred exterior with navy wash, clear for logo + CTA
+    # 20.54-25  end card: blurred exterior with navy wash, clear for logo + CTA
     dict(t0=b(12), t1=TOTAL, kind='end', p=P('exterior', (1.05, 1.10), (.45, .55)), tin='dissolve'),
 ]
 
@@ -108,7 +111,7 @@ def frame(s, t):
     if s['kind'] == 'grid':
         pw, ph = (W - GAP) // 2, (H - GAP) // 2
         for j, sp in enumerate(s['ps']):
-            k = (t - t0 - j * BEAT) / 0.18                 # panel j pops in on beat j
+            k = (t - t0 - j * s.get('step', BEAT)) / 0.18  # panel j pops in on beat (or 8th note) j
             if k < 0: continue
             sc = 0.7 + 0.3 * eout(k)
             tile = view(sp, u, pw, ph)

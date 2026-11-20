@@ -1,22 +1,22 @@
 # GSD St. George reel
 
-**v3 (current): `out/StGeorge_v3_clean.mp4`** — no text; beat-synced layouts and transitions (`render_fx.py`).
-Same section timings as v1/v2. Client asked to use the song from 4:01 (beyond the 1:22 TikTok sound, so not analysed
-here); the cut keeps the 138.04 BPM bar grid, so start the sound at 4:01 and nudge it until the first whip (1.74 s)
-lands on a downbeat.
+**v4 (current): `out/StGeorge_v4_clean.mp4`** — no text; beat-synced layouts and transitions (`render_fx.py`).
+Sound starts at **0:04.1** of the TikTok sound. From that start the song's first downbeat is at 1.421 s and the bass
+enters at 10.113 s; every cut sits on the bar grid 1.421 + n × 1.7384 s.
 | time | layout |
 |---|---|
-| 0–1.74 | exterior push-in |
-| 1.74 | whip → window signage |
-| 3.48 | zoom punch → 3 strips slide up on 8th notes (hallway, exam room, reception); exam room expands on the last beat |
-| 6.95 | exam room full |
-| 8.69 | whip → 2×2 grid, panels pop in on beats (equipment, counter, chairs, hallway); zooms into the hallway panel |
-| 12.17 | hallway full |
-| 13.91 | split screen: reception slides in from the left, exam-room chairs from the right on the next beat |
-| 15.65 | whip → reception |
-| 17.38 | zoom punch → recap grid (exterior, reception, hallway, exam room); zooms into the exterior |
-| 19.12 | exterior full |
-| 20.86 | dissolve → end card (blurred exterior, navy wash) for logo + CTA |
+| 0–1.42 | exterior push-in (intro) |
+| 1.42 | whip → window signage |
+| 3.16 | zoom punch → 3 strips slide up on 8th notes (hallway, exam room, reception); exam room expands on the last beat |
+| 6.64 | exam room full |
+| 8.38 | whip → equipment close-up |
+| 10.11 | bass entry: zoom punch → 2×2 grid pops in on 8th notes (counter, chairs, reception, hallway); zooms into the hallway |
+| 11.85 | hallway full |
+| 13.59 | split screen: reception from the left, exam-room chairs from the right on the next beat |
+| 15.33 | whip → reception |
+| 17.07 | zoom punch → recap grid (exterior, reception, hallway, exam room); zooms into the exterior |
+| 18.81 | exterior full |
+| 20.54 | dissolve → end card (blurred exterior, navy wash) for logo + CTA |
 
 
 9:16, 25.0 s, built from location photos (`photos/`). Format follows the client's new-location reel
