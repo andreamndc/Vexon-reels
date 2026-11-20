@@ -18,7 +18,9 @@ def src(key):
     return glob.glob(os.path.join(FOOT, f'*{key}*'))[0]
 
 SHELF, SKINLAB, SETUP, TREAT = '2_15_05', '2_16_57', '3_32_46', '3_34_32_PM.'
-HOLD, TRAY, PICK, WALK = '2_16_39', '2_01_25', '2_15_30', '2ff1841e'   # hand holding product box; treatment tray pan ending on Elf on the Shelf
+HOLD, TRAY, PICK, WALK = '2_16_39', '2_01_25', '2_15_30', '2ff1841e'   # hand holding product box; treatment tray pan ending on Elf on the Shelf; office walk
+LASER, CLOSE, CONSULT = '3_40_53', '3_42_57', '8ec49a6e'   # wide laser treatment; handpiece close-up (landscape); consultation
+LANDSCAPE_CX = {CLOSE: 0.5}    # horizontal clips: centre-crop to 9:16 at this x position
 def acc(n): return round(0.895 + n * 4 * B, 3)    # accent n: 0.895, 2.686, 4.477, 6.268, 8.059 ...
 # t0, t1, source, start, speed, zoom [from, to], crop centre (cx, cy), transition-in
 SHOTS = [
@@ -37,8 +39,9 @@ SHOTS = [
     (acc(7), acc(8), HOLD, 1.5, 1.0, (1.00, 1.04), (.50, .50), 'cut'),
     (acc(8), acc(9), TRAY, 2.2, 1.0, (1.00, 1.05), (.55, .50), 'cut'),
     # holiday savings: more Dr. Strunck
-    (acc(9), acc(10), TREAT, 1.0, 0.8, (1.40, 1.46), (.35, .28), 'star'),
-    (acc(10), acc(11), SETUP, 2.6, 0.7, (1.25, 1.30), (.38, .35), 'cut'),
+    (acc(9), acc(9) + 2 * B, LASER, 1.0, 1.0, (1.05, 1.09), (.55, .40), 'star'),     # Dr. Strunck, laser treatment
+    (acc(9) + 2 * B, acc(10), CLOSE, 2.0, 1.0, (1.00, 1.04), (.50, .50), 'cut'),     # handpiece close-up
+    (acc(10), acc(11), CONSULT, 2.0, 1.0, (1.05, 1.10), (.45, .45), 'cut'),         # consultation with a patient
     # end card: blurred SkinLab shelf, light cream wash, room for logos + CTA; song's final hit at 24.17 s
     (acc(11), TOTAL, SKINLAB, 2.2, 0.5, (1.10, 1.14), (.50, .50), 'snow'),
 ]
@@ -51,8 +54,9 @@ def frames(key, start, n, speed):
     ck = (key, start, n, speed)
     if ck in _cache: return _cache[ck]
     dur = n / FPS * speed + 0.2
+    fit = (f'scale=-2:{H},crop={W}:{H}:(iw-{W})*{LANDSCAPE_CX[key]}:0' if key in LANDSCAPE_CX else f'scale={W}:{H}')
     cmd = ['ffmpeg', '-nostdin', '-v', 'error', '-ss', str(start), '-t', str(dur), '-i', src(key),
-           '-vf', f'setpts=PTS/{speed},fps={FPS},scale={W}:{H}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-']
+           '-vf', f'setpts=PTS/{speed},fps={FPS},{fit}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-']
     raw = subprocess.run(cmd, capture_output=True, check=True).stdout
     arr = np.frombuffer(raw, np.uint8).reshape(-1, H, W, 3)
     if len(arr) < n: arr = np.concatenate([arr, np.repeat(arr[-1:], n - len(arr), 0)])

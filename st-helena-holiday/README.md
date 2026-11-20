@@ -12,7 +12,12 @@ Rebuild: `python3 make_song.py song.mid && fluidsynth -ni -g 0.6 -r 48000 -F raw
 160 BPM: 1 bar = 1.5 s. Drums enter with a crash at 3.0 s; more crashes at 6.0, 12.0, 18.0 s;
 brass lift from 18.0 s; final hit at 24.0 s, ring-out to 25.0 s.
 
-## v4 render — `out/StHelena_Holiday_Reel_v4.mp4` (25.0 s, current)
+## v5 render — `out/StHelena_Holiday_Reel_v5.mp4` (25.0 s, current)
+Same as v4, but the repeated Dr. Strunck shots in the holiday-savings section (17.01–20.59 s) are replaced with new
+footage: 3:40:53 PM wide laser treatment (17.01–17.91), 3:42:57 PM handpiece close-up (17.91–18.80; horizontal clip,
+centre-cropped to 9:16), 1120_41.mp4 consultation (18.80–20.59).
+
+## v4 render — `out/StHelena_Holiday_Reel_v4.mp4` (25.0 s)
 Music: client-supplied "Christmas In My Heart (Instrumental)" by Loving Caliber (Epidemic Sound) — place the MP3 at
 `music/ES_Christmas_In_My_Heart_Instrumental_-_Loving_Caliber.mp3` (not committed). 134.02 BPM. Segment 147.51–172.51 s:
 the final chorus into the song's real ending (final hit at 24.17 s in the edit, rings out under the end card).
