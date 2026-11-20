@@ -12,6 +12,14 @@ Rebuild: `python3 make_song.py song.mid && fluidsynth -ni -g 0.6 -r 48000 -F raw
 160 BPM: 1 bar = 1.5 s. Drums enter with a crash at 3.0 s; more crashes at 6.0, 12.0, 18.0 s;
 brass lift from 18.0 s; final hit at 24.0 s, ring-out to 25.0 s.
 
+## v1 render — `out/StHelena_Holiday_Reel_v1.mp4`
+`python3 render.py <footage_dir> music/holiday_track.wav out/StHelena_Holiday_Reel_v1.mp4` (shot list is `SHOTS` in render.py;
+`--stills 1.0,12.5` renders single frames for quick checks). Clean picture, no text; warm grade, sub-pixel push-ins,
+cuts on the bar, 0.35 s dissolves at section changes, gold sparkle on the opener and end card.
+Footage used (Nov 12 clips): 3:34:32 PM treatment, 3:32:46 PM laser setup, 2:15:05 PM shelf pan, 2:15:30 PM serum pick-up,
+2:16:39 PM product box, 2:01:25 PM tray + Elf on the Shelf, 2:16:57 PM SkinLab shelf (blurred end card).
+Not used: 3:34:32 PM_1 (duplicate), 2:15:17 PM (horizontal duplicate of shelf pan), 2:01:14 PM / 2:16:21 PM (spares).
+
 ## Cut map (brief sections snapped to the bar grid)
 | time | bars | visuals | brief text (added later) |
 |---|---|---|---|
