@@ -12,6 +12,14 @@ Rebuild: `python3 make_song.py song.mid && fluidsynth -ni -g 0.6 -r 48000 -F raw
 160 BPM: 1 bar = 1.5 s. Drums enter with a crash at 3.0 s; more crashes at 6.0, 12.0, 18.0 s;
 brass lift from 18.0 s; final hit at 24.0 s, ring-out to 25.0 s.
 
+## v2 render — `out/StHelena_Holiday_Reel_v2.mp4` (24.27 s, current)
+Music: client-supplied "A Lofi Wonderland" by Mizlo (Epidemic Sound) — place the WAV at
+`music/ES_A_Lofi_Wonderland_-_Mizlo.wav` (not committed; licensed asset). 88.99 BPM, beat 0.6742 s; the track starts
+at 7.402 s so its beat drop lands at 3.37 s; -1 dB, 1 s fade-out (the track ends abruptly).
+Section changes (all on beats): 3.37 snow sweep · 8.76 star iris · 12.81 candy-cane ribbon · 16.86 star iris ·
+20.90 snow sweep into the end card. No sparkle/lights. Cuts inside sections land on kicks.
+`python3 render.py <footage_dir> music/ES_A_Lofi_Wonderland_-_Mizlo.wav out/StHelena_Holiday_Reel_v2.mp4`
+
 ## v1 render — `out/StHelena_Holiday_Reel_v1.mp4`
 `python3 render.py <footage_dir> music/holiday_track.wav out/StHelena_Holiday_Reel_v1.mp4` (shot list is `SHOTS` in render.py;
 `--stills 1.0,12.5` renders single frames for quick checks). Clean picture, no text; warm grade, sub-pixel push-ins,
