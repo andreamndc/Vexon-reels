@@ -1,15 +1,16 @@
-"""St. Helena holiday reel v2 - clean 9:16 edit (no text; overlays/logos added by the client's editor).
-Usage: python3 render.py <footage_dir> <music.wav> <out.mp4> [--stills t1,t2,...]
-Cut to "A Lofi Wonderland" (Mizlo, Epidemic Sound): 88.99 BPM, beat B = 0.6742 s. The track starts at
-MUSIC_OFFSET so its beat drop lands at 3.37 s; every cut and Christmas transition sits on a beat."""
+"""St. Helena holiday reel v4 - clean 9:16 edit (no text; overlays/logos added by the client's editor).
+Usage: python3 render.py <footage_dir> <music> <out.mp4> [--stills t1,t2,...]
+Cut to "Christmas In My Heart (Instrumental)" (Loving Caliber, Epidemic Sound): 134.02 BPM, beat B = 0.4477 s.
+The track plays from MUSIC_OFFSET = 147.51 s to its real ending (final hit at 171.68 s = 24.17 s in the edit).
+Strong accents fall at 0.895 + n * 1.791 s in the edit; every section change sits on one."""
 import glob, math, os, random, subprocess, sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-B = 0.6742
+B = 0.4477
 W, H, FPS = 1080, 1920, 30
-TOTAL = round(36 * B, 3)          # 24.27 s
-MUSIC_OFFSET, FADE = 7.402, 1.0
+TOTAL = 25.0
+MUSIC_OFFSET, FADE = 147.51, 0.5
 FOOT, MUSIC, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
 STILLS = [float(x) for x in sys.argv[sys.argv.index('--stills') + 1].split(',')] if '--stills' in sys.argv else None
 
@@ -18,30 +19,28 @@ def src(key):
 
 SHELF, SKINLAB, SETUP, TREAT = '2_15_05', '2_16_57', '3_32_46', '3_34_32_PM.'
 HOLD, TRAY, PICK, WALK = '2_16_39', '2_01_25', '2_15_30', '2ff1841e'   # hand holding product box; treatment tray pan ending on Elf on the Shelf
-def k(n): return round(n * B, 3)
+def acc(n): return round(0.895 + n * 4 * B, 3)    # accent n: 0.895, 2.686, 4.477, 6.268, 8.059 ...
 # t0, t1, source, start, speed, zoom [from, to], crop centre (cx, cy), transition-in
 SHOTS = [
-    # hook (quiet intro): Dr. Strunck walking through the office
-    (0.0, k(5), WALK, 0.0, 1.0, (1.00, 1.06), (.50, .42), 'cut'),     # Dr. Strunck walking through the office
-    # beat drop -> 20% off cosmetic: Strunck b-roll + treatment
-    (k(5), k(7), TREAT, 0.3, 1.0, (1.00, 1.05), (.50, .40), 'snow'),
-    (k(7), k(9), SETUP, 2.4, 1.0, (1.00, 1.05), (.50, .45), 'cut'),
-    (k(9), k(11), TREAT, 5.0, 1.0, (1.35, 1.42), (.45, .33), 'cut'),
-    (k(11), k(13), SETUP, 4.6, 1.0, (1.30, 1.36), (.60, .62), 'cut'),
+    # hook: Dr. Strunck walking through the office
+    (0.0, acc(1), WALK, 0.0, 1.0, (1.00, 1.05), (.50, .42), 'cut'),
+    # 20% off cosmetic: treatment + Strunck b-roll
+    (acc(1), acc(2), TREAT, 0.3, 1.0, (1.00, 1.05), (.50, .40), 'snow'),
+    (acc(2), acc(3), SETUP, 2.4, 1.0, (1.00, 1.05), (.50, .45), 'cut'),
+    (acc(3), acc(4), TREAT, 4.9, 1.0, (1.35, 1.42), (.45, .33), 'cut'),
     # consultation / with patient / treatment room
-    (k(13), k(17), SETUP, 0.0, 0.67, (1.00, 1.04), (.50, .50), 'star'),
-    (k(17), k(19), TREAT, 3.0, 0.8, (1.12, 1.20), (.42, .45), 'cut'),
+    (acc(4), acc(5), SETUP, 0.2, 0.8, (1.00, 1.04), (.50, .50), 'star'),
+    (acc(5), acc(6), TREAT, 3.0, 0.8, (1.12, 1.20), (.42, .45), 'cut'),
     # 20% off skincare: shelves, serum pick-up, product box, tray + Elf on the Shelf
-    (k(19), k(20), SHELF, 0.5, 1.0, (1.05, 1.08), (.50, .45), 'ribbon'),
-    (k(20), k(21), PICK, 1.0, 1.0, (1.10, 1.13), (.45, .45), 'cut'),
-    (k(21), k(23), HOLD, 2.0, 1.0, (1.00, 1.04), (.50, .50), 'cut'),
-    (k(23), k(25), TRAY, 2.5, 1.0, (1.00, 1.05), (.55, .50), 'cut'),
+    (acc(6), acc(6) + 2 * B, SHELF, 0.5, 1.0, (1.05, 1.08), (.50, .45), 'ribbon'),
+    (acc(6) + 2 * B, acc(7), PICK, 0.9, 1.0, (1.10, 1.13), (.45, .45), 'cut'),
+    (acc(7), acc(8), HOLD, 1.5, 1.0, (1.00, 1.04), (.50, .50), 'cut'),
+    (acc(8), acc(9), TRAY, 2.2, 1.0, (1.00, 1.05), (.55, .50), 'cut'),
     # holiday savings: more Dr. Strunck
-    (k(25), k(27), TREAT, 1.0, 0.8, (1.40, 1.46), (.35, .28), 'star'),
-    (k(27), k(29), SETUP, 2.6, 0.7, (1.25, 1.30), (.38, .35), 'cut'),
-    (k(29), k(31), TREAT, 4.1, 1.0, (1.30, 1.35), (.50, .62), 'cut'),
-    # end card: blurred SkinLab shelf, light cream wash, room for logos + CTA
-    (k(31), TOTAL, SKINLAB, 2.2, 0.5, (1.10, 1.14), (.50, .50), 'snow'),
+    (acc(9), acc(10), TREAT, 1.0, 0.8, (1.40, 1.46), (.35, .28), 'star'),
+    (acc(10), acc(11), SETUP, 2.6, 0.7, (1.25, 1.30), (.38, .35), 'cut'),
+    # end card: blurred SkinLab shelf, light cream wash, room for logos + CTA; song's final hit at 24.17 s
+    (acc(11), TOTAL, SKINLAB, 2.2, 0.5, (1.10, 1.14), (.50, .50), 'snow'),
 ]
 XF = {'snow': 0.8, 'star': 0.6, 'ribbon': 0.6}   # transition length, centred on the cut
 PRE = 0.45                                         # pre-roll decoded before each shot for transitions
@@ -179,7 +178,7 @@ if STILLS:
 
 enc = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
                         '-r', str(FPS), '-i', '-', '-ss', str(MUSIC_OFFSET), '-i', MUSIC, '-vf', GRADE,
-                        '-af', f'volume=-1dB,afade=t=in:d=0.05,afade=t=out:st={TOTAL - FADE}:d={FADE}', '-map', '0:v', '-map', '1:a',
+                        '-af', f'volume=-1dB,alimiter=limit=0.85:level=false,afade=t=in:d=0.12,afade=t=out:st={TOTAL - FADE}:d={FADE}', '-map', '0:v', '-map', '1:a',
                         '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p',
                         '-c:a', 'aac', '-b:a', '256k', '-t', str(TOTAL), '-movflags', '+faststart', OUT],
                        stdin=subprocess.PIPE)
