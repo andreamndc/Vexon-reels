@@ -14,6 +14,7 @@ W, H, FPS, TOTAL = 1080, 1920, 30, 25.0
 BEAT = 0.4346; BAR = 4 * BEAT
 OUT = sys.argv[1]
 STILLS = [float(x) for x in sys.argv[sys.argv.index('--stills') + 1].split(',')] if '--stills' in sys.argv else None
+NOTEXT = '--notext' in sys.argv
 LOGO = sys.argv[sys.argv.index('--logo') + 1] if '--logo' in sys.argv else None
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONT = '/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf'   # Times-style bold italic
@@ -106,7 +107,7 @@ def wrap(words, fnt, maxw):
 
 def overlay(img, t):
     img = img.convert('RGBA')
-    for t0, t1, words, cy, size in TEXT:
+    for t0, t1, words, cy, size in ([] if NOTEXT else TEXT):
         if not (t0 <= t < t1): continue
         fnt = ImageFont.truetype(FONT, size)
         lines = wrap([w for w, _ in words], fnt, 900)

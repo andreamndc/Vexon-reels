@@ -8,7 +8,9 @@ Music: cut to the TikTok sound @mayoutfitofficial/7308589082270027013 (138.04 BP
 0:14.12 where the bass enters. Cuts land on the bar, words appear on the beat. The video is exported with a
 silent track (copyrighted song): add the sound in-app starting at 0:14.1.
 
-Render: `python3 render.py out/StGeorge_v1.mp4 [--logo white_logo.png]` (`--stills 1.5,8.0` for frame checks).
+**v2 (current): `out/StGeorge_v2_clean.mp4` — no text (client adds text); same cut.** Render with `--notext`.
+
+Render: `python3 render.py out/StGeorge_v1.mp4 [--logo white_logo.png] [--notext]` (`--stills 1.5,8.0` for frame checks).
 
 | time | photo | text |
 |---|---|---|
