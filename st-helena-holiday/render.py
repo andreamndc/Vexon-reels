@@ -178,7 +178,7 @@ if STILLS:
 
 enc = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
                         '-r', str(FPS), '-i', '-', '-ss', str(MUSIC_OFFSET), '-i', MUSIC, '-vf', GRADE,
-                        '-af', f'volume=-1dB,alimiter=limit=0.85:level=false,afade=t=in:d=0.12,afade=t=out:st={TOTAL - FADE}:d={FADE}', '-map', '0:v', '-map', '1:a',
+                        '-af', f'volume=-3dB,alimiter=limit=0.8:level=false:attack=1:release=50,afade=t=in:d=0.12,afade=t=out:st={TOTAL - FADE}:d={FADE}', '-map', '0:v', '-map', '1:a',
                         '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p',
                         '-c:a', 'aac', '-b:a', '256k', '-t', str(TOTAL), '-movflags', '+faststart', OUT],
                        stdin=subprocess.PIPE)

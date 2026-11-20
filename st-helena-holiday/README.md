@@ -17,7 +17,7 @@ Music: client-supplied "Christmas In My Heart (Instrumental)" by Loving Caliber 
 `music/ES_Christmas_In_My_Heart_Instrumental_-_Loving_Caliber.mp3` (not committed). 134.02 BPM. Segment 147.51–172.51 s:
 the final chorus into the song's real ending (final hit at 24.17 s in the edit, rings out under the end card).
 Section changes on the track's accents: 2.69 snow · 8.06 star · 11.64 ribbon · 17.01 star · 20.59 snow (end card).
-Opens on Dr. Strunck walking through the office (0–2.69 s). -1 dB + limiter (peaks ~-1.4 dB).
+Opens on Dr. Strunck walking through the office (0–2.69 s). -3 dB + limiter (peaks ~-2 dB).
 
 ## v3 render — `out/StHelena_Holiday_Reel_v3.mp4` (24.27 s, current)
 Same as v2, but opens on Dr. Strunck walking through the office (`1120.mp4`, 0–3.37 s); the treatment shot moves to the beat drop (3.37–4.72 s) and the laser set-up shot is shortened (4.72–6.07 s).
