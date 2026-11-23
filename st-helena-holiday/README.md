@@ -12,7 +12,10 @@ Rebuild: `python3 make_song.py song.mid && fluidsynth -ni -g 0.6 -r 48000 -F raw
 160 BPM: 1 bar = 1.5 s. Drums enter with a crash at 3.0 s; more crashes at 6.0, 12.0, 18.0 s;
 brass lift from 18.0 s; final hit at 24.0 s, ring-out to 25.0 s.
 
-## v7 render — `out/StHelena_Holiday_Reel_v7.mp4` (25.0 s, current)
+## v8 render — `out/StHelena_Holiday_Reel_v8.mp4` (25.0 s, current)
+Same as v7, but the 3:31:23 PM clip at 8.06–9.85 s now starts at 3.0 s in the clip.
+
+## v7 render — `out/StHelena_Holiday_Reel_v7.mp4` (25.0 s)
 Same as v6, but 8.06–9.85 s is now the 3:31:23 PM clip of Dr. Strunck treating the patient's face (from 1.0 s).
 
 ## v6 render — `out/StHelena_Holiday_Reel_v6.mp4` (25.0 s)

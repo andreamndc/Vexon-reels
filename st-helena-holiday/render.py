@@ -31,7 +31,7 @@ SHOTS = [
     (acc(2), acc(3), LASER, 3.0, 1.0, (1.00, 1.05), (.55, .45), 'cut'),       # laser treatment, wide
     (acc(3), acc(4), TREAT, 4.9, 1.0, (1.35, 1.42), (.45, .33), 'cut'),
     # consultation / with patient / treatment room
-    (acc(4), acc(5), FACE, 1.0, 1.0, (1.00, 1.05), (.45, .42), 'star'),       # Dr. Strunck treating the patient's face (3:31:23 PM)
+    (acc(4), acc(5), FACE, 3.0, 1.0, (1.00, 1.05), (.45, .42), 'star'),       # Dr. Strunck treating the patient's face (3:31:23 PM)
     (acc(5), acc(6), TREAT, 3.0, 0.8, (1.12, 1.20), (.42, .45), 'cut'),
     # 20% off skincare: shelves, serum pick-up, product box, tray + Elf on the Shelf
     (acc(6), acc(6) + 2 * B, SHELF, 0.5, 1.0, (1.05, 1.08), (.50, .45), 'ribbon'),
