@@ -19,7 +19,7 @@ def src(key):
 
 SHELF, SKINLAB, SETUP, TREAT = '2_15_05', '2_16_57', '3_32_46', '3_34_32_PM.'
 HOLD, TRAY, PICK, WALK = '2_16_39', '2_01_25', '2_15_30', '2ff1841e'   # hand holding product box; treatment tray pan ending on Elf on the Shelf; office walk
-LASER, CLOSE, CONSULT = '3_40_53', '3_42_57', '8ec49a6e'   # wide laser treatment; handpiece close-up (landscape); consultation
+LASER, CLOSE, CONSULT, FACE = '3_40_53', '3_42_57', '8ec49a6e', '3_31_23'   # wide laser treatment; handpiece close-up (landscape); consultation
 LANDSCAPE_CX = {CLOSE: 0.5}    # horizontal clips: centre-crop to 9:16 at this x position
 def acc(n): return round(0.895 + n * 4 * B, 3)    # accent n: 0.895, 2.686, 4.477, 6.268, 8.059 ...
 # t0, t1, source, start, speed, zoom [from, to], crop centre (cx, cy), transition-in
@@ -31,7 +31,7 @@ SHOTS = [
     (acc(2), acc(3), LASER, 3.0, 1.0, (1.00, 1.05), (.55, .45), 'cut'),       # laser treatment, wide
     (acc(3), acc(4), TREAT, 4.9, 1.0, (1.35, 1.42), (.45, .33), 'cut'),
     # consultation / with patient / treatment room
-    (acc(4), acc(5), CONSULT, 6.0, 1.0, (1.00, 1.05), (.45, .45), 'star'),    # consultation (later moment than the end shot)
+    (acc(4), acc(5), FACE, 1.0, 1.0, (1.00, 1.05), (.45, .42), 'star'),       # Dr. Strunck treating the patient's face (3:31:23 PM)
     (acc(5), acc(6), TREAT, 3.0, 0.8, (1.12, 1.20), (.42, .45), 'cut'),
     # 20% off skincare: shelves, serum pick-up, product box, tray + Elf on the Shelf
     (acc(6), acc(6) + 2 * B, SHELF, 0.5, 1.0, (1.05, 1.08), (.50, .45), 'ribbon'),
