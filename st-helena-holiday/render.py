@@ -28,10 +28,10 @@ SHOTS = [
     (0.0, acc(1), WALK, 0.0, 1.0, (1.00, 1.05), (.50, .42), 'cut'),
     # 20% off cosmetic: treatment + Strunck b-roll
     (acc(1), acc(2), TREAT, 0.3, 1.0, (1.00, 1.05), (.50, .40), 'snow'),
-    (acc(2), acc(3), SETUP, 2.4, 1.0, (1.00, 1.05), (.50, .45), 'cut'),
+    (acc(2), acc(3), LASER, 3.0, 1.0, (1.00, 1.05), (.55, .45), 'cut'),       # laser treatment, wide
     (acc(3), acc(4), TREAT, 4.9, 1.0, (1.35, 1.42), (.45, .33), 'cut'),
     # consultation / with patient / treatment room
-    (acc(4), acc(5), SETUP, 0.2, 0.8, (1.00, 1.04), (.50, .50), 'star'),
+    (acc(4), acc(5), CONSULT, 6.0, 1.0, (1.00, 1.05), (.45, .45), 'star'),    # consultation (later moment than the end shot)
     (acc(5), acc(6), TREAT, 3.0, 0.8, (1.12, 1.20), (.42, .45), 'cut'),
     # 20% off skincare: shelves, serum pick-up, product box, tray + Elf on the Shelf
     (acc(6), acc(6) + 2 * B, SHELF, 0.5, 1.0, (1.05, 1.08), (.50, .45), 'ribbon'),
@@ -41,7 +41,7 @@ SHOTS = [
     # holiday savings: more Dr. Strunck
     (acc(9), acc(9) + 2 * B, LASER, 1.0, 1.0, (1.05, 1.09), (.55, .40), 'star'),     # Dr. Strunck, laser treatment
     (acc(9) + 2 * B, acc(10), CLOSE, 2.0, 1.0, (1.00, 1.04), (.50, .50), 'cut'),     # handpiece close-up
-    (acc(10), acc(11), CONSULT, 2.0, 1.0, (1.05, 1.10), (.45, .45), 'cut'),         # consultation with a patient
+    (acc(10), acc(11), CONSULT, 10.5, 1.0, (1.22, 1.28), (.50, .36), 'cut'),       # consultation, tighter, later moment
     # end card: blurred SkinLab shelf, light cream wash, room for logos + CTA; song's final hit at 24.17 s
     (acc(11), TOTAL, SKINLAB, 2.2, 0.5, (1.10, 1.14), (.50, .50), 'snow'),
 ]

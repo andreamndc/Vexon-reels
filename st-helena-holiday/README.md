@@ -12,7 +12,12 @@ Rebuild: `python3 make_song.py song.mid && fluidsynth -ni -g 0.6 -r 48000 -F raw
 160 BPM: 1 bar = 1.5 s. Drums enter with a crash at 3.0 s; more crashes at 6.0, 12.0, 18.0 s;
 brass lift from 18.0 s; final hit at 24.0 s, ring-out to 25.0 s.
 
-## v5 render — `out/StHelena_Holiday_Reel_v5.mp4` (25.0 s, current)
+## v6 render — `out/StHelena_Holiday_Reel_v6.mp4` (25.0 s, current)
+Same as v5, but the 3:32:46 PM laser set-up clip is no longer used: 4.48–6.27 s is now the 3:40:53 PM wide laser
+treatment (from 3.0 s), 8.06–9.85 s is the 1120_41 consultation (from 6.0 s), and the end consultation shot
+(18.80–20.59 s) moved to a later, tighter moment (from 10.5 s) so the two consultation shots read differently.
+
+## v5 render — `out/StHelena_Holiday_Reel_v5.mp4` (25.0 s)
 Same as v4, but the repeated Dr. Strunck shots in the holiday-savings section (17.01–20.59 s) are replaced with new
 footage: 3:40:53 PM wide laser treatment (17.01–17.91), 3:42:57 PM handpiece close-up (17.91–18.80; horizontal clip,
 centre-cropped to 9:16), 1120_41.mp4 consultation (18.80–20.59).
