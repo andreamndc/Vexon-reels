@@ -13,11 +13,11 @@
     "SENIOR": "clips/E.mp4"
   },
   "shots": [
-    {"name": "HOOK · rider", "kind": "title", "src": "MAN", "ss": 2.0, "beats": 2, "z": [1.14, 1.04], "zc": [0.6, 0.45], "tin": "cut", "text_span": 2, "band_y": 1300,
-     "note": "Full-body rider on the first kick. Title slams in small, low third; footage carries the open.",
+    {"name": "HOOK · rider", "kind": "title", "src": "MAN", "ss": 2.0, "beats": 2, "z": [1.14, 1.04], "zc": [0.6, 0.45], "tin": "cut", "text_span": 2, "band_y": 960,
+     "note": "Full-body rider on the first kick. Title slams in, centred; footage carries the open.",
      "title_words": [
-       {"text": "DISCOVER YOUR", "beat": 0, "size": 66, "y": 1225, "color": "cream"},
-       {"text": "VO₂ MAX", "beat": 2, "size": 150, "y": 1340, "color": "orange"}]},
+       {"text": "DISCOVER YOUR", "beat": 0, "size": 84, "y": 870, "color": "cream"},
+       {"text": "VO₂ MAX", "beat": 2, "size": 185, "y": 1010, "color": "orange"}]},
     {"name": "HOOK · mask macro", "kind": "plain", "src": "WOMAN", "ss": 11.0, "beats": 3, "z": [1.6, 1.7], "zc": [0.25, 0.18], "tin": "whip", "cont": true,
      "note": "Whip into a tight macro of the VO₂ mask (crop of the side angle). 'VO₂ MAX' lands on this cut."},
 
