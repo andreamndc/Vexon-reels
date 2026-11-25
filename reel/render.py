@@ -82,15 +82,9 @@ def hblur(img, k):
     k = int(k)
     return img if k < 3 else cv2.blur(img, (k, 1))
 
-# grade: warm, gentle contrast, light vignette (no grain)
-yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-_r = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
-VIG = (1 - 0.22 * np.clip(_r - 0.45, 0, 1) ** 1.6)[..., None].astype(np.float32)
-WARM = np.float32([1.035, 1.0, 0.955])
+# no colour grade: photos keep their original colours
 
 def grade(img, fi):
-    img = (img - 128) * 1.05 + 128
-    img = img * WARM * VIG
     return np.clip(img, 0, 255).astype(np.uint8)
 
 def frame_at(plan, t, fi=0):
