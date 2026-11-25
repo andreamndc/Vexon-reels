@@ -1,0 +1,30 @@
+{
+  "audio": "voiceover.mp3",
+  "end": 77.6,
+  "shots": [
+    {"t": 0.00,  "img": "01_pouring_spiced_drink",              "tin": "cut",      "say": "Pour yourself something and settle in."},
+    {"t": 2.20,  "img": "04_mug_star_anise_cinnamon",           "tin": "zoomblur", "say": "This one goes back centuries."},
+    {"t": 4.50,  "img": "05_crowned_posset_pot_delftware",      "tin": "burst",    "say": "Eggnog started in medieval Britain as posset,"},
+    {"t": 7.00,  "img": "06_posset_pot_delftware_floral",       "tin": "whip",     "say": "a hot milky drink made with ale, eggs, and spices reserved"},
+    {"t": 10.60, "img": "07_monks_drinking_painting",           "tin": "zoomblur", "say": "for monks and the wealthy. A drink of good fortune"},
+    {"t": 13.60, "img": "08_medieval_feast_manuscript",         "tin": "whip",     "say": "saved for special occasions. When it crossed"},
+    {"t": 16.25, "img": "10_sailing_warships",                  "tin": "burst",    "say": "the Atlantic, colonists swap expensive European spirits"},
+    {"t": 19.05, "img": "12_colonial_rum_bottle",               "tin": "zoomblur", "say": "for cheap Caribbean rum, fresh farm eggs, and milk."},
+    {"t": 22.90, "img": "14_vintage_eggnog_carton",             "tin": "zoomblur", "say": "Eggnog went from a luxury drink to the holiday drink for everyone."},
+    {"t": 26.85, "img": "16_christiana_campbells_tavern_snow",  "tin": "zoomblur", "say": "By the 18th century, it was flowing freely"},
+    {"t": 29.35, "img": "09_georgian_drinking_party",           "tin": "whip",     "say": "at every Christmas gathering in the colonies."},
+    {"t": 32.05, "img": "20_washington_winking_eggnog",         "tin": "burst",    "say": "George Washington served his guests an eggnog loaded with"},
+    {"t": 34.50, "img": "19_brandy_decanter_glasses",           "tin": "zoomblur", "say": "brandy, rye whiskey, rum, and sherry"},
+    {"t": 36.95, "img": "18_mount_vernon_snow_front",           "tin": "zoomblur", "say": "at Mount Vernon. His recipe ended with one final instruction,"},
+    {"t": 40.90, "img": "24_victorian_christmas_party_engraving","tin": "whip",    "say": "taste frequently, solid advice."},
+    {"t": 43.35, "img": "21_west_point_from_river",             "tin": "burst",    "say": "In 1826, West Point cadets loved their eggnog so much"},
+    {"t": 46.60, "img": "22_corn_whiskey_jug",                  "tin": "zoomblur", "say": "that when alcohol was banned on campus, they smuggled in whiskey anyway."},
+    {"t": 50.65, "img": "25_west_point_cadets",                 "tin": "zoomblur", "say": "The holiday party turned into what history now calls the eggnog riot. Yes, that is true."},
+    {"t": 56.80, "img": "23_highland_whisky_jug",               "tin": "cut",      "say": "20 cadets were expelled, zero regrets, presumably."},
+    {"t": 60.60, "img": "26_american_heritage_chocolate",       "tin": "burst",    "say": "This spiced eggnog adds American Heritage Chocolate crafted from an authentic 1700s recipe"},
+    {"t": 65.45, "img": "28_hot_chocolate_speckled_mug",        "tin": "zoomblur", "say": "to that centuries-old tradition."},
+    {"t": 68.05, "img": "27_hot_chocolate_whipped_shavings",    "tin": "zoomblur", "say": "Warm spices, rich chocolate, and 300 years of holiday history in every sip."},
+    {"t": 72.95, "img": "03_mugs_christmas_tree",               "tin": "zoomblur", "say": "Some traditions are worth keeping."},
+    {"t": 75.10, "img": "02_two_tall_mugs_whipped_cream",       "tin": "whip",     "say": "Full recipe is linked in our bio."}
+  ]
+}
