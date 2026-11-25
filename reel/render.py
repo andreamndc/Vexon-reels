@@ -24,7 +24,9 @@ def load(name):
     """Source photo, pre-scaled with Lanczos (and sharpened if upscaled) so it covers the frame at zoom 1."""
     if name in _cache:
         return _cache[name]
-    im = Image.open(os.path.join(HERE, "photos", name + ".jpg")).convert("RGB")
+    up = os.path.join(HERE, "photos_upscaled", name + ".jpg")
+    src = up if os.path.exists(up) and not os.environ.get("NO_UPSCALE") else os.path.join(HERE, "photos", name + ".jpg")
+    im = Image.open(src).convert("RGB")
     w, h = im.size
     landscape = w > h
     s = H / h if landscape else max(W / w, H / h)
